@@ -44,9 +44,9 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
 
                     <div className="outer-box">
 
-                        <button className="ui-btn search-btn" onClick={handleSearch}>
+                        {/* <button className="ui-btn search-btn" onClick={handleSearch}>
                         <i className="icon fal fa-search"></i>
-                        </button>
+                        </button> */}
 
                         <div className="divider"></div>
 

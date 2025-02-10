@@ -12,9 +12,11 @@ const Gallery1 = () => {
                     <div className="inner-box">
                       <div className="image-box">
                         <figure className="image">
-                          <Link className="lightbox-image" href="images/resource/gallery1-4.jpg"><img src="images/resource/gallery1-4.jpg" alt="Image"/></Link>
+                          {/* <Link className="lightbox-image" href="images/resource/gallery1-4.jpg"> */}
+                          <img src="images/resource/gallery1-4.jpg" alt="Image"/>
+                          {/* </Link> */}
                         </figure>
-                        <Link className="icon" href="page-gallery"><i className="fa-sharp fa-light fa-eye"></i></Link>
+                        {/* <Link className="icon" href="page-gallery"><i className="fa-sharp fa-light fa-eye"></i></Link> */}
                       </div>
                     </div>
                   </div>
@@ -23,15 +25,19 @@ const Gallery1 = () => {
                     <div className="inner-box">
                       <div className="image-box">
                         <figure className="image">
-                          <Link className="lightbox-image" href="images/resource/gallery1-3.jpg"><img src="images/resource/gallery1-3.jpg" alt="Image"/></Link>
+                          {/* <Link className="lightbox-image" href="images/resource/gallery1-3.jpg"> */}
+                          <img src="images/resource/gallery1-3.jpg" alt="Image"/>
+                          {/* </Link> */}
                         </figure>
-                        <Link className="icon" href="page-gallery"><i className="fa-sharp fa-light fa-eye"></i></Link>
+                        {/* <Link className="icon" href="page-gallery"><i className="fa-sharp fa-light fa-eye"></i></Link> */}
                       </div>
                       <div className="image-box">
                         <figure className="image">
-                          <Link className="lightbox-image" href="images/resource/gallery1-2.jpg"><img src="images/resource/gallery1-2.jpg" alt="Image"/></Link>
+                          {/* <Link className="lightbox-image" href="images/resource/gallery1-2.jpg"> */}
+                          <img src="images/resource/gallery1-2.jpg" alt="Image"/>
+                          {/* </Link> */}
                         </figure>
-                        <Link className="icon" href="page-gallery"><i className="fa-sharp fa-light fa-eye"></i></Link>
+                        {/* <Link className="icon" href="page-gallery"><i className="fa-sharp fa-light fa-eye"></i></Link> */}
                       </div>
                     </div>
                   </div>
@@ -41,9 +47,11 @@ const Gallery1 = () => {
                 <div className="inner-box">
                   <div className="image-box">
                     <figure className="image">
-                      <Link className="lightbox-image" href="images/resource/gallery1-1.jpg"><img src="images/resource/gallery1-1.jpg" alt="Image"/></Link>
+                      {/* <Link className="lightbox-image" href="images/resource/gallery1-1.jpg"> */}
+                      <img src="images/resource/gallery1-1.jpg" alt="Image"/>
+                      {/* </Link> */}
                     </figure>
-                    <Link className="icon" href="page-gallery"><i className="fa-sharp fa-light fa-eye"></i></Link>
+                    {/* <Link className="icon" href="page-gallery"><i className="fa-sharp fa-light fa-eye"></i></Link> */}
                   </div>
                 </div>
               </div>

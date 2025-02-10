@@ -27,9 +27,9 @@ export default function Home() {
       <Pricing1 />
       <Contact1 />
       <Testimonial1 />
-      <Team1 />
+      {/* <Team1 /> */}
       <Instagram1 />
-      <Blog1 />
+      {/* <Blog1 /> */}
     </Layout>
     </>
   )

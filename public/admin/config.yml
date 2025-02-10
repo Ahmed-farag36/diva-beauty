@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: # Branch to update (optional; defaults to master)
+
+media_folder: public/images
+public_folder: images
+collections:
+  - name: "pages" # Used in routes, e.g., /admin/collections/pages
+    label: "Pages" # Used in the UI
+    format: "json"
+    # folder: "content/pages" # The path to the folder where the documents are stored
+    files:
+      - name: "home"
+        label: "Home"
+        file: "content/pages/home.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero_section"
+            widget: "object"

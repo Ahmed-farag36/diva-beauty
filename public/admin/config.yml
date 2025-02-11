@@ -1,12 +1,9 @@
 backend:
-  name: git
-  branch: main
+  name: git-gateway
+  branch: # Branch to update (optional; defaults to master)
 
-local_backend: true
-
-media_folder: "public/uploads" # Folder where uploaded files will be stored
-public_folder: "/uploads"
-
+media_folder: public/images
+public_folder: images
 collections:
   - name: "pages" # Used in routes, e.g., /admin/collections/pages
     label: "Pages" # Used in the UI
@@ -16,3 +13,39 @@ collections:
       - name: "home"
         label: "Home"
         file: "content/pages/home.json"
+        fields:
+          # repeat for every carousel slide
+          - label: "Banner Section"
+            name: "banner_section"
+            widget: "list"
+            fields:
+              - {
+                  name: "banner_header_prefix",
+                  label: "Banner Header prefix",
+                  widget: "string",
+                }
+              - {
+                  name: "banner_header_part1",
+                  label: "Banner Header part1",
+                  widget: "string",
+                }
+              - {
+                  name: "banner_header_part2",
+                  label: "Banner Header part2",
+                  widget: "string",
+                }
+              - {
+                  name: "banner_cta_label",
+                  label: "Banner CTA Label",
+                  widget: "string",
+                }
+              - {
+                  name: "banner_cta_link",
+                  label: "Banner CTA Link",
+                  widget: "string",
+                }
+              - {
+                  name: "banner_header_website_title",
+                  label: "Banner Header Website Title",
+                  widget: "string",
+                }

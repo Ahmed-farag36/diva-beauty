@@ -1,0 +1,38 @@
+{
+  "banner": {
+    "slides": [
+      {
+        "backgroundImage": "/images/main-slider/bg-slider1-1.png",
+        "leapImage": "/images/main-slider/slide1-3.png",
+        "subTitle": "Professional Styling Since 1990",
+        "title": {
+          "part1": "The Essence",
+          "part2": "Of Beauty"
+        },
+        "button": {
+          "text": "Book Now",
+          "link": "page-contact"
+        },
+        "image1": "/images/main-slider/slide1-4.png",
+        "image2": "/images/main-slider/slide1-2.png",
+        "styleTitle": "Purerelax"
+      },
+      {
+        "backgroundImage": "/images/main-slider/bg-slider1-1.png",
+        "leapImage": "/images/main-slider/slide1-3.png",
+        "subTitle": "Professional Styling Since 1990",
+        "title": {
+          "part1": "The Essence",
+          "part2": "Of Beauty"
+        },
+        "button": {
+          "text": "Book Now",
+          "link": "page-contact"
+        },
+        "image1": "/images/main-slider/slide1-4.png",
+        "image2": "/images/main-slider/slide1-2.png",
+        "styleTitle": "Purerelax"
+      }
+    ]
+  }
+} 

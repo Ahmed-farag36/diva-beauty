@@ -1,0 +1,18 @@
+backend:
+  name: git
+  branch: main
+
+local_backend: true
+
+media_folder: "public/uploads" # Folder where uploaded files will be stored
+public_folder: "/uploads"
+
+collections:
+  - name: "pages" # Used in routes, e.g., /admin/collections/pages
+    label: "Pages" # Used in the UI
+    format: "json"
+    # folder: "content/pages" # The path to the folder where the documents are stored
+    files:
+      - name: "home"
+        label: "Home"
+        file: "content/pages/home.json"

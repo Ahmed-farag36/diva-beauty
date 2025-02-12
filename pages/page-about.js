@@ -7,6 +7,7 @@ import Pricing1 from "@/components/sections/Pricing1"
 import Testimonial1 from "@/components/sections/Testimonial1"
 import Video1 from "@/components/sections/Video1"
 import data from "@/content/pages/home.json"
+
 export default function PageAbout() {
   return (
     <>
@@ -14,10 +15,10 @@ export default function PageAbout() {
     <PageTitle pageName="About Us" />
     <About1 data={data} />
     <Clients8 />
-    <Video1 />
-    <Pricing1 />
-    <Contact1 />
-    <Testimonial1 />
+    <Video1 data={data} />
+    <Pricing1 data={data} />
+    <Contact1 data={data} />
+    <Testimonial1 data={data} />
     </Layout>
     </>
   )

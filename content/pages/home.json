@@ -163,5 +163,195 @@
         "link": "page-service-details"
       }
     ]
+  },
+  "marquee": {
+    "items": [
+      {
+        "text": "Mesotherapy"
+      },
+      {
+        "text": "Treatments"
+      },
+      {
+        "text": "Relax"
+      },
+      {
+        "text": "Manicure"
+      }
+    ]
+  },
+  "video": {
+    "bgImage": "/images/background/bg-video1.jpg",
+    "title": "Book & feel our Incredible Spa Experience",
+    "button": {
+      "text": "Make Appointment",
+      "link": "page-contact"
+    },
+    "videoElement": {
+      "title": "Watch Now",
+      "videoId": "L61p2uyiMSo"
+    }
+  },
+  "gallery": {
+    "sideImages": [
+      {
+        "image": "images/resource/gallery1-4.jpg",
+        "alt": "Gallery Image 1"
+      },
+      {
+        "image": "images/resource/gallery1-3.jpg",
+        "alt": "Gallery Image 2"
+      },
+      {
+        "image": "images/resource/gallery1-2.jpg",
+        "alt": "Gallery Image 3"
+      }
+    ],
+    "mainImage": {
+      "image": "images/resource/gallery1-1.jpg",
+      "alt": "Gallery Main Image"
+    }
+  },
+  "pricing": {
+    "header": {
+      "icon": "images/icons/icon1.png",
+      "subTitle": "Price",
+      "title": "Spa Treatments With Pricing"
+    },
+    "centerImage": {
+      "bgImage": "/images/resource/flower1.png",
+      "image": "images/resource/price1-1.png"
+    },
+    "items": [
+      {
+        "image": "images/resource/price1-2.jpg",
+        "title": "Manicure",
+        "description": "20mins revitalize facial",
+        "price": "$30",
+        "link": "page-pricing"
+      },
+      {
+        "image": "images/resource/price1-3.jpg",
+        "title": "Face facial",
+        "description": "20mins revitalize facial",
+        "price": "$40",
+        "link": "page-pricing"
+      },
+      {
+        "image": "images/resource/price1-4.jpg",
+        "title": "Makeup & Massage",
+        "description": "20mins revitalize facial",
+        "price": "$50",
+        "link": "page-pricing"
+      }
+    ]
+  },
+  "contact": {
+    "bgImage": "/images/background/bg-contact1-1.jpg",
+    "topShapeImage": "/images/resource/curved-shape-top.png",
+    "bottomShapeImage": "/images/resource/curved-shape-bottom.png",
+    "form": {
+      "icon": "images/icons/icon1.png",
+      "subTitle": "Appointment",
+      "title": "Book Now",
+      "description": "Proin efficitur, mauris vel condimentum pulvinar, velit orci consectetur ligula.",
+      "buttonText": "Book Now",
+      "fields": {
+        "namePlaceholder": "Name *",
+        "emailPlaceholder": "Email Address *",
+        "servicePlaceholder": "Select Service *",
+        "datePlaceholder": "Select Date *",
+        "dateFormat": "YYYY-MM-DD",
+        "messagePlaceholder": "Write a Message"
+      }
+    }
+  },
+  "instagram": {
+    "title": "Follow On Instagram",
+    "images": [
+      {
+        "image": "images/resource/instagram1-1.jpg",
+        "link": "images/resource/instagram1-1.jpg",
+        "alt": "Instagram Image 1"
+      },
+      {
+        "image": "images/resource/instagram1-2.jpg",
+        "link": "images/resource/instagram1-2.jpg",
+        "alt": "Instagram Image 2"
+      },
+      {
+        "image": "images/resource/instagram1-3.jpg",
+        "link": "images/resource/instagram1-3.jpg",
+        "alt": "Instagram Image 3"
+      },
+      {
+        "image": "images/resource/instagram1-1.jpg",
+        "link": "images/resource/instagram1-1.jpg",
+        "alt": "Instagram Image 4"
+      },
+      {
+        "image": "images/resource/instagram1-4.jpg",
+        "link": "images/resource/instagram1-4.jpg",
+        "alt": "Instagram Image 5"
+      },
+      {
+        "image": "images/resource/instagram1-5.jpg",
+        "link": "images/resource/instagram1-5.jpg",
+        "alt": "Instagram Image 6"
+      }
+    ]
+  },
+  "testimonial": {
+    "header": {
+      "icon": "images/icons/icon1.png",
+      "subTitle": "Testimonial",
+      "title": "What they say?"
+    },
+    "items": [
+      {
+        "text": "Suspendisse sit amet neque euismod, convallis quam eget, dignissim massa. Aliquam blandit risus purus, in congue nunc venenatis id. Pellentesque habitant morbi tristique senectus",
+        "name": "Robert Fox",
+        "designation": "Co Founder",
+        "rating": 5
+      },
+      {
+        "text": "Suspendisse sit amet neque euismod, convallis quam eget, dignissim massa. Aliquam blandit risus purus, in congue nunc venenatis id. Pellentesque habitant morbi tristique senectus",
+        "name": "Robert Fox",
+        "designation": "Co Founder",
+        "rating": 5
+      }
+    ],
+    "clientImages": [
+      {
+        "image": "images/resource/client1.png",
+        "link": "#",
+        "alt": "Client 1",
+        "className": "client1 bounce-x"
+      },
+      {
+        "image": "images/resource/client2.png",
+        "link": "#",
+        "alt": "Client 2",
+        "className": "client2 bounce-y"
+      },
+      {
+        "image": "images/resource/client3.png",
+        "link": "#",
+        "alt": "Client 3",
+        "className": "client3 bounce-x"
+      },
+      {
+        "image": "images/resource/client4.png",
+        "link": "#",
+        "alt": "Client 4",
+        "className": "client4 bounce-x"
+      },
+      {
+        "image": "images/resource/client5.png",
+        "link": "#",
+        "alt": "Client 5",
+        "className": "client5 bounce-y"
+      }
+    ]
   }
 }

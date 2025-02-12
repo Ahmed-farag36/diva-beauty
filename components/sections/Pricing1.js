@@ -1,5 +1,8 @@
 import Link from "next/link"
-const Pricing1 = () => {
+
+const Pricing1 = ({ data }) => {
+    const { pricing } = data;
+    
     return (
         <>
         <section className="pricing-section">
@@ -7,110 +10,71 @@ const Pricing1 = () => {
           <div className="leaf2 bounce-x"></div>
           <div className="auto-container">
             <div className="sec-title text-center">
-              <figure className="image"><img src="images/icons/icon1.png" alt="Image"/></figure>
-              <span className="sub-title">Price</span>
-              <h2 className="words-slide-up text-split">Spa Treatments With <br/> Pricing</h2>
+              <figure className="image">
+                <img src={pricing.header.icon} alt="Price Icon"/>
+              </figure>
+              <span className="sub-title">{pricing.header.subTitle}</span>
+              <h2 className="words-slide-up text-split">{pricing.header.title}</h2>
             </div>
             <div className="row align-items-center">
               <div className="content-column col-lg-4">
-                <div className="pricing-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <figure className="image overlay-anim mb-0">
-                        <Link href="page-pricing"><img src="images/resource/price1-2.jpg" alt="Image"/></Link>
-                      </figure>
-                    </div>
-                    <div className="content-box">
-                      <div className="inner">
-                        <h5 className="title"><Link href="page-pricing">Manicure</Link></h5>
-                        <div className="text">20mins revitalize facial</div>
+                {pricing.items.map((item, index) => (
+                  <div key={index} className="pricing-block">
+                    <div className="inner-box">
+                      <div className="image-box">
+                        <figure className="image overlay-anim mb-0">
+                          <Link href={item.link}>
+                            <img src={item.image} alt={item.title}/>
+                          </Link>
+                        </figure>
                       </div>
-                      <span className="price">$30</span>
+                      <div className="content-box">
+                        <div className="inner">
+                          <h5 className="title">
+                            <Link href={item.link}>{item.title}</Link>
+                          </h5>
+                          <div className="text">{item.description}</div>
+                        </div>
+                        <span className="price">{item.price}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="pricing-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <figure className="image overlay-anim mb-0"><Link href="page-pricing"><img src="images/resource/price1-3.jpg" alt="Image"/></Link></figure>
-                    </div>
-                    <div className="content-box">
-                      <div className="inner">
-                        <h5 className="title"><Link href="page-pricing">Face facial</Link></h5>
-                        <div className="text">20mins revitalize facial</div>
-                      </div>
-                      <span className="price">$40</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="pricing-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <figure className="image overlay-anim mb-0"><Link href="page-pricing"><img src="images/resource/price1-4.jpg" alt="Image"/></Link></figure>
-                    </div>
-                    <div className="content-box">
-                      <div className="inner">
-                        <h5 className="title"><Link href="page-pricing">Makeup & Massage</Link></h5>
-                        <div className="text">20mins revitalize facial</div>
-                      </div>
-                      <span className="price">$50</span>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
               <div className="image-column col-lg-4">
                 <div className="inner-box">
-                  <div className="bg bg-image bounce-y" style={{ backgroundImage: 'url(/images/resource/flower1.png)' }}></div>
+                  <div 
+                    className="bg bg-image bounce-y" 
+                    style={{ backgroundImage: `url(${pricing.centerImage.bgImage})` }}
+                  ></div>
                   <figure className="image overlay-anim mb-0">
-                    <img src="images/resource/price1-1.png" alt="Image"/>
+                    <img src={pricing.centerImage.image} alt="Center Image"/>
                   </figure>
                 </div>
               </div>
               <div className="content-column col-lg-4">
-                <div className="pricing-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <figure className="image overlay-anim mb-0">
-                        <Link href="page-pricing"><img src="images/resource/price1-2.jpg" alt="Image"/></Link>
-                      </figure>
-                    </div>
-                    <div className="content-box">
-                      <div className="inner">
-                        <h5 className="title"><Link href="page-pricing">Manicure</Link></h5>
-                        <div className="text">20mins revitalize facial</div>
+                {pricing.items.map((item, index) => (
+                  <div key={`right-${index}`} className="pricing-block">
+                    <div className="inner-box">
+                      <div className="image-box">
+                        <figure className="image overlay-anim mb-0">
+                          <Link href={item.link}>
+                            <img src={item.image} alt={item.title}/>
+                          </Link>
+                        </figure>
                       </div>
-                      <span className="price">$30</span>
+                      <div className="content-box">
+                        <div className="inner">
+                          <h5 className="title">
+                            <Link href={item.link}>{item.title}</Link>
+                          </h5>
+                          <div className="text">{item.description}</div>
+                        </div>
+                        <span className="price">{item.price}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="pricing-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <figure className="image overlay-anim mb-0"><Link href="page-pricing"><img src="images/resource/price1-3.jpg" alt="Image"/></Link></figure>
-                    </div>
-                    <div className="content-box">
-                      <div className="inner">
-                        <h5 className="title"><Link href="page-pricing">Face facial</Link></h5>
-                        <div className="text">20mins revitalize facial</div>
-                      </div>
-                      <span className="price">$40</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="pricing-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <figure className="image overlay-anim mb-0"><Link href="page-pricing"><img src="images/resource/price1-4.jpg" alt="Image"/></Link></figure>
-                    </div>
-                    <div className="content-box">
-                      <div className="inner">
-                        <h5 className="title"><Link href="page-pricing">Makeup & Massage</Link></h5>
-                        <div className="text">20mins revitalize facial</div>
-                      </div>
-                      <span className="price">$50</span>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -118,4 +82,5 @@ const Pricing1 = () => {
         </>
     );
 };
-export default Pricing1
+
+export default Pricing1;

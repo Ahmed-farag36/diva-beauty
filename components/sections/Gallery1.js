@@ -1,5 +1,8 @@
 import Link from "next/link"
-const Gallery1 = () => {
+
+const Gallery1 = ({ data }) => {
+    const { gallery } = data;
+    
     return (
         <>
         <section className="gallery-section">
@@ -7,51 +10,25 @@ const Gallery1 = () => {
             <div className="row">
               <div className="col-xl-6">
                 <div className="row">
-      
-                  <div className="gallery-block col-sm-6">
-                    <div className="inner-box">
-                      <div className="image-box">
-                        <figure className="image">
-                          {/* <Link className="lightbox-image" href="images/resource/gallery1-4.jpg"> */}
-                          <img src="images/resource/gallery1-4.jpg" alt="Image"/>
-                          {/* </Link> */}
-                        </figure>
-                        {/* <Link className="icon" href="page-gallery"><i className="fa-sharp fa-light fa-eye"></i></Link> */}
+                  {gallery.sideImages.map((item, index) => (
+                    <div key={index} className="gallery-block col-sm-6">
+                      <div className="inner-box">
+                        <div className="image-box">
+                          <figure className="image">
+                            <img src={item.image} alt={item.alt}/>
+                          </figure>
+                        </div>
                       </div>
                     </div>
-                  </div>
-      
-                  <div className="gallery-block col-sm-6">
-                    <div className="inner-box">
-                      <div className="image-box">
-                        <figure className="image">
-                          {/* <Link className="lightbox-image" href="images/resource/gallery1-3.jpg"> */}
-                          <img src="images/resource/gallery1-3.jpg" alt="Image"/>
-                          {/* </Link> */}
-                        </figure>
-                        {/* <Link className="icon" href="page-gallery"><i className="fa-sharp fa-light fa-eye"></i></Link> */}
-                      </div>
-                      <div className="image-box">
-                        <figure className="image">
-                          {/* <Link className="lightbox-image" href="images/resource/gallery1-2.jpg"> */}
-                          <img src="images/resource/gallery1-2.jpg" alt="Image"/>
-                          {/* </Link> */}
-                        </figure>
-                        {/* <Link className="icon" href="page-gallery"><i className="fa-sharp fa-light fa-eye"></i></Link> */}
-                      </div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
               <div className="gallery-block col-xl-6">
                 <div className="inner-box">
                   <div className="image-box">
                     <figure className="image">
-                      {/* <Link className="lightbox-image" href="images/resource/gallery1-1.jpg"> */}
-                      <img src="images/resource/gallery1-1.jpg" alt="Image"/>
-                      {/* </Link> */}
+                      <img src={gallery.mainImage.image} alt={gallery.mainImage.alt}/>
                     </figure>
-                    {/* <Link className="icon" href="page-gallery"><i className="fa-sharp fa-light fa-eye"></i></Link> */}
                   </div>
                 </div>
               </div>
@@ -61,4 +38,5 @@ const Gallery1 = () => {
         </>
     );
 };
-export default Gallery1
+
+export default Gallery1;

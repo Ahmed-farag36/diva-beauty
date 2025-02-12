@@ -23,14 +23,14 @@ export default function Home() {
       <About1 data={data} />
       <Clients1 data={data} />
       <Services1 data={data} />
-      <Marquee1 />
-      <Video1 />
-      <Gallery1 />
-      <Pricing1 />
-      <Contact1 />
-      <Testimonial1 />
+      <Marquee1 data={data} />
+      <Video1 data={data} />
+      <Gallery1 data={data} />
+      <Pricing1 data={data} />
+      <Contact1 data={data} />
+      <Testimonial1 data={data} />
       {/* <Team1 /> */}
-      <Instagram1 />
+      <Instagram1 data={data} />
       {/* <Blog1 /> */}
     </Layout>
     </>

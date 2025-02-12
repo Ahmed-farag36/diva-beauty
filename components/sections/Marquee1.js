@@ -1,25 +1,29 @@
-
-const Marquee1 = () => {
+const Marquee1 = ({ data }) => {
+    const { marquee } = data;
+    
     return (
         <>
         <section className="marquee-section">
           <div className="marquee">
             <div className="marquee-group">
-              <div className="text" data-text="Mesotherapy">Mesotherapy</div>
-              <div className="text" data-text="Treatments">Treatments</div>
-              <div className="text" data-text="Relax">Relax</div>
-              <div className="text" data-text="Manicure">Manicure</div>
+              {marquee.items.map((item, index) => (
+                <div key={index} className="text" data-text={item.text}>
+                  {item.text}
+                </div>
+              ))}
             </div>
       
             <div aria-hidden="true" className="marquee-group">
-              <div className="text" data-text="Mesotherapy">Mesotherapy</div>
-              <div className="text" data-text="Treatments">Treatments</div>
-              <div className="text" data-text="Relax">Relax</div>
-              <div className="text" data-text="Manicure">Manicure</div>
+              {marquee.items.map((item, index) => (
+                <div key={`copy-${index}`} className="text" data-text={item.text}>
+                  {item.text}
+                </div>
+              ))}
             </div>
           </div>
         </section>
         </>
     );
 };
-export default Marquee1
+
+export default Marquee1;

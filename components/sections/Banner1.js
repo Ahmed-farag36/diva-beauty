@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import data from "@/content/pages/home.json";
 
 const swiperOptions = {
     modules: [ Autoplay, Pagination, Navigation],
@@ -13,12 +12,13 @@ const swiperOptions = {
     loop: true
 };
 
-const Banner1 = () => {
+const Banner1 = ({ data }) => {
+    const { banner } = data;
     return (
         <>
         <section className="main-slider">
             <Swiper {...swiperOptions}>
-                {data.banner.slides.map((slide, index) => (
+                {banner.slides.map((slide, index) => (
                     <SwiperSlide className="slide-item" key={index}>
                         <div className="image-curve"></div>
                         <div className="bg bg-image" style={{ backgroundImage: `url(${slide.backgroundImage})` }}></div>

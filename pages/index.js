@@ -12,13 +12,15 @@ import Services1 from "@/components/sections/Services1"
 import Team1 from "@/components/sections/Team1"
 import Testimonial1 from "@/components/sections/Testimonial1"
 import Video1 from "@/components/sections/Video1"
+import data from "@/content/pages/home.json"
+
 export default function Home() {
 
   return (
     <>
     <Layout headerStyle={1} footerStyle={1}>
-      <Banner1 />
-      <About1 />
+      <Banner1 data={data} />
+      <About1 data={data} />
       <Clients1 />
       <Services1 />
       <Marquee1 />

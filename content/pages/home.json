@@ -34,5 +34,50 @@
         "styleTitle": "Purerelax"
       }
     ]
+  },
+  "about": {
+    "bgImage1": "/images/resource/about1-3.png",
+    "bgImage2": "/images/resource/about1-4.png",
+    "bgImage3": "/images/resource/about1-7.png",
+    "bgImage4": "/images/resource/about1-8.png",
+    "mainImage": "/images/resource/about1-1.png",
+    "experienceBox": {
+      "bgImage": "/images/resource/about1-6.png",
+      "years": "20+",
+      "text": "Experience"
+    },
+    "content": {
+      "subTitle": "Get to know us",
+      "titlePart1": "Beauty and",
+      "titlePart2": "Spa Center",
+      "description": "Proin efficitur, mauris vel condimentum pulvinar, velit orci consectetur ligula, eget egestas magna mi ut arcu. Phasellus nec odio orci.",
+      "features": [
+        {
+          "text": "Velit orci consectetur ligula, eget egestas magn",
+          "icon": "/images/icons/theme-icon4.png"
+        },
+        {
+          "text": "Pelit orci consectetur ligula",
+          "icon": "/images/icons/theme-icon4.png"
+        },
+        {
+          "text": "Eget egestas magn",
+          "icon": "/images/icons/theme-icon4.png"
+        }
+      ]
+    },
+    "author": {
+      "image": "/images/resource/about1-2.png",
+      "signature": "/images/resource/about-sign1.png",
+      "name": "Michale",
+      "designation": "Co Founder"
+    },
+    "openingHours": {
+      "icon": "/images/icons/clock1.png",
+      "title": "Opening Hours",
+      "weekdayHours": "09:00 am - 06:00 pm",
+      "saturdayHours": "11:00 am to 3:00 pm",
+      "bgImage": "/images/resource/about1-5.png"
+    }
   }
 }

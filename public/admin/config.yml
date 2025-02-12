@@ -40,3 +40,50 @@ collections:
                   - { label: "Image 1", name: "image1", widget: "image" }
                   - { label: "Image 2", name: "image2", widget: "image" }
                   - { label: "Style Title", name: "styleTitle", widget: "string", default: "Purerelax" }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Background Image 1", name: "bgImage1", widget: "image" }
+              - { label: "Background Image 2", name: "bgImage2", widget: "image" }
+              - { label: "Background Image 3", name: "bgImage3", widget: "image" }
+              - { label: "Background Image 4", name: "bgImage4", widget: "image" }
+              - { label: "Main Image", name: "mainImage", widget: "image" }
+              - label: "Experience Box"
+                name: "experienceBox"
+                widget: "object"
+                fields:
+                  - { label: "Background Image", name: "bgImage", widget: "image" }
+                  - { label: "Years", name: "years", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
+              - label: "Content"
+                name: "content"
+                widget: "object"
+                fields:
+                  - { label: "Sub Title", name: "subTitle", widget: "string" }
+                  - { label: "Title Part 1", name: "titlePart1", widget: "string" }
+                  - { label: "Title Part 2", name: "titlePart2", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - label: "Features"
+                    name: "features"
+                    widget: "list"
+                    fields:
+                      - { label: "Text", name: "text", widget: "string" }
+                      - { label: "Icon", name: "icon", widget: "image" }
+              - label: "Author"
+                name: "author"
+                widget: "object"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Signature", name: "signature", widget: "image" }
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Designation", name: "designation", widget: "string" }
+              - label: "Opening Hours"
+                name: "openingHours"
+                widget: "object"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Weekday Hours", name: "weekdayHours", widget: "string" }
+                  - { label: "Saturday Hours", name: "saturdayHours", widget: "string" }
+                  - { label: "Background Image", name: "bgImage", widget: "image" }

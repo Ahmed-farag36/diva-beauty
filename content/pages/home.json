@@ -193,11 +193,7 @@
     }
   },
   "gallery": {
-    "sideImages": [
-      {
-        "image": "images/resource/gallery1-4.jpg",
-        "alt": "Gallery Image 1"
-      },
+    "smallImages": [
       {
         "image": "images/resource/gallery1-3.jpg",
         "alt": "Gallery Image 2"
@@ -205,6 +201,12 @@
       {
         "image": "images/resource/gallery1-2.jpg",
         "alt": "Gallery Image 3"
+      }
+    ],
+    "mediumImages": [
+      {
+        "image": "images/resource/gallery1-4.jpg",
+        "alt": "Gallery Image 1"
       }
     ],
     "mainImage": {
@@ -266,41 +268,6 @@
       }
     }
   },
-  "instagram": {
-    "title": "Follow On Instagram",
-    "images": [
-      {
-        "image": "images/resource/instagram1-1.jpg",
-        "link": "images/resource/instagram1-1.jpg",
-        "alt": "Instagram Image 1"
-      },
-      {
-        "image": "images/resource/instagram1-2.jpg",
-        "link": "images/resource/instagram1-2.jpg",
-        "alt": "Instagram Image 2"
-      },
-      {
-        "image": "images/resource/instagram1-3.jpg",
-        "link": "images/resource/instagram1-3.jpg",
-        "alt": "Instagram Image 3"
-      },
-      {
-        "image": "images/resource/instagram1-1.jpg",
-        "link": "images/resource/instagram1-1.jpg",
-        "alt": "Instagram Image 4"
-      },
-      {
-        "image": "images/resource/instagram1-4.jpg",
-        "link": "images/resource/instagram1-4.jpg",
-        "alt": "Instagram Image 5"
-      },
-      {
-        "image": "images/resource/instagram1-5.jpg",
-        "link": "images/resource/instagram1-5.jpg",
-        "alt": "Instagram Image 6"
-      }
-    ]
-  },
   "testimonial": {
     "header": {
       "icon": "images/icons/icon1.png",
@@ -351,6 +318,41 @@
         "link": "#",
         "alt": "Client 5",
         "className": "client5 bounce-y"
+      }
+    ]
+  },
+  "instagram": {
+    "title": "Follow On Instagram",
+    "images": [
+      {
+        "image": "images/resource/instagram1-1.jpg",
+        "link": "images/resource/instagram1-1.jpg",
+        "alt": "Instagram Image 1"
+      },
+      {
+        "image": "images/resource/instagram1-2.jpg",
+        "link": "images/resource/instagram1-2.jpg",
+        "alt": "Instagram Image 2"
+      },
+      {
+        "image": "images/resource/instagram1-3.jpg",
+        "link": "images/resource/instagram1-3.jpg",
+        "alt": "Instagram Image 3"
+      },
+      {
+        "image": "images/resource/instagram1-1.jpg",
+        "link": "images/resource/instagram1-1.jpg",
+        "alt": "Instagram Image 4"
+      },
+      {
+        "image": "images/resource/instagram1-4.jpg",
+        "link": "images/resource/instagram1-4.jpg",
+        "alt": "Instagram Image 5"
+      },
+      {
+        "image": "images/resource/instagram1-5.jpg",
+        "link": "images/resource/instagram1-5.jpg",
+        "alt": "Instagram Image 6"
       }
     ]
   }

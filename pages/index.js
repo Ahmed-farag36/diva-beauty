@@ -21,7 +21,7 @@ export default function Home() {
     <Layout headerStyle={1} footerStyle={1}>
       <Banner1 data={data} />
       <About1 data={data} />
-      <Clients1 />
+      <Clients1 data={data} />
       <Services1 />
       <Marquee1 />
       <Video1 />

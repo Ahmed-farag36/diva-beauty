@@ -87,3 +87,14 @@ collections:
                   - { label: "Weekday Hours", name: "weekdayHours", widget: "string" }
                   - { label: "Saturday Hours", name: "saturdayHours", widget: "string" }
                   - { label: "Background Image", name: "bgImage", widget: "image" }
+          - label: "Clients Section"
+            name: "clients"
+            widget: "object"
+            fields:
+              - label: "Clients"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Name", name: "name", widget: "string" }

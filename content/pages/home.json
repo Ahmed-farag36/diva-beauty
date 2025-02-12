@@ -79,5 +79,44 @@
       "saturdayHours": "11:00 am to 3:00 pm",
       "bgImage": "/images/resource/about1-5.png"
     }
+  },
+  "clients": {
+    "items": [
+      {
+        "image": "/images/resource/client1-1.png",
+        "link": "#",
+        "name": "Client 1"
+      },
+      {
+        "image": "/images/resource/client1-2.png",
+        "link": "#",
+        "name": "Client 2"
+      },
+      {
+        "image": "/images/resource/client1-3.png",
+        "link": "#",
+        "name": "Client 3"
+      },
+      {
+        "image": "/images/resource/client1-4.png",
+        "link": "#",
+        "name": "Client 4"
+      },
+      {
+        "image": "/images/resource/client1-5.png",
+        "link": "#",
+        "name": "Client 5"
+      },
+      {
+        "image": "/images/resource/client1-1.png",
+        "link": "#",
+        "name": "Client 1"
+      },
+      {
+        "image": "/images/resource/client1-2.png",
+        "link": "#",
+        "name": "Client 2"
+      }
+    ]
   }
 }

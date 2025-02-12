@@ -22,7 +22,7 @@ export default function Home() {
       <Banner1 data={data} />
       <About1 data={data} />
       <Clients1 data={data} />
-      <Services1 />
+      <Services1 data={data} />
       <Marquee1 />
       <Video1 />
       <Gallery1 />

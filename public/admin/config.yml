@@ -98,3 +98,24 @@ collections:
                   - { label: "Image", name: "image", widget: "image" }
                   - { label: "Link", name: "link", widget: "string" }
                   - { label: "Name", name: "name", widget: "string" }
+          - label: "Services Section"
+            name: "services"
+            widget: "object"
+            fields:
+              - label: "Header"
+                name: "header"
+                widget: "object"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Sub Title", name: "subTitle", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Background Image 1", name: "bgImage1", widget: "image" }
+                  - { label: "Background Image 2", name: "bgImage2", widget: "image" }
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }

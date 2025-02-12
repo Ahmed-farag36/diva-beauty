@@ -39,7 +39,10 @@ const swiperOptions = {
 		},
 	}
 };
-const Services1 = () => {
+
+const Services1 = ({ data }) => {
+    const { services } = data;
+    
     return (
         <>
         <section className="services-section pt-0">
@@ -49,96 +52,40 @@ const Services1 = () => {
             <div className="sec-title">
               <div className="row">
                 <div className="col-xl-6">
-                  <figure className="image"><img src="/images/icons/icon1.png" alt="Image"/></figure>
-                  <span className="sub-title">Services list</span>
-                  <h2 className="words-slide-up text-split">Our Services Will Make You Glow</h2>
+                  <figure className="image">
+                    <img src={services.header.icon} alt="Service Icon"/>
+                  </figure>
+                  <span className="sub-title">{services.header.subTitle}</span>
+                  <h2 className="words-slide-up text-split">{services.header.title}</h2>
                 </div>
                 <div className="col-xl-5 offset-xl-1">
-                  <div className="text">Proin efficitur, mauris vel condimentum pulvinar, velit orci consectetur ligula, eget egestas magna mi ut arcu. Phasellus nec.</div>
+                  <div className="text">{services.header.description}</div>
                 </div>
               </div>
             </div>
                 <Swiper {...swiperOptions} className="service-carousel owl-carousel owl-theme default-dots pb-0">
-                    <SwiperSlide>
-							<div className="swiper-slide">
-                <div className="service-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <div className="bg-image" style={{ backgroundImage: 'url(/images/resource/service1-1.png)' }}></div>
-                      <div className="bg-image-two" style={{ backgroundImage: 'url(/images/resource/service1-2.png)' }}></div>
-                    </div>
-                    <div className="content-box">
-                      <figure className="icon mb-0"><img src="/images/icons/theme-icon5.png" alt="Image"/></figure>
-                      <h4 className="title"><Link href="page-service-details">Sauna Relax</Link></h4>
-                    </div>
-                  </div>
-                </div>
-							</div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-							<div className="swiper-slide">
-                <div className="service-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <div className="bg-image" style={{ backgroundImage: 'url(/images/resource/service1-1.png)' }}></div>
-                      <div className="bg-image-two" style={{ backgroundImage: 'url(/images/resource/service1-2.png)' }}></div>
-                    </div>
-                    <div className="content-box">
-                      <figure className="icon mb-0"><img src="/images/icons/theme-icon6.png" alt="Image"/></figure>
-                      <h4 className="title"><Link href="page-service-details">Face Treatments</Link></h4>
-                    </div>
-                  </div>
-                </div>
-							</div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-							<div className="swiper-slide">
-                <div className="service-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <div className="bg-image" style={{ backgroundImage: 'url(/images/resource/service1-1.png)' }}></div>
-                      <div className="bg-image-two" style={{ backgroundImage: 'url(/images/resource/service1-2.png)' }}></div>
-                    </div>
-                    <div className="content-box">
-                      <figure className="icon mb-0"><img src="/images/icons/theme-icon7.png" alt="Image"/></figure>
-                      <h4 className="title"><Link href="page-service-details">Make-up</Link></h4>
-                    </div>
-                  </div>
-                </div>
-							</div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-							<div className="swiper-slide">
-                <div className="service-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <div className="bg-image" style={{ backgroundImage: 'url(/images/resource/service1-1.png)' }}></div>
-                      <div className="bg-image-two" style={{ backgroundImage: 'url(/images/resource/service1-2.png)' }}></div>
-                    </div>
-                    <div className="content-box">
-                      <figure className="icon mb-0"><img src="/images/icons/theme-icon8.png" alt="Image"/></figure>
-                      <h4 className="title"><Link href="page-service-details">Thai Massage</Link></h4>
-                    </div>
-                  </div>
-                </div>
-							</div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-							<div className="swiper-slide">
-                <div className="service-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <div className="bg-image" style={{ backgroundImage: 'url(/images/resource/service1-1.png)' }}></div>
-                      <div className="bg-image-two" style={{ backgroundImage: 'url(/images/resource/service1-2.png)' }}></div>
-                    </div>
-                    <div className="content-box">
-                      <figure className="icon mb-0"><img src="/images/icons/theme-icon5.png" alt="Image"/></figure>
-                      <h4 className="title"><Link href="page-service-details">Sauna Relax</Link></h4>
-                    </div>
-                  </div>
-                </div>
-							</div>
-                    </SwiperSlide>
+                    {services.items.map((service, index) => (
+                        <SwiperSlide key={index}>
+                            <div className="swiper-slide">
+                                <div className="service-block">
+                                    <div className="inner-box">
+                                        <div className="image-box">
+                                            <div className="bg-image" style={{ backgroundImage: `url(${service.bgImage1})` }}></div>
+                                            <div className="bg-image-two" style={{ backgroundImage: `url(${service.bgImage2})` }}></div>
+                                        </div>
+                                        <div className="content-box">
+                                            <figure className="icon mb-0">
+                                                <img src={service.icon} alt={service.title}/>
+                                            </figure>
+                                            <h4 className="title">
+                                                <Link href={service.link}>{service.title}</Link>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
                 </div>
           </div>

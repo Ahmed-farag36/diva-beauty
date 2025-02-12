@@ -118,5 +118,50 @@
         "name": "Client 2"
       }
     ]
+  },
+  "services": {
+    "header": {
+      "icon": "/images/icons/icon1.png",
+      "subTitle": "Services list",
+      "title": "Our Services Will Make You Glow",
+      "description": "Proin efficitur, mauris vel condimentum pulvinar, velit orci consectetur ligula, eget egestas magna mi ut arcu. Phasellus nec."
+    },
+    "items": [
+      {
+        "bgImage1": "/images/resource/service1-1.png",
+        "bgImage2": "/images/resource/service1-2.png",
+        "icon": "/images/icons/theme-icon5.png",
+        "title": "Sauna Relax",
+        "link": "page-service-details"
+      },
+      {
+        "bgImage1": "/images/resource/service1-1.png",
+        "bgImage2": "/images/resource/service1-2.png",
+        "icon": "/images/icons/theme-icon6.png",
+        "title": "Face Treatments",
+        "link": "page-service-details"
+      },
+      {
+        "bgImage1": "/images/resource/service1-1.png",
+        "bgImage2": "/images/resource/service1-2.png",
+        "icon": "/images/icons/theme-icon7.png",
+        "title": "Make-up",
+        "link": "page-service-details"
+      },
+      {
+        "bgImage1": "/images/resource/service1-1.png",
+        "bgImage2": "/images/resource/service1-2.png",
+        "icon": "/images/icons/theme-icon8.png",
+        "title": "Thai Massage",
+        "link": "page-service-details"
+      },
+      {
+        "bgImage1": "/images/resource/service1-1.png",
+        "bgImage2": "/images/resource/service1-2.png",
+        "icon": "/images/icons/theme-icon5.png",
+        "title": "Sauna Relax",
+        "link": "page-service-details"
+      }
+    ]
   }
 }

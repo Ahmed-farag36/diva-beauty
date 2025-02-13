@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import menuData from "@/content/pages/header.json";
 
 export default function MobileMenu() {
   const [isActive, setIsActive] = useState({
@@ -20,38 +21,29 @@ export default function MobileMenu() {
       });
     }
   };
+  
   return (
     <>
       <ul className="navigation clearfix">
-        {/*Keep This Empty / Menu will come through Javascript*/}
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-
-        <li className="dropdown">
-          <Link href="/page-services">Services</Link>
-          <ul style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}>
-            <li>
-              <Link href="/page-services">Services Grid</Link>
-            </li>
-            <li>
-              <Link href="/page-service-details">Service Details</Link>
-            </li>
-          </ul>
-          <div className="dropdown-btn" onClick={() => handleClick(2)}>
-            <i className="fa fa-angle-down" />
-          </div>
-        </li>
-
-        <li>
-          <Link href="/page-pricing">Preise</Link>
-        </li>
-        <li>
-          <Link href="/page-team-details">Über uns</Link>
-        </li>
-        <li>
-          <Link href="/page-contact">Kontakt</Link>
-        </li>
+        {menuData.mobileMenu.items.map((item, index) => (
+          <li key={index} className={item.submenu ? "dropdown" : ""}>
+            <Link href={item.link}>{item.name}</Link>
+            {item.submenu && (
+              <>
+                <ul style={{ display: `${isActive.key === index ? "block" : "none"}` }}>
+                  {item.submenu.map((subItem, subIndex) => (
+                    <li key={subIndex}>
+                      <Link href={subItem.link}>{subItem.name}</Link>
+                    </li>
+                  ))}
+                </ul>
+                <div className="dropdown-btn" onClick={() => handleClick(index)}>
+                  <i className="fa fa-angle-down" />
+                </div>
+              </>
+            )}
+          </li>
+        ))}
       </ul>
     </>
   );

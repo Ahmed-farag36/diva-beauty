@@ -1,0 +1,104 @@
+{
+  "topBar": {
+    "email": "alma.lawson@example.com",
+    "hoursText": "Mon to Sat: 9:00am – 6:00pm Sun: Closed",
+    "socialLinks": [
+      {
+        "platform": "twitter",
+        "link": "#"
+      },
+      {
+        "platform": "facebook-f",
+        "link": "#"
+      },
+      {
+        "platform": "pinterest-p",
+        "link": "#"
+      },
+      {
+        "platform": "vimeo-v",
+        "link": "#"
+      }
+    ]
+  },
+  "logo": {
+    "light": "images/logo.png",
+    "dark": "images/logo-2.png"
+  },
+  "bookNowButton": {
+    "text": "Book Now",
+    "link": "page-contact"
+  },
+  "menu": {
+    "items": [
+      {
+        "label": "Home",
+        "link": "/",
+        "submenu": []
+      },
+      {
+        "label": "Behandlungen",
+        "link": "/page-services",
+        "submenu": [
+          {
+            "label": "Services Grid",
+            "link": "/page-services"
+          },
+          {
+            "label": "Service Details",
+            "link": "/page-service-details"
+          }
+        ]
+      },
+      {
+        "label": "Preise",
+        "link": "/page-pricing",
+        "submenu": []
+      },
+      {
+        "label": "Über uns",
+        "link": "/page-team-details",
+        "submenu": []
+      },
+      {
+        "label": "Kontakt",
+        "link": "/page-contact",
+        "submenu": []
+      }
+    ]
+  },
+  "mobileMenu": {
+    "items": [
+      {
+        "name": "Home",
+        "link": "/"
+      },
+      {
+        "name": "Services",
+        "link": "/page-services",
+        "submenu": [
+          {
+            "name": "Services Grid",
+            "link": "/page-services"
+          },
+          {
+            "name": "Service Details",
+            "link": "/page-service-details"
+          }
+        ]
+      },
+      {
+        "name": "Preise",
+        "link": "/page-pricing"
+      },
+      {
+        "name": "Über uns",
+        "link": "/page-team-details"
+      },
+      {
+        "name": "Kontakt",
+        "link": "/page-contact"
+      }
+    ]
+  }
+} 

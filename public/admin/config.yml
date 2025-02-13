@@ -255,3 +255,101 @@ collections:
                   - { label: "Link", name: "link", widget: "string" }
                   - { label: "Alt Text", name: "alt", widget: "string" }
                   - { label: "Class Name", name: "className", widget: "string" }
+
+      - name: "Header"
+        label: "Header"
+        file: "content/pages/header.json"
+        fields:
+          - label: "Top Bar"
+            name: "topBar"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string", default: "alma.lawson@example.com" }
+              - { label: "Hours Text", name: "hoursText", widget: "string", default: "Mon to Sat: 9:00am – 6:00pm Sun: Closed" }
+              - label: "Social Links"
+                name: "socialLinks"
+                widget: "list"
+                fields:
+                  - { label: "Platform", name: "platform", widget: "select", options: ["twitter", "facebook-f", "pinterest-p", "vimeo-v", "instagram"] }
+                  - { label: "Link", name: "link", widget: "string" }
+          - label: "Logo"
+            name: "logo"
+            widget: "object"
+            fields:
+              - { label: "Light Logo", name: "light", widget: "image" }
+              - { label: "Dark Logo", name: "dark", widget: "image" }
+          - label: "Book Now Button"
+            name: "bookNowButton"
+            widget: "object"
+            fields:
+              - { label: "Text", name: "text", widget: "string", default: "Book Now" }
+              - { label: "Link", name: "link", widget: "string", default: "page-contact" }
+          - label: "Mobile Menu"
+            name: "mobileMenu"
+            widget: "object"
+            fields:
+              - { label: "Phone Number", name: "phone", widget: "string", default: "+92 (8800) - 98670" }
+              - { label: "Email", name: "email", widget: "string", default: "help@company.com" }
+              - { label: "Hours", name: "hours", widget: "string", default: "Mon - Sat 8:00 - 6:30, Sunday - CLOSED" }
+          - label: "Menu"
+            name: "menu"
+            widget: "object"
+            fields:
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+                  - label: "Submenu"
+                    name: "submenu"
+                    widget: "list"
+                    required: false
+                    fields:
+                      - { label: "Label", name: "label", widget: "string" }
+                      - { label: "Link", name: "link", widget: "string" }
+
+      - name: "Footer"
+        label: "Footer"
+        file: "content/pages/footer.json"
+        fields:
+          - label: "Opening Hours"
+            name: "openingHours"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", default: "Open Hours" }
+              - label: "Hours"
+                name: "hours"
+                widget: "list"
+                fields:
+                  - { label: "Day", name: "day", widget: "string" }
+                  - { label: "Time", name: "time", widget: "string" }
+          - label: "Center Section"
+            name: "center"
+            widget: "object"
+            fields:
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Social Links"
+                name: "socialLinks"
+                widget: "list"
+                fields:
+                  - { label: "Platform", name: "platform", widget: "select", options: ["twitter", "facebook-f", "pinterest-p", "vimeo-v"] }
+                  - { label: "Link", name: "link", widget: "string" }
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", default: "Contact" }
+              - { label: "Address", name: "address", widget: "text" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+          - label: "Bottom Bar"
+            name: "bottomBar"
+            widget: "object"
+            fields:
+              - { label: "Bottom Image", name: "bottomImage", widget: "image" }
+              - { label: "Copyright Text", name: "copyrightText", widget: "string", default: "© Purerelax" }
+              - { label: "Copyright Link", name: "copyrightLink", widget: "string", default: "Reserved By Kodesolution" }
+              - { label: "Terms Link Text", name: "termsText", widget: "string", default: "Terms & Conditions" }
+              - { label: "Terms Link", name: "termsLink", widget: "string", default: "/" }

@@ -17,6 +17,7 @@ collections:
           - label: "Banner Section"
             name: "banner"
             widget: "object"
+            collapsed: true
             fields:
               - label: "Slides"
                 name: "slides"
@@ -77,6 +78,7 @@ collections:
           - label: "About Section"
             name: "about"
             widget: "object"
+            collapsed: true
             fields:
               - {
                   label: "Background Image 1",
@@ -172,6 +174,7 @@ collections:
           - label: "Clients Section"
             name: "clients"
             widget: "object"
+            collapsed: true
             fields:
               - label: "Clients"
                 name: "items"
@@ -183,6 +186,7 @@ collections:
           - label: "Services Section"
             name: "services"
             widget: "object"
+            collapsed: true
             fields:
               - label: "Header"
                 name: "header"
@@ -216,6 +220,7 @@ collections:
           - label: "Marquee Section"
             name: "marquee"
             widget: "object"
+            collapsed: true
             fields:
               - label: "Items"
                 name: "items"
@@ -225,6 +230,7 @@ collections:
           - label: "Video Section"
             name: "video"
             widget: "object"
+            collapsed: true
             fields:
               - { label: "Background Image", name: "bgImage", widget: "image" }
               - { label: "Title", name: "title", widget: "string" }
@@ -247,6 +253,7 @@ collections:
           - label: "Gallery Section"
             name: "gallery"
             widget: "object"
+            collapsed: true
             fields:
               - label: "Side Images"
                 name: "sideImages"
@@ -263,6 +270,7 @@ collections:
           - label: "Pricing Section"
             name: "pricing"
             widget: "object"
+            collapsed: true
             fields:
               - label: "Header"
                 name: "header"
@@ -297,6 +305,7 @@ collections:
           - label: "Contact Section"
             name: "contact"
             widget: "object"
+            collapsed: true
             fields:
               - { label: "Background Image", name: "bgImage", widget: "image" }
               - {
@@ -368,10 +377,10 @@ collections:
                           widget: "string",
                           default: "Write a Message",
                         }
-
           - label: "Instagram Section"
             name: "instagram"
             widget: "object"
+            collapsed: true
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - label: "Images"
@@ -381,10 +390,10 @@ collections:
                   - { label: "Image", name: "image", widget: "image" }
                   - { label: "Link", name: "link", widget: "string" }
                   - { label: "Alt Text", name: "alt", widget: "string" }
-
           - label: "Testimonial Section"
             name: "testimonial"
             widget: "object"
+            collapsed: true
             fields:
               - label: "Header"
                 name: "header"
@@ -419,6 +428,78 @@ collections:
                   - { label: "Link", name: "link", widget: "string" }
                   - { label: "Alt Text", name: "alt", widget: "string" }
                   - { label: "Class Name", name: "className", widget: "string" }
+      - name: "contact"
+        label: "Contact"
+        file: "content/pages/contact.json"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Breadcrumb"
+            name: "breadcrumb"
+            widget: "list"
+            collapsed: true
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+          - label: "Contact Form"
+            name: "contactForm"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "Subtitle", name: "subtitle", widget: "string" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Fields"
+                name: "fields"
+                widget: "object"
+                fields:
+                  - { label: "Name Placeholder", name: "name", widget: "string" }
+                  - { label: "Email Placeholder", name: "email", widget: "string" }
+                  - { label: "Subject Placeholder", name: "subject", widget: "string" }
+                  - { label: "Phone Placeholder", name: "phone", widget: "string" }
+                  - { label: "Message Placeholder", name: "message", widget: "string" }
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "Loading Text", name: "loadingText", widget: "string" }
+          - label: "Contact Info"
+            name: "contactInfo"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "Subtitle", name: "subtitle", widget: "string" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+              - label: "Details"
+                name: "details"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Content"
+                    name: "content"
+                    widget: "object"
+                    fields:
+                      - { label: "Prefix", name: "prefix", widget: "string", required: false }
+                      - { label: "Value", name: "value", widget: "string" }
+                      - { label: "Link", name: "link", widget: "string", required: false }
+          - label: "Map"
+            name: "map"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Source", name: "src", widget: "string" }
+              - { label: "Height", name: "height", widget: "string" }
 
       - name: "Header"
         label: "Header"
@@ -427,6 +508,7 @@ collections:
           - label: "Top Bar"
             name: "topBar"
             widget: "object"
+            collapsed: true
             fields:
               - {
                   label: "Email",
@@ -461,12 +543,14 @@ collections:
           - label: "Logo"
             name: "logo"
             widget: "object"
+            collapsed: true
             fields:
               - { label: "Light Logo", name: "light", widget: "image" }
               - { label: "Dark Logo", name: "dark", widget: "image" }
           - label: "Book Now Button"
             name: "bookNowButton"
             widget: "object"
+            collapsed: true
             fields:
               - {
                   label: "Text",
@@ -483,6 +567,7 @@ collections:
           - label: "Menu"
             name: "Menu"
             widget: "object"
+            collapsed: true
             fields:
               - label: "Menu Items"
                 name: "items"
@@ -497,13 +582,14 @@ collections:
                     fields:
                       - { label: "Name", name: "name", widget: "string" }
                       - { label: "Link", name: "link", widget: "string" }
-            - label: "Mobile Menu Contacts"
-              name: "mobileMenuContacts"
-              widget: "object"
-              fields:
-                - { label: "Phone", name: "phone", widget: "string" }
-                - { label: "Email", name: "email", widget: "string" }
-                - { label: "Hours", name: "hours", widget: "string" }
+          - label: "Mobile Menu Contacts"
+            name: "mobileMenuContacts"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Hours", name: "hours", widget: "string" }
 
       - name: "Footer"
         label: "Footer"
@@ -512,6 +598,7 @@ collections:
           - label: "Opening Hours"
             name: "openingHours"
             widget: "object"
+            collapsed: true
             fields:
               - {
                   label: "Title",
@@ -528,6 +615,7 @@ collections:
           - label: "Center Section"
             name: "center"
             widget: "object"
+            collapsed: true
             fields:
               - { label: "Logo", name: "logo", widget: "image" }
               - { label: "Description", name: "description", widget: "text" }
@@ -546,6 +634,7 @@ collections:
           - label: "Contact Section"
             name: "contact"
             widget: "object"
+            collapsed: true
             fields:
               - {
                   label: "Title",
@@ -559,6 +648,7 @@ collections:
           - label: "Bottom Bar"
             name: "bottomBar"
             widget: "object"
+            collapsed: true
             fields:
               - { label: "Bottom Image", name: "bottomImage", widget: "image" }
               - {
@@ -593,6 +683,7 @@ collections:
           - label: "Team Member"
             name: "teamMember"
             widget: "object"
+            collapsed: true
             fields:
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Name", name: "name", widget: "string" }
@@ -621,6 +712,7 @@ collections:
           - label: "Contact Form"
             name: "contactForm"
             widget: "object"
+            collapsed: true
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string" }

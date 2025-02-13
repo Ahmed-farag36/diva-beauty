@@ -32,49 +32,12 @@
   "menu": {
     "items": [
       {
-        "label": "Home",
+        "name": "Home",
         "link": "/",
         "submenu": []
       },
       {
-        "label": "Behandlungen",
-        "link": "/page-services",
-        "submenu": [
-          {
-            "label": "Services Grid",
-            "link": "/page-services"
-          },
-          {
-            "label": "Service Details",
-            "link": "/page-service-details"
-          }
-        ]
-      },
-      {
-        "label": "Preise",
-        "link": "/page-pricing",
-        "submenu": []
-      },
-      {
-        "label": "Über uns",
-        "link": "/page-team-details",
-        "submenu": []
-      },
-      {
-        "label": "Kontakt",
-        "link": "/page-contact",
-        "submenu": []
-      }
-    ]
-  },
-  "mobileMenu": {
-    "items": [
-      {
-        "name": "Home",
-        "link": "/"
-      },
-      {
-        "name": "Services",
+        "name": "Behandlungen",
         "link": "/page-services",
         "submenu": [
           {
@@ -89,16 +52,24 @@
       },
       {
         "name": "Preise",
-        "link": "/page-pricing"
+        "link": "/page-pricing",
+        "submenu": []
       },
       {
         "name": "Über uns",
-        "link": "/page-team-details"
+        "link": "/page-team-details",
+        "submenu": []
       },
       {
         "name": "Kontakt",
-        "link": "/page-contact"
+        "link": "/page-contact",
+        "submenu": []
       }
     ]
+  },
+  "mobileMenuContacts": {
+    "phone": "+49 176 300 07 307",
+    "email": "info@beauty-paradies.de",
+    "hours": "Mo - Fr: 09:00 - 18:00"
   }
 } 

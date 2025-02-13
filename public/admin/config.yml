@@ -22,38 +22,92 @@ collections:
                 name: "slides"
                 widget: "list"
                 fields:
-                  - { label: "Background Image", name: "backgroundImage", widget: "image" }
+                  - {
+                      label: "Background Image",
+                      name: "backgroundImage",
+                      widget: "image",
+                    }
                   - { label: "Leap Image", name: "leapImage", widget: "image" }
-                  - { label: "Sub Title", name: "subTitle", widget: "string", default: "Professional Styling Since 1990" }
+                  - {
+                      label: "Sub Title",
+                      name: "subTitle",
+                      widget: "string",
+                      default: "Professional Styling Since 1990",
+                    }
                   - label: "Title"
                     name: "title"
                     widget: "object"
                     fields:
-                      - { label: "Part 1", name: "part1", widget: "string", default: "The Essence" }
-                      - { label: "Part 2", name: "part2", widget: "string", default: "Of Beauty" }
+                      - {
+                          label: "Part 1",
+                          name: "part1",
+                          widget: "string",
+                          default: "The Essence",
+                        }
+                      - {
+                          label: "Part 2",
+                          name: "part2",
+                          widget: "string",
+                          default: "Of Beauty",
+                        }
                   - label: "Button"
                     name: "button"
                     widget: "object"
                     fields:
-                      - { label: "Text", name: "text", widget: "string", default: "Book Now" }
-                      - { label: "Link", name: "link", widget: "string", default: "page-contact" }
+                      - {
+                          label: "Text",
+                          name: "text",
+                          widget: "string",
+                          default: "Book Now",
+                        }
+                      - {
+                          label: "Link",
+                          name: "link",
+                          widget: "string",
+                          default: "page-contact",
+                        }
                   - { label: "Image 1", name: "image1", widget: "image" }
                   - { label: "Image 2", name: "image2", widget: "image" }
-                  - { label: "Style Title", name: "styleTitle", widget: "string", default: "Purerelax" }
+                  - {
+                      label: "Style Title",
+                      name: "styleTitle",
+                      widget: "string",
+                      default: "Purerelax",
+                    }
           - label: "About Section"
             name: "about"
             widget: "object"
             fields:
-              - { label: "Background Image 1", name: "bgImage1", widget: "image" }
-              - { label: "Background Image 2", name: "bgImage2", widget: "image" }
-              - { label: "Background Image 3", name: "bgImage3", widget: "image" }
-              - { label: "Background Image 4", name: "bgImage4", widget: "image" }
+              - {
+                  label: "Background Image 1",
+                  name: "bgImage1",
+                  widget: "image",
+                }
+              - {
+                  label: "Background Image 2",
+                  name: "bgImage2",
+                  widget: "image",
+                }
+              - {
+                  label: "Background Image 3",
+                  name: "bgImage3",
+                  widget: "image",
+                }
+              - {
+                  label: "Background Image 4",
+                  name: "bgImage4",
+                  widget: "image",
+                }
               - { label: "Main Image", name: "mainImage", widget: "image" }
               - label: "Experience Box"
                 name: "experienceBox"
                 widget: "object"
                 fields:
-                  - { label: "Background Image", name: "bgImage", widget: "image" }
+                  - {
+                      label: "Background Image",
+                      name: "bgImage",
+                      widget: "image",
+                    }
                   - { label: "Years", name: "years", widget: "string" }
                   - { label: "Text", name: "text", widget: "string" }
               - label: "Content"
@@ -61,9 +115,21 @@ collections:
                 widget: "object"
                 fields:
                   - { label: "Sub Title", name: "subTitle", widget: "string" }
-                  - { label: "Title Part 1", name: "titlePart1", widget: "string" }
-                  - { label: "Title Part 2", name: "titlePart2", widget: "string" }
-                  - { label: "Description", name: "description", widget: "text" }
+                  - {
+                      label: "Title Part 1",
+                      name: "titlePart1",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Title Part 2",
+                      name: "titlePart2",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                    }
                   - label: "Features"
                     name: "features"
                     widget: "list"
@@ -77,16 +143,32 @@ collections:
                   - { label: "Image", name: "image", widget: "image" }
                   - { label: "Signature", name: "signature", widget: "image" }
                   - { label: "Name", name: "name", widget: "string" }
-                  - { label: "Designation", name: "designation", widget: "string" }
+                  - {
+                      label: "Designation",
+                      name: "designation",
+                      widget: "string",
+                    }
               - label: "Opening Hours"
                 name: "openingHours"
                 widget: "object"
                 fields:
                   - { label: "Icon", name: "icon", widget: "image" }
                   - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Weekday Hours", name: "weekdayHours", widget: "string" }
-                  - { label: "Saturday Hours", name: "saturdayHours", widget: "string" }
-                  - { label: "Background Image", name: "bgImage", widget: "image" }
+                  - {
+                      label: "Weekday Hours",
+                      name: "weekdayHours",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Saturday Hours",
+                      name: "saturdayHours",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Background Image",
+                      name: "bgImage",
+                      widget: "image",
+                    }
           - label: "Clients Section"
             name: "clients"
             widget: "object"
@@ -109,13 +191,25 @@ collections:
                   - { label: "Icon", name: "icon", widget: "image" }
                   - { label: "Sub Title", name: "subTitle", widget: "string" }
                   - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Description", name: "description", widget: "text" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                    }
               - label: "Items"
                 name: "items"
                 widget: "list"
                 fields:
-                  - { label: "Background Image 1", name: "bgImage1", widget: "image" }
-                  - { label: "Background Image 2", name: "bgImage2", widget: "image" }
+                  - {
+                      label: "Background Image 1",
+                      name: "bgImage1",
+                      widget: "image",
+                    }
+                  - {
+                      label: "Background Image 2",
+                      name: "bgImage2",
+                      widget: "image",
+                    }
                   - { label: "Icon", name: "icon", widget: "image" }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Link", name: "link", widget: "string" }
@@ -145,7 +239,11 @@ collections:
                 widget: "object"
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
-                  - { label: "YouTube Video ID", name: "videoId", widget: "string" }
+                  - {
+                      label: "YouTube Video ID",
+                      name: "videoId",
+                      widget: "string",
+                    }
           - label: "Gallery Section"
             name: "gallery"
             widget: "object"
@@ -177,7 +275,11 @@ collections:
                 name: "centerImage"
                 widget: "object"
                 fields:
-                  - { label: "Background Image", name: "bgImage", widget: "image" }
+                  - {
+                      label: "Background Image",
+                      name: "bgImage",
+                      widget: "image",
+                    }
                   - { label: "Main Image", name: "image", widget: "image" }
               - label: "Pricing Items"
                 name: "items"
@@ -185,7 +287,11 @@ collections:
                 fields:
                   - { label: "Image", name: "image", widget: "image" }
                   - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Description", name: "description", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "string",
+                    }
                   - { label: "Price", name: "price", widget: "string" }
                   - { label: "Link", name: "link", widget: "string" }
           - label: "Contact Section"
@@ -193,8 +299,16 @@ collections:
             widget: "object"
             fields:
               - { label: "Background Image", name: "bgImage", widget: "image" }
-              - { label: "Top Shape Image", name: "topShapeImage", widget: "image" }
-              - { label: "Bottom Shape Image", name: "bottomShapeImage", widget: "image" }
+              - {
+                  label: "Top Shape Image",
+                  name: "topShapeImage",
+                  widget: "image",
+                }
+              - {
+                  label: "Bottom Shape Image",
+                  name: "bottomShapeImage",
+                  widget: "image",
+                }
               - label: "Form"
                 name: "form"
                 widget: "object"
@@ -202,18 +316,58 @@ collections:
                   - { label: "Icon", name: "icon", widget: "image" }
                   - { label: "Sub Title", name: "subTitle", widget: "string" }
                   - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Description", name: "description", widget: "text" }
-                  - { label: "Button Text", name: "buttonText", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                    }
+                  - {
+                      label: "Button Text",
+                      name: "buttonText",
+                      widget: "string",
+                    }
                   - label: "Fields"
                     name: "fields"
                     widget: "object"
                     fields:
-                      - { label: "Name Placeholder", name: "namePlaceholder", widget: "string", default: "Name *" }
-                      - { label: "Email Placeholder", name: "emailPlaceholder", widget: "string", default: "Email Address *" }
-                      - { label: "Service Placeholder", name: "servicePlaceholder", widget: "string", default: "Select Service *" }
-                      - { label: "Date Placeholder", name: "datePlaceholder", widget: "string", default: "Select Date *" }
-                      - { label: "Date Format", name: "dateFormat", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
-                      - { label: "Message Placeholder", name: "messagePlaceholder", widget: "string", default: "Write a Message" }
+                      - {
+                          label: "Name Placeholder",
+                          name: "namePlaceholder",
+                          widget: "string",
+                          default: "Name *",
+                        }
+                      - {
+                          label: "Email Placeholder",
+                          name: "emailPlaceholder",
+                          widget: "string",
+                          default: "Email Address *",
+                        }
+                      - {
+                          label: "Service Placeholder",
+                          name: "servicePlaceholder",
+                          widget: "string",
+                          default: "Select Service *",
+                        }
+                      - {
+                          label: "Date Placeholder",
+                          name: "datePlaceholder",
+                          widget: "string",
+                          default: "Select Date *",
+                        }
+                      - {
+                          label: "Date Format",
+                          name: "dateFormat",
+                          widget: "datetime",
+                          format: "YYYY-MM-DD",
+                          date_format: "YYYY-MM-DD",
+                          time_format: false,
+                        }
+                      - {
+                          label: "Message Placeholder",
+                          name: "messagePlaceholder",
+                          widget: "string",
+                          default: "Write a Message",
+                        }
 
           - label: "Instagram Section"
             name: "instagram"
@@ -245,8 +399,18 @@ collections:
                 fields:
                   - { label: "Text", name: "text", widget: "text" }
                   - { label: "Name", name: "name", widget: "string" }
-                  - { label: "Designation", name: "designation", widget: "string" }
-                  - { label: "Rating", name: "rating", widget: "number", min: 1, max: 5 }
+                  - {
+                      label: "Designation",
+                      name: "designation",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Rating",
+                      name: "rating",
+                      widget: "number",
+                      min: 1,
+                      max: 5,
+                    }
               - label: "Client Images"
                 name: "clientImages"
                 widget: "list"
@@ -264,13 +428,35 @@ collections:
             name: "topBar"
             widget: "object"
             fields:
-              - { label: "Email", name: "email", widget: "string", default: "alma.lawson@example.com" }
-              - { label: "Hours Text", name: "hoursText", widget: "string", default: "Mon to Sat: 9:00am – 6:00pm Sun: Closed" }
+              - {
+                  label: "Email",
+                  name: "email",
+                  widget: "string",
+                  default: "alma.lawson@example.com",
+                }
+              - {
+                  label: "Hours Text",
+                  name: "hoursText",
+                  widget: "string",
+                  default: "Mon to Sat: 9:00am – 6:00pm Sun: Closed",
+                }
               - label: "Social Links"
                 name: "socialLinks"
                 widget: "list"
                 fields:
-                  - { label: "Platform", name: "platform", widget: "select", options: ["twitter", "facebook-f", "pinterest-p", "vimeo-v", "instagram"] }
+                  - {
+                      label: "Platform",
+                      name: "platform",
+                      widget: "select",
+                      options:
+                        [
+                          "twitter",
+                          "facebook-f",
+                          "pinterest-p",
+                          "vimeo-v",
+                          "instagram",
+                        ],
+                    }
                   - { label: "Link", name: "link", widget: "string" }
           - label: "Logo"
             name: "logo"
@@ -282,32 +468,42 @@ collections:
             name: "bookNowButton"
             widget: "object"
             fields:
-              - { label: "Text", name: "text", widget: "string", default: "Book Now" }
-              - { label: "Link", name: "link", widget: "string", default: "page-contact" }
-          - label: "Mobile Menu"
-            name: "mobileMenu"
-            widget: "object"
-            fields:
-              - { label: "Phone Number", name: "phone", widget: "string", default: "+92 (8800) - 98670" }
-              - { label: "Email", name: "email", widget: "string", default: "help@company.com" }
-              - { label: "Hours", name: "hours", widget: "string", default: "Mon - Sat 8:00 - 6:30, Sunday - CLOSED" }
+              - {
+                  label: "Text",
+                  name: "text",
+                  widget: "string",
+                  default: "Book Now",
+                }
+              - {
+                  label: "Link",
+                  name: "link",
+                  widget: "string",
+                  default: "page-contact",
+                }
           - label: "Menu"
-            name: "menu"
+            name: "Menu"
             widget: "object"
             fields:
-              - label: "Items"
+              - label: "Menu Items"
                 name: "items"
                 widget: "list"
                 fields:
-                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Name", name: "name", widget: "string" }
                   - { label: "Link", name: "link", widget: "string" }
                   - label: "Submenu"
                     name: "submenu"
                     widget: "list"
                     required: false
                     fields:
-                      - { label: "Label", name: "label", widget: "string" }
+                      - { label: "Name", name: "name", widget: "string" }
                       - { label: "Link", name: "link", widget: "string" }
+            - label: "Mobile Menu Contacts"
+              name: "mobileMenuContacts"
+              widget: "object"
+              fields:
+                - { label: "Phone", name: "phone", widget: "string" }
+                - { label: "Email", name: "email", widget: "string" }
+                - { label: "Hours", name: "hours", widget: "string" }
 
       - name: "Footer"
         label: "Footer"
@@ -317,7 +513,12 @@ collections:
             name: "openingHours"
             widget: "object"
             fields:
-              - { label: "Title", name: "title", widget: "string", default: "Open Hours" }
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "string",
+                  default: "Open Hours",
+                }
               - label: "Hours"
                 name: "hours"
                 widget: "list"
@@ -334,13 +535,24 @@ collections:
                 name: "socialLinks"
                 widget: "list"
                 fields:
-                  - { label: "Platform", name: "platform", widget: "select", options: ["twitter", "facebook-f", "pinterest-p", "vimeo-v"] }
+                  - {
+                      label: "Platform",
+                      name: "platform",
+                      widget: "select",
+                      options:
+                        ["twitter", "facebook-f", "pinterest-p", "vimeo-v"],
+                    }
                   - { label: "Link", name: "link", widget: "string" }
           - label: "Contact Section"
             name: "contact"
             widget: "object"
             fields:
-              - { label: "Title", name: "title", widget: "string", default: "Contact" }
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "string",
+                  default: "Contact",
+                }
               - { label: "Address", name: "address", widget: "text" }
               - { label: "Phone", name: "phone", widget: "string" }
               - { label: "Email", name: "email", widget: "string" }
@@ -349,7 +561,125 @@ collections:
             widget: "object"
             fields:
               - { label: "Bottom Image", name: "bottomImage", widget: "image" }
-              - { label: "Copyright Text", name: "copyrightText", widget: "string", default: "© Purerelax" }
-              - { label: "Copyright Link", name: "copyrightLink", widget: "string", default: "Reserved By Kodesolution" }
-              - { label: "Terms Link Text", name: "termsText", widget: "string", default: "Terms & Conditions" }
-              - { label: "Terms Link", name: "termsLink", widget: "string", default: "/" }
+              - {
+                  label: "Copyright Text",
+                  name: "copyrightText",
+                  widget: "string",
+                  default: "© Purerelax",
+                }
+              - {
+                  label: "Copyright Link",
+                  name: "copyrightLink",
+                  widget: "string",
+                  default: "Reserved By Kodesolution",
+                }
+              - {
+                  label: "Terms Link Text",
+                  name: "termsText",
+                  widget: "string",
+                  default: "Terms & Conditions",
+                }
+              - {
+                  label: "Terms Link",
+                  name: "termsLink",
+                  widget: "string",
+                  default: "/",
+                }
+
+      - name: "team-details"
+        label: "Team Details Page"
+        file: "content/pages/page-team-details.json"
+        fields:
+          - label: "Team Member"
+            name: "teamMember"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Position", name: "position", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Experience"
+                name: "experience"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                    }
+              - label: "Skills"
+                name: "skills"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                    }
+          - label: "Contact Form"
+            name: "contactForm"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - label: "Form Fields"
+                name: "fields"
+                widget: "object"
+                fields:
+                  - label: "Name Field"
+                    name: "name"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Placeholder",
+                          name: "placeholder",
+                          widget: "string",
+                        }
+                  - label: "Email Field"
+                    name: "email"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Placeholder",
+                          name: "placeholder",
+                          widget: "string",
+                        }
+                  - label: "Subject Field"
+                    name: "subject"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Placeholder",
+                          name: "placeholder",
+                          widget: "string",
+                        }
+                  - label: "Phone Field"
+                    name: "phone"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Placeholder",
+                          name: "placeholder",
+                          widget: "string",
+                        }
+                  - label: "Message Field"
+                    name: "message"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Placeholder",
+                          name: "placeholder",
+                          widget: "string",
+                        }
+              - label: "Submit Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - { label: "Button Text", name: "text", widget: "string" }
+                  - {
+                      label: "Loading Text",
+                      name: "loadingText",
+                      widget: "string",
+                    }

@@ -25,10 +25,10 @@ export default function MobileMenu() {
   return (
     <>
       <ul className="navigation clearfix">
-        {menuData.mobileMenu.items.map((item, index) => (
-          <li key={index} className={item.submenu ? "dropdown" : ""}>
+        {menuData.menu.items.map((item, index) => (
+          <li key={index} className={item.submenu?.length > 0 ? "dropdown" : ""}>
             <Link href={item.link}>{item.name}</Link>
-            {item.submenu && (
+            {item.submenu?.length > 0 && (
               <>
                 <ul style={{ display: `${isActive.key === index ? "block" : "none"}` }}>
                   {item.submenu.map((subItem, subIndex) => (

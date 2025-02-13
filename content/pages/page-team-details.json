@@ -1,0 +1,51 @@
+{
+  "teamMember": {
+    "image": "/images/resource/team-details.jpg",
+    "name": "Aleesha Brown",
+    "position": "Managing Director & CEO",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, voluptas, odio dolor perferendis quidem nesciunt nulla officia vel asperiores incidunt hic nemo dolorem! Optio a doloremque, quo accusantium adipisci vitae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, voluptas, odio dolor perferendis quidem nesciunt nulla officia vel asperiores incidunt hic nemo dolorem! Optio a doloremque, quo accusantium adipisci vitae?",
+    "experience": {
+      "title": "Personal Experience",
+      "description": "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries architecto dolorem ipsum quia"
+    },
+    "skills": [
+      {
+        "title": "Tecnology",
+        "description": "When an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      },
+      {
+        "title": "Marketing",
+        "description": "When an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      },
+      {
+        "title": "Business",
+        "description": "When an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      }
+    ]
+  },
+  "contactForm": {
+    "title": "Contact With Us Now",
+    "subtitle": "Feel Free to Write Our Tecnology Experts",
+    "fields": {
+      "name": {
+        "placeholder": "Enter Name"
+      },
+      "email": {
+        "placeholder": "Enter Email"
+      },
+      "subject": {
+        "placeholder": "Enter Subject"
+      },
+      "phone": {
+        "placeholder": "Enter Phone"
+      },
+      "message": {
+        "placeholder": "Enter Message"
+      }
+    },
+    "button": {
+      "text": "Send message",
+      "loadingText": "Please wait..."
+    }
+  }
+} 

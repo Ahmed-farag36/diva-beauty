@@ -1,6 +1,8 @@
 import Link from "next/link";
 
-const Contact = () => {
+const Contact = ({ contactData }) => {
+  const { contactForm, contactInfo, map } = contactData;
+  
   return (
     <>
       <section className="contact-details">
@@ -8,8 +10,8 @@ const Contact = () => {
           <div className="row">
             <div className="col-xl-7 col-lg-6">
               <div className="sec-title">
-                <span className="sub-title">Send us email</span>
-                <h2>Feel free to write</h2>
+                <span className="sub-title">{contactForm.title.subtitle}</span>
+                <h2>{contactForm.title.heading}</h2>
               </div>
               {/* Contact Form */}
               <form
@@ -26,7 +28,7 @@ const Contact = () => {
                         name="form_name"
                         className="form-control"
                         type="text"
-                        placeholder="Enter Name"
+                        placeholder={contactForm.fields.name}
                       />
                     </div>
                   </div>
@@ -36,7 +38,7 @@ const Contact = () => {
                         name="form_email"
                         className="form-control required email"
                         type="email"
-                        placeholder="Enter Email"
+                        placeholder={contactForm.fields.email}
                       />
                     </div>
                   </div>
@@ -48,7 +50,7 @@ const Contact = () => {
                         name="form_subject"
                         className="form-control required"
                         type="text"
-                        placeholder="Enter Subject"
+                        placeholder={contactForm.fields.subject}
                       />
                     </div>
                   </div>
@@ -58,7 +60,7 @@ const Contact = () => {
                         name="form_phone"
                         className="form-control"
                         type="text"
-                        placeholder="Enter Phone"
+                        placeholder={contactForm.fields.phone}
                       />
                     </div>
                   </div>
@@ -68,7 +70,7 @@ const Contact = () => {
                     name="form_message"
                     className="form-control required"
                     rows="7"
-                    placeholder="Enter Message"
+                    placeholder={contactForm.fields.message}
                   ></textarea>
                 </div>
                 <div className="mb-3">
@@ -81,58 +83,39 @@ const Contact = () => {
                   <button
                     type="submit"
                     className="theme-btn btn-style-one me-2"
-                    data-loading-text="Please wait..."
+                    data-loading-text={contactForm.button.loadingText}
                   >
-                    <span className="btn-title">Send message</span>
+                    <span className="btn-title">{contactForm.button.text}</span>
                   </button>
-                  {/* <button type="reset" className="theme-btn btn-style-one"><span className="btn-title">Reset</span></button> */}
                 </div>
               </form>
-              {/* Contact Form Validation */}
             </div>
             <div className="col-xl-5 col-lg-6">
               <div className="contact-details__right">
                 <div className="sec-title mb-30">
-                  <span className="sub-title">Need any help?</span>
-                  <h2>Get in touch with us</h2>
-                  <div className="text">
-                    Lorem ipsum is simply free text available dolor sit amet,
-                    consectetur notted adipisicing elit sed do eiusmod tempor
-                    incididunt simply free labore dolore magna.
-                  </div>
+                  <span className="sub-title">{contactInfo.title.subtitle}</span>
+                  <h2>{contactInfo.title.heading}</h2>
+                  <div className="text">{contactInfo.title.description}</div>
                 </div>
                 <ul className="list-unstyled contact-details__info">
-                  <li>
-                    <div className="icon">
-                      <span className="lnr-icon-phone-plus"></span>
-                    </div>
-                    <div className="text">
-                      <h6>Have any question?</h6>
-                      <Link href="tel:980089850">
-                        <span>Free</span> +92 (020)-9850
-                      </Link>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="icon">
-                      <span className="lnr-icon-envelope1"></span>
-                    </div>
-                    <div className="text">
-                      <h6>Write email</h6>
-                      <Link href="mailto:needhelp@company.com">
-                        needhelp@company.com
-                      </Link>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="icon">
-                      <span className="lnr-icon-location"></span>
-                    </div>
-                    <div className="text">
-                      <h6>Visit anytime</h6>
-                      <span>66 broklyn golden street. New York</span>
-                    </div>
-                  </li>
+                  {contactInfo.details.map((detail, index) => (
+                    <li key={index}>
+                      <div className="icon">
+                        <span className={detail.icon}></span>
+                      </div>
+                      <div className="text">
+                        <h6>{detail.title}</h6>
+                        {detail.content.link ? (
+                          <Link href={detail.content.link}>
+                            {detail.content.prefix && <span>{detail.content.prefix}</span>}{" "}
+                            {detail.content.value}
+                          </Link>
+                        ) : (
+                          <span>{detail.content.value}</span>
+                        )}
+                      </div>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -143,13 +126,12 @@ const Contact = () => {
       <section>
         <div className="container-fluid p-0">
           <div className="row">
-            {/* Google Map HTML Codes */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.843149788316!2d144.9537131159042!3d-37.81714274201087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sbn!2sbd!4v1583760510840!5m2!1sbn!2sbd"
+              src={map.src}
               data-tm-width="100%"
-              height="500"
-              frameborder="0"
-              allowfullscreen=""
+              height={map.height}
+              frameBorder="0"
+              allowFullScreen=""
             ></iframe>
           </div>
         </div>
@@ -157,4 +139,5 @@ const Contact = () => {
     </>
   );
 };
+
 export default Contact;

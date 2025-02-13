@@ -80,21 +80,21 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                                 <div className="contact-info-box">
                                     <i className="icon lnr-icon-phone-handset" />
                                     <span className="title">Call Now</span>
-                                    <Link href={`tel:${headerData.mobileMenu.phone}`}>{headerData.mobileMenu.phone}</Link>
+                                    <Link href={`tel:${headerData.mobileMenuContacts.phone}`}>{headerData.mobileMenuContacts.phone}</Link>
                                 </div>
                             </li>
                             <li>
                                 <div className="contact-info-box">
                                     <span className="icon lnr-icon-envelope1" />
                                     <span className="title">Send Email</span>
-                                    <Link href={`mailto:${headerData.mobileMenu.email}`}>{headerData.mobileMenu.email}</Link>
+                                    <Link href={`mailto:${headerData.mobileMenuContacts.email}`}>{headerData.mobileMenuContacts.email}</Link>
                                 </div>
                             </li>
                             <li>
                                 <div className="contact-info-box">
                                     <span className="icon lnr-icon-clock" />
                                     <span className="title">Working Hours</span>
-                                    {headerData.mobileMenu.hours}
+                                    {headerData.mobileMenuContacts.hours}
                                 </div>
                             </li>
                         </ul>

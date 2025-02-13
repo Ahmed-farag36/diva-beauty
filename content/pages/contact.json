@@ -1,0 +1,67 @@
+{
+  "title": "Kontakt",
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "Contact Us",
+      "url": "/contact"
+    }
+  ],
+  "contactForm": {
+    "title": {
+      "subtitle": "Send us email",
+      "heading": "Feel free to write"
+    },
+    "fields": {
+      "name": "Enter Name",
+      "email": "Enter Email",
+      "subject": "Enter Subject",
+      "phone": "Enter Phone",
+      "message": "Enter Message"
+    },
+    "button": {
+      "text": "Send message",
+      "loadingText": "Please wait..."
+    }
+  },
+  "contactInfo": {
+    "title": {
+      "subtitle": "Need any help?",
+      "heading": "Get in touch with us",
+      "description": "Lorem ipsum is simply free text available dolor sit amet, consectetur notted adipisicing elit sed do eiusmod tempor incididunt simply free labore dolore magna."
+    },
+    "details": [
+      {
+        "icon": "lnr-icon-phone-plus",
+        "title": "Have any question?",
+        "content": {
+          "prefix": "Free",
+          "value": "+92 (020)-9850",
+          "link": "tel:980089850"
+        }
+      },
+      {
+        "icon": "lnr-icon-envelope1",
+        "title": "Write email",
+        "content": {
+          "value": "needhelp@company.com",
+          "link": "mailto:needhelp@company.com"
+        }
+      },
+      {
+        "icon": "lnr-icon-location",
+        "title": "Visit anytime",
+        "content": {
+          "value": "66 broklyn golden street. New York"
+        }
+      }
+    ]
+  },
+  "map": {
+    "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.843149788316!2d144.9537131159042!3d-37.81714274201087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sbn!2sbd!4v1583760510840!5m2!1sbn!2sbd",
+    "height": "500"
+  }
+}

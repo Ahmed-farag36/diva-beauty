@@ -1,9 +1,14 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import teamData from "@/content/pages/page-team-details.json";
+
 const CounterUp = dynamic(() => import("@/components/elements/CounterUp"), {
   ssr: false,
 });
+
 const TeamDetails = () => {
+  const { teamMember, contactForm } = teamData;
+
   return (
     <>
       <section className="team-details">
@@ -13,7 +18,7 @@ const TeamDetails = () => {
               <div className="col-xl-6 col-lg-6">
                 <div className="team-details__top-left">
                   <div className="team-details__top-img">
-                    <img src="images/resource/team-details.jpg" alt="" />
+                    <img src={teamMember.image} alt={teamMember.name} />
                     <div className="team-details__big-text"></div>
                   </div>
                 </div>
@@ -21,19 +26,12 @@ const TeamDetails = () => {
               <div className="col-xl-6 col-lg-6">
                 <div className="team-details__top-right">
                   <div className="team-details__top-content">
-                    <h3 className="team-details__top-name">Aleesha Brown</h3>
+                    <h3 className="team-details__top-name">{teamMember.name}</h3>
                     <p className="team-details__top-title">
-                      Managing Director & CEO
+                      {teamMember.position}
                     </p>
-                    <p className="team-details__top-text-1 ">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Aliquid, voluptas, odio dolor perferendis quidem nesciunt
-                      nulla officia vel asperiores incidunt hic nemo dolorem!
-                      Optio a doloremque, quo accusantium adipisci vitae? <br />
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Aliquid, voluptas, odio dolor perferendis quidem nesciunt
-                      nulla officia vel asperiores incidunt hic nemo dolorem!
-                      Optio a doloremque, quo accusantium adipisci vitae?
+                    <p className="team-details__top-text-1">
+                      {teamMember.description}
                     </p>
                   </div>
                 </div>
@@ -45,44 +43,24 @@ const TeamDetails = () => {
               <div className="col-xl-6 col-lg-6">
                 <div className="team-details__bottom-left">
                   <h4 className="team-details__bottom-left-title">
-                    Personal Experience
+                    {teamMember.experience.title}
                   </h4>
                   <p className="team-details__bottom-left-text">
-                    When an unknown printer took a galley of type and scrambled
-                    it to make a type specimen book. It has survived not only
-                    five centuries architecto dolorem ipsum quia
+                    {teamMember.experience.description}
                   </p>
                 </div>
               </div>
               <div className="col-xl-6 col-lg-6">
                 <div className="team-details__bottom-right">
                   <div className="team-details__progress">
-                    <div className="team-details__progress-single">
-                      <h4 className="team-details__progress-title">
-                        Tecnology
-                      </h4>
-
-                      <p>
-                        When an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.
-                      </p>
-                    </div>
-                    <div className="team-details__progress-single">
-                      <h4 className="team-details__progress-title">
-                        Marketing
-                      </h4>
-                      <p>
-                        When an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.
-                      </p>
-                    </div>
-                    <div className="team-details__progress-single">
-                      <h4 className="team-details__progress-title">Business</h4>
-                      <p>
-                        When an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.
-                      </p>
-                    </div>
+                    {teamMember.skills.map((skill, index) => (
+                      <div key={index} className="team-details__progress-single">
+                        <h4 className="team-details__progress-title">
+                          {skill.title}
+                        </h4>
+                        <p>{skill.description}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -94,9 +72,9 @@ const TeamDetails = () => {
       <section className="team-contact-form pt-100">
         <div className="container pb-100">
           <div className="sec-title text-center">
-            <span className="sub-title">Contact With Us Now</span>
+            <span className="sub-title">{contactForm.title}</span>
             <h2 className="section-title__title">
-              Feel Free to Write Our <br /> Tecnology Experts
+              {contactForm.subtitle}
             </h2>
           </div>
           <div className="row justify-content-center">
@@ -115,7 +93,7 @@ const TeamDetails = () => {
                         name="form_name"
                         className="form-control"
                         type="text"
-                        placeholder="Enter Name"
+                        placeholder={contactForm.fields.name.placeholder}
                       />
                     </div>
                   </div>
@@ -125,19 +103,19 @@ const TeamDetails = () => {
                         name="form_email"
                         className="form-control required email"
                         type="email"
-                        placeholder="Enter Email"
+                        placeholder={contactForm.fields.email.placeholder}
                       />
                     </div>
                   </div>
                 </div>
-                <div className="row ">
+                <div className="row">
                   <div className="col-sm-6">
                     <div className="mb-3">
                       <input
                         name="form_subject"
-                        className="form-control required "
+                        className="form-control required"
                         type="text"
-                        placeholder="Enter Subject"
+                        placeholder={contactForm.fields.subject.placeholder}
                       />
                     </div>
                   </div>
@@ -147,7 +125,7 @@ const TeamDetails = () => {
                         name="form_phone"
                         className="form-control"
                         type="text"
-                        placeholder="Enter Phone"
+                        placeholder={contactForm.fields.phone.placeholder}
                       />
                     </div>
                   </div>
@@ -157,7 +135,7 @@ const TeamDetails = () => {
                     name="form_message"
                     className="form-control required"
                     rows="5"
-                    placeholder="Enter Message"
+                    placeholder={contactForm.fields.message.placeholder}
                   ></textarea>
                 </div>
                 <div className="mb-3 text-center">
@@ -170,9 +148,9 @@ const TeamDetails = () => {
                   <button
                     type="submit"
                     className="theme-btn btn-style-one"
-                    data-loading-text="Please wait..."
+                    data-loading-text={contactForm.button.loadingText}
                   >
-                    <span className="btn-title">Send message</span>
+                    <span className="btn-title">{contactForm.button.text}</span>
                   </button>
                 </div>
               </form>
@@ -183,4 +161,5 @@ const TeamDetails = () => {
     </>
   );
 };
+
 export default TeamDetails;

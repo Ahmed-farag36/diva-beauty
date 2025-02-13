@@ -775,3 +775,46 @@ collections:
                       name: "loadingText",
                       widget: "string",
                     }
+
+      - name: "pricing"
+        label: "Pricing Page"
+        file: "content/pages/pricing.json"
+        fields:
+          - label: "Page Title"
+            name: "pageTitle"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", default: "Pricing Table" }
+              - { label: "Background Image", name: "bgImage", widget: "image", default: "/images/background/page-title-bg.png" }
+              - label: "Breadcrumb"
+                name: "breadcrumb"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+          - label: "Pricing Sections"
+            name: "pricingSections"
+            widget: "list"
+            fields:
+              - label: "Header"
+                name: "header"
+                widget: "object"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Sub Title", name: "subTitle", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+              - label: "Center Image"
+                name: "centerImage"
+                widget: "object"
+                fields:
+                  - { label: "Background Image", name: "bgImage", widget: "image" }
+                  - { label: "Main Image", name: "image", widget: "image" }
+              - label: "Pricing Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "string" }
+                  - { label: "Price", name: "price", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }

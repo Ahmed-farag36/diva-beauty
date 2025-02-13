@@ -1,19 +1,23 @@
 import Layout from "@/components/layout/Layout";
-import Instragram from "@/components/sections/innerpages/Instragram";
+import Instagram1 from "@/components/sections/Instagram1"
 import PageTitle from "@/components/sections/PageTitle";
 import Pricing1 from "@/components/sections/Pricing1";
-import data from "@/content/pages/home.json"
+import homeData from "@/content/pages/home.json"
+import data from "@/content/pages/pricing.json"
 
 export default function PagePricing() {
   return (
     <>
       <Layout headerStyle={3} footerStyle={1}>
-        <PageTitle pageName="Pricing Table" />
-        <Pricing1 data={data} />
-        <Pricing1 data={data} />
-        <Pricing1 data={data} />
-        <Pricing1 data={data} />
-        <Instragram />
+        <PageTitle 
+          pageName={data.pageTitle.title} 
+          breadcrumb={data.pageTitle.breadcrumb}
+          bgImage={data.pageTitle.bgImage}
+        />
+        {data.pricingSections.map((section, index) => (
+          <Pricing1 key={index} data={{ pricing: section }} />
+        ))}
+        <Instagram1 data={homeData} />
       </Layout>
     </>
   );

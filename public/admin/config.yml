@@ -428,6 +428,7 @@ collections:
                   - { label: "Link", name: "link", widget: "string" }
                   - { label: "Alt Text", name: "alt", widget: "string" }
                   - { label: "Class Name", name: "className", widget: "string" }
+      
       - name: "contact"
         label: "Contact"
         file: "content/pages/contact.json"
@@ -775,3 +776,60 @@ collections:
                       name: "loadingText",
                       widget: "string",
                     }
+
+  - name: "services"
+    label: "Services"
+    format: "json"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Icon", name: "icon", widget: "image" }
+      - { label: "Background Image", name: "bgImage", widget: "image" }
+      - { label: "Background Image Two", name: "bgImageTwo", widget: "image" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Duration", name: "duration", widget: "string" }
+      - label: "Service Overview"
+        name: "overview"
+        widget: "object"
+        fields:
+          - { label: "Main Image", name: "mainImage", widget: "image" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Additional Description", name: "additionalDescription", widget: "text" }
+      - label: "Service Center"
+        name: "serviceCenter"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Quote", name: "quote", widget: "text" }
+          - label: "Feature Images"
+            name: "featureImages"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
+      - label: "FAQ"
+        name: "faq"
+        widget: "list"
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Answer", name: "answer", widget: "text" }
+      - label: "Sidebar Menu"
+        name: "sidebarMenu"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Link", name: "link", widget: "string" }
+      - label: "Contact"
+        name: "contact"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Icon", name: "icon", widget: "image" }
+

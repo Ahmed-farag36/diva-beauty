@@ -8,7 +8,7 @@ export default function PageServiceDetails() {
     <Layout headerStyle={3} footerStyle={1}>
     <PageTitle pageName="Services Details" />
 
-    <ServiceDetails />
+    {/* <ServiceDetails /> */}
     </Layout>
     </>
   )

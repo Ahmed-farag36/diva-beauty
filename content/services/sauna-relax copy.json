@@ -1,0 +1,80 @@
+{
+  "title": "Sauna Relax",
+  "icon": "images/icons/theme-icon5.png",
+  "bgImage": "/images/resource/service1-1.png",
+  "bgImageTwo": "/images/resource/service1-2.png",
+  "link": "page-service-details",
+  "category": "Massage",
+  "price": "$100",
+  "duration": "60 Minutes",
+  "overview": {
+    "mainImage": "/images/resource/service-details.jpg",
+    "description": "Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ndustry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make",
+    "additionalDescription": "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged Lorem ipsum dolor sit amet consec tetur adipis icing elit"
+  },
+  "serviceCenter": {
+    "title": "Service Center",
+    "description": "Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+    "quote": "Lorem ipsum dolor sit amet, consectetur notted adipisicing elit sed do eiusmod remaining essentially unchanged Lorem ipsum dolor sit amet consec tetur",
+    "featureImages": [
+      {
+        "image": "/images/resource/service-d1.jpg",
+        "description": "Lorem ipsum dolor sit amet consec adipis elit Dolor repellat pariatur temporibus doloribus hic conse quatur copy typing refreshing"
+      },
+      {
+        "image": "/images/resource/service-d2.jpg",
+        "description": "Lorem ipsum dolor sit amet consec adipis elit Dolor repellat pariatur temporibus doloribus hic conse quatur copy typing refreshing"
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Is my technology allowed on tech?",
+      "answer": "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable."
+    },
+    {
+      "question": "How to soft launch your business?",
+      "answer": "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable."
+    },
+    {
+      "question": "How to soft launch your business?",
+      "answer": "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable."
+    },
+    {
+      "question": "How I can find my solution?",
+      "answer": "There are many variations of passages the majority have suffered alteration in some fo injected humour, or randomised words believable."
+    }
+  ],
+  "sidebarMenu": [
+    {
+      "title": "Deep Massage",
+      "link": "page-service-details"
+    },
+    {
+      "title": "Facial Treatments",
+      "link": "page-service-details"
+    },
+    {
+      "title": "Body Treatments",
+      "link": "page-service-details"
+    },
+    {
+      "title": "Nail Care",
+      "link": "page-service-details"
+    },
+    {
+      "title": "Body Glow & Wraps",
+      "link": "page-service-details"
+    },
+    {
+      "title": "Hair Salon",
+      "link": "page-service-details"
+    }
+  ],
+  "contact": {
+    "title": "Contact with us for any advice",
+    "subtitle": "Need help? Talk to an expert",
+    "phone": "+892 ( 123 ) 112 - 9999",
+    "icon": "lnr-icon-phone-handset"
+  }
+} 

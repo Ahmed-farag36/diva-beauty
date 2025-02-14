@@ -22,8 +22,8 @@
     ]
   },
   "logo": {
-    "light": "images/logo.png",
-    "dark": "images/logo-2.png"
+    "light": "/images/logo.png",
+    "dark": "/images/logo-2.png"
   },
   "bookNowButton": {
     "text": "Book Now",
@@ -38,17 +38,8 @@
       },
       {
         "name": "Behandlungen",
-        "link": "/page-services",
-        "submenu": [
-          {
-            "name": "Services Grid",
-            "link": "/page-services"
-          },
-          {
-            "name": "Service Details",
-            "link": "/page-service-details"
-          }
-        ]
+        "link": "/services",
+        "submenu": []
       },
       {
         "name": "Preise",

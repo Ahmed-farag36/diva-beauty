@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
-const ServiceDetails = () => {
+
+const ServiceDetails = ({ serviceData }) => {
   const [isActive, setIsActive] = useState({
     status: false,
     key: 1,
@@ -18,267 +19,109 @@ const ServiceDetails = () => {
       });
     }
   };
+
   return (
     <>
-      <section class="services-details">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-4 col-lg-4">
-              <div class="service-sidebar">
-                <div class="sidebar-widget service-sidebar-single">
-                  <div class="sidebar-service-list">
+      <section className="services-details">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-4 col-lg-4">
+              <div className="service-sidebar">
+                <div className="sidebar-widget service-sidebar-single">
+                  <div className="sidebar-service-list">
                     <ul>
-                      <li>
-                        <Link href="page-service-details" class="current">
-                          <i class="fas fa-angle-right"></i>
-                          <span>Deep Massage</span>
-                        </Link>
-                      </li>
-                      <li class="current">
-                        <Link href="page-service-details">
-                          <i class="fas fa-angle-right"></i>
-                          <span>Facial Treatments</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="page-service-details">
-                          <i class="fas fa-angle-right"></i>
-                          <span>Body Treatments</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="page-service-details">
-                          <i class="fas fa-angle-right"></i>
-                          <span>Nail Care</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="page-service-details">
-                          <i class="fas fa-angle-right"></i>
-                          <span>Body Glow & Wraps</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="page-service-details">
-                          <i class="fas fa-angle-right"></i>
-                          <span>Hair Salon</span>
-                        </Link>
-                      </li>
+                      {serviceData?.sidebarMenu?.map((item, index) => (
+                        <li key={index} className={index === 0 ? "current" : ""}>
+                          <Link href={item.link}>
+                            <i className="fas fa-angle-right"></i>
+                            <span>{item.title}</span>
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
-                  <div class="service-details-help">
-                    <div class="help-shape-1"></div>
-                    <div class="help-shape-2"></div>
-
-                    <h2 class="help-title">Price 100</h2>
-                    <h2 class="help-title">Duration 60 Mintues</h2>
+                  <div className="service-details-help">
+                    <div className="help-shape-1"></div>
+                    <div className="help-shape-2"></div>
+                    <h2 className="help-title">Price {serviceData.price}</h2>
+                    <h2 className="help-title">Duration {serviceData.duration}</h2>
                   </div>
-                  <div class="service-details-help">
-                    <div class="help-shape-1"></div>
-                    <div class="help-shape-2"></div>
-                    <h2 class="help-title">
-                      Contact with <br /> us for any <br /> advice
+
+                  <div className="service-details-help">
+                    <div className="help-shape-1"></div>
+                    <div className="help-shape-2"></div>
+                    <h2 className="help-title">
+                      {serviceData.contact.title}
                     </h2>
-                    <div class="help-icon">
-                      <span class=" lnr-icon-phone-handset"></span>
+                    <div className="help-icon">
+                      <span className={serviceData.contact.icon}></span>
                     </div>
-                    <div class="help-contact">
-                      <p>Need help? Talk to an expert</p>
-                      <Link href="tel:12463330079">
-                        +892 ( 123 ) 112 - 9999
-                      </Link>
+                    <div className="help-contact">
+                      <p>{serviceData.contact.subtitle}</p>
+                      <Link href={`tel:${serviceData.contact.phone}`}>{serviceData.contact.phone}</Link>
                     </div>
                   </div>
-
-                  {/* <div class="sidebar-widget service-sidebar-single mt-4">
-                      <div class="service-sidebar-single-btn wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1200m">
-                        <Link href="#" class="theme-btn btn-style-one d-grid"><span class="btn-title"><span class="fas fa-file-pdf"></span> download pdf file</span></Link>
-                      </div>
-                    </div> */}
                 </div>
               </div>
             </div>
 
-            <div class="col-xl-8 col-lg-8">
-              <div class="services-details__content">
-                <img src="images/resource/service-details.jpg" alt="" />
-                <h3 class="mt-4">Service Overview</h3>
-                <p>
-                  Lorem ipsum is simply free text used by copytyping refreshing.
-                  Neque porro est qui dolorem ipsum quia quaed inventore
-                  veritatis et quasi architecto beatae vitae dicta sunt
-                  explicabo. Aelltes port lacus quis enim var sed efficitur
-                  turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply
-                  dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the ndustry standard dummy text ever since the
-                  1500s, when an unknown printer took a galley of type and
-                  scrambled it to make{" "}
-                </p>
-                <p>
-                  When an unknown printer took a galley of type and scrambled it
-                  to make a type specimen book. It has survived not only five
-                  centuries, but also the leap into electronic typesetting,
-                  remaining essentially unchanged Lorem ipsum dolor sit amet
-                  consec tetur adipis icing elit{" "}
-                </p>
-                <div class="content mt-40">
-                  <div class="text">
-                    <h3>Service Center</h3>
-                    <p>
-                      Lorem ipsum is simply free text used by copytyping
-                      refreshing. Neque porro est qui dolorem ipsum quia quaed
-                      inventore veritatis et quasi architecto beatae vitae dicta
-                      sunt explicabo.
-                    </p>
-                    <blockquote class="blockquote-one">
-                      Lorem ipsum dolor sit amet, consectetur notted adipisicing
-                      elit sed do eiusmod remaining essentially unchanged Lorem
-                      ipsum dolor sit amet consec tetur
+            <div className="col-xl-8 col-lg-8">
+              <div className="services-details__content">
+                <img src={serviceData.overview.mainImage} alt={serviceData.title} />
+                <h3 className="mt-4">Service Overview</h3>
+                <p>{serviceData.overview.description}</p>
+                <p>{serviceData.overview.additionalDescription}</p>
+
+                <div className="content mt-40">
+                  <div className="text">
+                    <h3>{serviceData.serviceCenter.title}</h3>
+                    <p>{serviceData.serviceCenter.description}</p>
+                    <blockquote className="blockquote-one">
+                      {serviceData.serviceCenter.quote}
                     </blockquote>
                   </div>
-                  <div class="feature-list mt-4">
-                    <div class="row clearfix">
-                      <div class="col-lg-6 col-md-6 col-sm-12 column">
-                        <img
-                          class="mb-3"
-                          src="images/resource/service-d1.jpg"
-                          alt="images"
-                        />
-                        <p>
-                          Lorem ipsum dolor sit amet consec adipis elit Dolor
-                          repellat pariatur temporibus doloribus hic conse
-                          quatur copy typing refreshing
-                        </p>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-12 column">
-                        <img
-                          class="mb-3"
-                          src="images/resource/service-d2.jpg"
-                          alt="images"
-                        />
-                        <p>
-                          Lorem ipsum dolor sit amet consec adipis elit Dolor
-                          repellat pariatur temporibus doloribus hic conse
-                          quatur copy typing refreshing
-                        </p>
-                      </div>
+
+                  <div className="feature-list mt-4">
+                    <div className="row clearfix">
+                      {serviceData.serviceCenter.featureImages.map((feature, index) => (
+                        <div key={index} className="col-lg-6 col-md-6 col-sm-12 column">
+                          <img className="mb-3" src={feature.image} alt="images" />
+                          <p>{feature.description}</p>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
-                <div class=" mt-25">
+
+                <div className="mt-25">
                   <h3>Frequently Asked Question</h3>
                   <p>
-                    Lorem ipsum is simply free text used by copytyping
-                    refreshing. Neque porro est qui dolorem ipsum quia quaed
-                    inventore veritatis et quasi architecto beatae vitae dicta
-                    sunt explicabo.
+                    Lorem ipsum is simply free text used by copytyping refreshing.
                   </p>
-                  <ul class="accordion-box wow fadeInRight">
-                    <li class="accordion block">
-                      <div
-                        className={
-                          isActive.key == 1 ? "acc-btn active" : "acc-btn"
-                        }
-                        onClick={() => handleClick(1)}
-                      >
-                        Is my technology allowed on tech?
-                        <div class="icon fa fa-plus"></div>
-                      </div>
-                      <div
-                        className={
-                          isActive.key == 1
-                            ? "acc-content current"
-                            : "acc-content"
-                        }
-                      >
-                        <div class="content">
-                          <div class="text">
-                            There are many variations of passages the majority
-                            have suffered alteration in some fo injected humour,
-                            or randomised words believable.
+                  <ul className="accordion-box wow fadeInRight">
+                    {serviceData.faq.map((faq, index) => (
+                      <li key={index} className="accordion block">
+                        <div
+                          className={isActive.key == index + 1 ? "acc-btn active" : "acc-btn"}
+                          onClick={() => handleClick(index + 1)}
+                        >
+                          {faq.question}
+                          <div className="icon fa fa-plus"></div>
+                        </div>
+                        <div
+                          className={
+                            isActive.key == index + 1
+                              ? "acc-content current"
+                              : "acc-content"
+                          }
+                        >
+                          <div className="content">
+                            <div className="text">{faq.answer}</div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                    <li class="accordion block">
-                      <div
-                        className={
-                          isActive.key == 2 ? "acc-btn active" : "acc-btn"
-                        }
-                        onClick={() => handleClick(2)}
-                      >
-                        How to soft launch your business?
-                        <div class="icon fa fa-plus"></div>
-                      </div>
-                      <div
-                        className={
-                          isActive.key == 2
-                            ? "acc-content current"
-                            : "acc-content"
-                        }
-                      >
-                        <div class="content">
-                          <div class="text">
-                            There are many variations of passages the majority
-                            have suffered alteration in some fo injected humour,
-                            or randomised words believable.
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="accordion block">
-                      <div
-                        className={
-                          isActive.key == 3 ? "acc-btn active" : "acc-btn"
-                        }
-                        onClick={() => handleClick(3)}
-                      >
-                        How to turn visitors into contributors
-                        <div class="icon fa fa-plus"></div>
-                      </div>
-                      <div
-                        className={
-                          isActive.key == 3
-                            ? "acc-content current"
-                            : "acc-content"
-                        }
-                      >
-                        <div class="content">
-                          <div class="text">
-                            There are many variations of passages the majority
-                            have suffered alteration in some fo injected humour,
-                            or randomised words believable.
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="accordion block">
-                      <div
-                        className={
-                          isActive.key == 4 ? "acc-btn active" : "acc-btn"
-                        }
-                        onClick={() => handleClick(4)}
-                      >
-                        How can i find my solutions?
-                        <div class="icon fa fa-plus"></div>
-                      </div>
-                      <div
-                        className={
-                          isActive.key == 4
-                            ? "acc-content current"
-                            : "acc-content"
-                        }
-                      >
-                        <div class="content">
-                          <div class="text">
-                            There are many variations of passages the majority
-                            have suffered alteration in some fo injected humour,
-                            or randomised words believable.
-                          </div>
-                        </div>
-                      </div>
-                    </li>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -289,4 +132,5 @@ const ServiceDetails = () => {
     </>
   );
 };
+
 export default ServiceDetails;

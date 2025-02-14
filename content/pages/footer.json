@@ -17,7 +17,7 @@
     ]
   },
   "center": {
-    "logo": "images/logo-2.png",
+    "logo": "/images/logo-2.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore",
     "socialLinks": [
       {
@@ -45,7 +45,7 @@
     "email": "yourmail@company.com"
   },
   "bottomBar": {
-    "bottomImage": "images/icons/footer-bottom-img-1.png",
+    "bottomImage": "/images/icons/footer-bottom-img-1.png",
     "copyrightText": "© Purerelax",
     "copyrightLink": "Reserved By Kodesolution",
     "termsText": "Terms & Conditions",

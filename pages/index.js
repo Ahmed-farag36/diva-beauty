@@ -13,12 +13,13 @@ import Team1 from "@/components/sections/Team1"
 import Testimonial1 from "@/components/sections/Testimonial1"
 import Video1 from "@/components/sections/Video1"
 import data from "@/content/pages/home.json"
+import { getServices, getGroupedServices } from "@/utils/getServices";
 
-export default function Home() {
-
+export default function Home({ groupedServices }) {
+  
   return (
     <>
-    <Layout headerStyle={1} footerStyle={1}>
+    <Layout headerStyle={1} footerStyle={1} groupedServices={groupedServices}>
       <Banner1 data={data} />
       <About1 data={data} />
       <Clients1 data={data} />
@@ -35,4 +36,12 @@ export default function Home() {
     </Layout>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const services = getServices();
+  const groupedServices = getGroupedServices(services);
+  return {
+    props: { groupedServices },
+  };
 }

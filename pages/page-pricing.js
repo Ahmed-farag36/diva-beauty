@@ -14,9 +14,11 @@ export default function PagePricing() {
           breadcrumb={data.pageTitle.breadcrumb}
           bgImage={data.pageTitle.bgImage}
         />
-        {data.pricingSections.map((section, index) => (
-          <Pricing1 key={index} data={{ pricing: section }} />
-        ))}
+        <div id="plans">
+          {data.pricingSections.map((section, index) => (
+            <Pricing1 key={index} data={{ pricing: section }} />
+          ))}
+        </div>
         <Instagram1 data={homeData} />
       </Layout>
     </>

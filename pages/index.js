@@ -13,26 +13,33 @@ import Team1 from "@/components/sections/Team1"
 import Testimonial1 from "@/components/sections/Testimonial1"
 import Video1 from "@/components/sections/Video1"
 import data from "@/content/pages/home.json"
+import pricingData from "@/content/pages/pricing.json"
+import LearnMore from "@/components/common/LearnMore"
 
 export default function Home() {
 
   return (
     <>
-    <Layout headerStyle={1} footerStyle={1}>
-      <Banner1 data={data} />
-      <About1 data={data} />
-      <Clients1 data={data} />
-      <Services1 data={data} />
-      <Marquee1 data={data} />
-      <Video1 data={data} />
-      <Gallery1 data={data} />
-      <Pricing1 data={data} />
-      <Contact1 data={data} />
-      <Testimonial1 data={data} />
-      {/* <Team1 /> */}
-      <Instagram1 data={data} />
-      {/* <Blog1 /> */}
-    </Layout>
+      <Layout headerStyle={1} footerStyle={1}>
+        <Banner1 data={data} />
+        <About1 data={data} />
+        <Clients1 data={data} />
+        <Services1 data={data} />
+        <Marquee1 data={data} />
+        <Video1 data={data} />
+        <Gallery1 data={data} />
+        <Pricing1 data={{ pricing: pricingData.pricingSections?.[0] }} />
+        <LearnMore 
+          link={data.pricing.seeAllButton.link}
+          text={data.pricing.seeAllButton.text}
+          show={data.pricing.seeAllButton.text !== ""}
+        />
+        <Contact1 data={data} />
+        <Testimonial1 data={data} />
+        {/* <Team1 /> */}
+        <Instagram1 data={data} />
+        {/* <Blog1 /> */}
+      </Layout>
     </>
   )
 }

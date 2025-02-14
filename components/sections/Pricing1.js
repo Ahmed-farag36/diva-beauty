@@ -19,26 +19,28 @@ const Pricing1 = ({ data }) => {
             <div className="row align-items-center">
               <div className="content-column col-lg-4">
                 {pricing.items.map((item, index) => (
-                  <div key={index} className="pricing-block">
-                    <div className="inner-box">
-                      <div className="image-box">
-                        <figure className="image overlay-anim mb-0">
-                          <Link href={item.link}>
-                            <img src={item.image} alt={item.title}/>
-                          </Link>
-                        </figure>
-                      </div>
-                      <div className="content-box">
-                        <div className="inner">
-                          <h5 className="title">
-                            <Link href={item.link}>{item.title}</Link>
-                          </h5>
-                          <div className="text">{item.description}</div>
+                  index % 2 === 0 && (
+                    <div key={index} className="pricing-block">
+                      <div className="inner-box">
+                        <div className="image-box">
+                          <figure className="image overlay-anim mb-0">
+                            <Link href={item.link}>
+                              <img src={item.image} alt={item.title}/>
+                            </Link>
+                          </figure>
                         </div>
-                        <span className="price">{item.price}</span>
+                        <div className="content-box">
+                          <div className="inner">
+                            <h5 className="title">
+                              <Link href={item.link}>{item.title}</Link>
+                            </h5>
+                            <div className="text">{item.description}</div>
+                          </div>
+                          <span className="price">{item.price}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )
                 ))}
               </div>
               <div className="image-column col-lg-4">
@@ -54,26 +56,28 @@ const Pricing1 = ({ data }) => {
               </div>
               <div className="content-column col-lg-4">
                 {pricing.items.map((item, index) => (
-                  <div key={`right-${index}`} className="pricing-block">
-                    <div className="inner-box">
-                      <div className="image-box">
-                        <figure className="image overlay-anim mb-0">
-                          <Link href={item.link}>
-                            <img src={item.image} alt={item.title}/>
-                          </Link>
-                        </figure>
-                      </div>
-                      <div className="content-box">
-                        <div className="inner">
-                          <h5 className="title">
-                            <Link href={item.link}>{item.title}</Link>
-                          </h5>
-                          <div className="text">{item.description}</div>
+                  index % 2 === 1 && (
+                    <div key={index} className="pricing-block">
+                      <div className="inner-box">
+                        <div className="image-box">
+                          <figure className="image overlay-anim mb-0">
+                            <Link href={item.link}>
+                              <img src={item.image} alt={item.title}/>
+                            </Link>
+                          </figure>
                         </div>
-                        <span className="price">{item.price}</span>
+                        <div className="content-box">
+                          <div className="inner">
+                            <h5 className="title">
+                              <Link href={item.link}>{item.title}</Link>
+                            </h5>
+                            <div className="text">{item.description}</div>
+                          </div>
+                          <span className="price">{item.price}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )
                 ))}
               </div>
             </div>

@@ -272,36 +272,13 @@ collections:
             widget: "object"
             collapsed: true
             fields:
-              - label: "Header"
-                name: "header"
+              - label: "See All Prices Button"
+                name: "seeAllButton"
                 widget: "object"
+                hint: "Leave the text empty to hide the button"
                 fields:
-                  - { label: "Icon", name: "icon", widget: "image" }
-                  - { label: "Sub Title", name: "subTitle", widget: "string" }
-                  - { label: "Title", name: "title", widget: "string" }
-              - label: "Center Image"
-                name: "centerImage"
-                widget: "object"
-                fields:
-                  - {
-                      label: "Background Image",
-                      name: "bgImage",
-                      widget: "image",
-                    }
-                  - { label: "Main Image", name: "image", widget: "image" }
-              - label: "Pricing Items"
-                name: "items"
-                widget: "list"
-                fields:
-                  - { label: "Image", name: "image", widget: "image" }
-                  - { label: "Title", name: "title", widget: "string" }
-                  - {
-                      label: "Description",
-                      name: "description",
-                      widget: "string",
-                    }
-                  - { label: "Price", name: "price", widget: "string" }
-                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Button Text", name: "text", widget: "string", required: false }
+                  - { label: "Button Link", name: "link", widget: "string", default: "/page-pricing" }
           - label: "Contact Section"
             name: "contact"
             widget: "object"

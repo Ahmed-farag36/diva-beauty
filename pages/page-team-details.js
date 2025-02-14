@@ -7,7 +7,9 @@ export default function PageTeam() {
     <>
     <Layout headerStyle={3} footerStyle={1}>
     <PageTitle pageName="Team Details" />
-    <TeamDetails />
+    <div style={{ marginTop: '3rem' }}>
+      <TeamDetails/>
+    </div>
     </Layout>
     </>
   )

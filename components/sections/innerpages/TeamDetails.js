@@ -7,14 +7,15 @@ const CounterUp = dynamic(() => import("@/components/elements/CounterUp"), {
 });
 
 const TeamDetails = () => {
-  const { teamMember, contactForm } = teamData;
+  const { teamMembers, contactForm } = teamData;
 
   return (
     <>
-      <section className="team-details">
-        <div className="container pb-100">
-          <div className="team-details__top pb-70">
-            <div className="row">
+      {teamMembers.map((teamMember, index) => (
+        <section className="team-details" key={index}>
+          <div className="container pb-100">
+            <div className="team-details__top pb-70">
+              <div className="row">
               <div className="col-xl-6 col-lg-6">
                 <div className="team-details__top-left">
                   <div className="team-details__top-img">
@@ -68,6 +69,7 @@ const TeamDetails = () => {
           </div>
         </div>
       </section>
+      ))}
 
       <section className="team-contact-form pt-100">
         <div className="container pb-100">

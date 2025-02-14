@@ -8,7 +8,7 @@ export default function PageContact({ groupedServices }) {
   return (
     <>
     <Layout headerStyle={1} footerStyle={1} groupedServices={groupedServices}>
-    <PageTitle pageName={contact.title} breadcrumb={contact.breadcrumb} />
+    <PageTitle pageName={contact.pageTitle.title} breadcrumb={contact.pageTitle.breadcrumb} bgImage={contact.pageTitle.bgImage} />
 
     <Contact contactData={contact} />
     </Layout>

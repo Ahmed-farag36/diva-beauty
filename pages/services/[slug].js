@@ -7,7 +7,7 @@ export default function PageServiceDetails({ service, groupedServices }) {
   return (
     <>
       <Layout headerStyle={1} footerStyle={1} groupedServices={groupedServices}>
-        <PageTitle pageName={service.title} />
+        <PageTitle pageName={service.title} breadcrumb={service.breadcrumb} bgImage={service.bgImage} />
         <ServiceDetails serviceData={service} />
       </Layout>
     </>

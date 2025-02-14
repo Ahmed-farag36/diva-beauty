@@ -22,7 +22,7 @@ const ServiceDetails = ({ serviceData }) => {
 
   return (
     <>
-      <section className="services-details">
+      <section className="services-details p-100">
         <div className="container">
           <div className="row">
             <div className="col-xl-4 col-lg-4">

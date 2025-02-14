@@ -7,6 +7,20 @@
   "category": "Massage",
   "price": "$100",
   "duration": "60 Minutes",
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "Services",
+      "url": "/services"
+    },
+    {
+      "label": "Make-up",
+      "url": "/services/make-up"
+    }
+  ],
   "overview": {
     "mainImage": "/images/resource/service-details.jpg",
     "description": "Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ndustry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make",

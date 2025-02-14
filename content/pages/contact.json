@@ -1,15 +1,17 @@
 {
-  "title": "Kontakt",
-  "breadcrumb": [
-    {
-      "label": "Home",
+  "pageTitle": {
+    "title": "Kontakt",
+    "bgImage": "/images/background/page-title-bg.png",
+    "breadcrumb": [
+      {
+        "label": "Home",
       "url": "/"
     },
     {
       "label": "Contact Us",
-      "url": "/contact"
+      "url": "/page-contacts"
     }
-  ],
+  ]},
   "contactForm": {
     "title": {
       "subtitle": "Send us email",

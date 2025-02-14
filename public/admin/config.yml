@@ -410,16 +410,18 @@ collections:
         label: "Contact"
         file: "content/pages/contact.json"
         fields:
-          - label: "Title"
-            name: "title"
-            widget: "string"
-          - label: "Breadcrumb"
-            name: "breadcrumb"
-            widget: "list"
-            collapsed: true
+          - label: "Page Title"
+            name: "pageTitle"
+            widget: "object"
             fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Title", name: "title", widget: "string", default: "Pricing Table" }
+              - { label: "Background Image", name: "bgImage", widget: "image", default: "/images/background/page-title-bg.png" }
+              - label: "Breadcrumb"
+                name: "breadcrumb"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
           - label: "Contact Form"
             name: "contactForm"
             widget: "object"
@@ -658,9 +660,21 @@ collections:
         label: "Team Details Page"
         file: "content/pages/page-team-details.json"
         fields:
+          - label: "Page Title"
+            name: "pageTitle"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", default: "Pricing Table" }
+              - { label: "Background Image", name: "bgImage", widget: "image", default: "/images/background/page-title-bg.png" }
+              - label: "Breadcrumb"
+                name: "breadcrumb"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
           - label: "Team Member"
             name: "teamMember"
-            widget: "object"
+            widget: "list"
             collapsed: true
             fields:
               - { label: "Image", name: "image", widget: "image" }
@@ -753,8 +767,9 @@ collections:
                       name: "loadingText",
                       widget: "string",
                     }
+
       - name: "pricing"
-        label: "Pricing Page"
+        label: "Pricing"
         file: "content/pages/pricing.json"
         fields:
           - label: "Page Title"
@@ -795,7 +810,45 @@ collections:
                   - { label: "Description", name: "description", widget: "string" }
                   - { label: "Price", name: "price", widget: "string" }
                   - { label: "Link", name: "link", widget: "string" }
+      
+      - name: "service"
+        label: "Service"
+        file: "content/pages/service.json"
+        fields:
+          - label: "Page Title"
+            name: "pageTitle"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", default: "Pricing Table" }
+              - { label: "Background Image", name: "bgImage", widget: "image", default: "/images/background/page-title-bg.png" }
+              - label: "Breadcrumb"
+                name: "breadcrumb"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
 
+      - name: "service-details"
+        label: "Service Details"
+        file: "content/pages/service-details.json"
+        fields:
+          - label: "Page Title"
+            name: "pageTitle"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Background Image", name: "bgImage", widget: "image", default: "/images/background/page-title-bg.png" }
+              - label: "Breadcrumb"
+                name: "breadcrumb"
+                widget: "object"
+                fields:
+                  - { label: "Home", name: "home", widget: "string", default: "Home" }
+                  - { label: "Home URL", name: "homeURL", widget: "string", default: "/" }
+                  - { label: "Services", name: "services", widget: "string", default: "Services" }
+                  - { label: "Services URL", name: "servicesURL", widget: "string", default: "/services" }
+                  - { label: "Label", name: "label", widget: "string", default: "{{slug}}" }
+                  - { label: "Service Details URL", name: "serviceDetailsURL", widget: "string", default: "/services/{{slug}}" }
+     
   - name: "services"
     label: "Services"
     format: "json"

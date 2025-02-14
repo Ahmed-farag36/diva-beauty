@@ -1,5 +1,19 @@
 {
-  "teamMember": {
+  "pageTitle": {
+    "title": "Team Details",
+    "bgImage": "/images/background/page-title-bg.png",
+    "breadcrumb": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Team",
+        "url": "/page-team-details"
+      }
+    ]
+  },
+  "teamMembers": [{
     "image": "/images/resource/team-details.jpg",
     "name": "Aleesha Brown",
     "position": "Managing Director & CEO",
@@ -22,7 +36,7 @@
         "description": "When an unknown printer took a galley of type and scrambled it to make a type specimen book."
       }
     ]
-  },
+  }],
   "contactForm": {
     "title": "Contact With Us Now",
     "subtitle": "Feel Free to Write Our Tecnology Experts",

@@ -215,38 +215,10 @@
     }
   },
   "pricing": {
-    "header": {
-      "icon": "images/icons/icon1.png",
-      "subTitle": "Price",
-      "title": "Spa Treatments With Pricing"
-    },
-    "centerImage": {
-      "bgImage": "/images/resource/flower1.png",
-      "image": "images/resource/price1-1.png"
-    },
-    "items": [
-      {
-        "image": "images/resource/price1-2.jpg",
-        "title": "Manicure",
-        "description": "20mins revitalize facial",
-        "price": "$30",
-        "link": "page-pricing"
-      },
-      {
-        "image": "images/resource/price1-3.jpg",
-        "title": "Face facial",
-        "description": "20mins revitalize facial",
-        "price": "$40",
-        "link": "page-pricing"
-      },
-      {
-        "image": "images/resource/price1-4.jpg",
-        "title": "Makeup & Massage",
-        "description": "20mins revitalize facial",
-        "price": "$50",
-        "link": "page-pricing"
-      }
-    ]
+    "seeAllButton": {
+      "text": "See all Prices",
+      "link": "/page-pricing#plans"
+    }
   },
   "contact": {
     "bgImage": "/images/background/bg-contact1-1.jpg",

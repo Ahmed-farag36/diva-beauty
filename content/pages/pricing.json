@@ -1,0 +1,52 @@
+{
+    "pageTitle": {
+        "title": "Pricing Table",
+        "bgImage": "/images/background/page-title-bg.png",
+        "breadcrumb": [
+            {
+                "label": "Home",
+                "url": "/"
+            },
+            {
+                "label": "Pricing Table",
+                "url": "/page-pricing"
+            }
+        ]
+    },
+    "pricingSections": [
+        {
+            "header": {
+                "icon": "/images/icons/icon1.png",
+                "subTitle": "Pricing & Plans",
+                "title": "Best Pricing Plans For You"
+            },
+            "centerImage": {
+                "bgImage": "/images/resource/flower1.png",
+                "image": "images/resource/price1-1.png"
+            },
+            "items": [
+                {
+                    "image": "/images/resource/price1-2.jpg",
+                    "title": "Hair Cutting",
+                    "description": "Starting from basic course",
+                    "price": "$29",
+                    "link": "/page-pricing"
+                },
+                {
+                    "image": "/images/resource/price1-3.jpg",
+                    "title": "Skin Care",
+                    "description": "Starting from basic course",
+                    "price": "$49",
+                    "link": "/page-pricing"
+                },
+                {
+                    "image": "images/resource/price1-4.jpg",
+                    "title": "Skin Care",
+                    "description": "Starting from basic course",
+                    "price": "$49",
+                    "link": "/page-pricing"
+                }
+            ]
+        }
+    ]
+}

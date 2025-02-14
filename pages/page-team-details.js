@@ -8,7 +8,9 @@ export default function PageTeam({ groupedServices }) {
     <>
     <Layout headerStyle={1} footerStyle={1} groupedServices={groupedServices}>
     <PageTitle pageName="Team Details" />
-    <TeamDetails />
+    <div style={{ marginTop: '3rem' }}>
+      <TeamDetails/>
+    </div>
     </Layout>
     </>
   )

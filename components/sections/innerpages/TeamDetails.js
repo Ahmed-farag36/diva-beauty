@@ -82,7 +82,7 @@ const TeamDetails = () => {
               <form
                 id="contact_form"
                 name="contact_form"
-                className=""
+                className="team-details-form"
                 action="#"
                 method="post"
               >
@@ -158,6 +158,21 @@ const TeamDetails = () => {
           </div>
         </div>
       </section>
+
+      <style jsx>{`
+        :global(.team-details-form .form-control::placeholder) {
+          color: #808080 !important;
+          opacity: 1;
+        }
+        
+        :global(.team-details-form .form-control:-ms-input-placeholder) {
+          color: #808080 !important;
+        }
+        
+        :global(.team-details-form .form-control::-ms-input-placeholder) {
+          color: #808080 !important;
+        }
+      `}</style>
     </>
   );
 };

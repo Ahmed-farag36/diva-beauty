@@ -19,8 +19,8 @@ export default function Menu({ groupedServices = {} }) {
           {item.name === "Behandlungen" ? (
             <ul>
               {Object.entries(groupedServices).map(([category, services]) => (
-                <li key={category} className="dropdown">
-                  <Link href={`/services#${category}`}>
+                <li key={category} className="dropdown"> 
+                  <Link href={`/services#${category}`} style={{ margin: "0 20px" }}>
                     {category}
                     <span className="dropdown-btn fa fa-angle-down"></span>
                   </Link>

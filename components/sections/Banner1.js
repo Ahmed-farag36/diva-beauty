@@ -30,7 +30,7 @@ const Banner1 = ({ data }) => {
                             <h1 className="title">
                                 {slide.title.part1} <br /> {slide.title.part2}
                             </h1>
-                            <Link href={slide.button.link} className="theme-btn btn-style-one">
+                            <Link href={slide.button.link} className="theme-btn btn-style-one" style={{zIndex: "1000"}}>
                                 <span className="btn-title">{slide.button.text}</span>
                             </Link>
                             <figure className="image">

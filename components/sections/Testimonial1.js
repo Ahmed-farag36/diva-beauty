@@ -12,73 +12,51 @@ const swiperOptions = {
 	},
 	loop: true
 };
-const Testimonial1 = ({ addClass }) => {
+
+const Testimonial1 = ({ data, addClass }) => {
+	const { testimonial } = data;
+	
 	return (
 	<>
     <section className={`testimonial-section ${addClass}`}>
       <div className="testimonial-pattrn1-1 bounce-y"></div>
       <div className="auto-container">
         <div className="sec-title text-center">
-          <figure className="image"><img src="images/icons/icon1.png" alt="Image"/></figure>
-          <span className="sub-title">Testimonial</span>
-          <h2 className="words-slide-up text-split">What they say?</h2>
+          <figure className="image">
+            <img src={testimonial.header.icon} alt="Icon"/>
+          </figure>
+          <span className="sub-title">{testimonial.header.subTitle}</span>
+          <h2 className="words-slide-up text-split">{testimonial.header.title}</h2>
         </div>
         <div className="carousel-outer col-lg-8 offset-lg-2">
             <Swiper {...swiperOptions} className="testimonial-carousel-three owl-carousel owl-theme default-dots">
-              <SwiperSlide className="slide-item">
-                <div className="testimonial-block">
+              {testimonial.items.map((item, index) => (
+                <SwiperSlide key={index} className="slide-item">
+                  <div className="testimonial-block">
                     <div className="inner-box text-center">
                         <div className="rating">
-                        <i className="icon fa fa-star"></i>
-                        <i className="icon fa fa-star"></i>
-                        <i className="icon fa fa-star"></i>
-                        <i className="icon fa fa-star"></i>
-                        <i className="icon fa fa-star"></i>
+                        {[...Array(item.rating)].map((_, i) => (
+                          <i key={i} className="icon fa fa-star"></i>
+                        ))}
                         </div>
-                        <div className="text">“  Suspendisse sit amet neque euismod, convallis quam eget, dignissim massa. Aliquam blandit risus purus, in congue nunc venenatis id. Pellentesque habitant morbi tristique senectus ”</div>
+                        <div className="text">"{item.text}"</div>
                         <div className="info-box">
-                        <h4 className="name">Robert Fox -</h4>
-                        <span className="designation">Co Founder</span>
+                        <h4 className="name">{item.name} -</h4>
+                        <span className="designation">{item.designation}</span>
                         </div>
                     </div>
-                </div>
-              </SwiperSlide>
-      
-              <SwiperSlide className="slide-item">
-                <div className="testimonial-block">
-                    <div className="inner-box text-center">
-                        <div className="rating">
-                        <i className="icon fa fa-star"></i>
-                        <i className="icon fa fa-star"></i>
-                        <i className="icon fa fa-star"></i>
-                        <i className="icon fa fa-star"></i>
-                        <i className="icon fa fa-star"></i>
-                        </div>
-                        <div className="text">“  Suspendisse sit amet neque euismod, convallis quam eget, dignissim massa. Aliquam blandit risus purus, in congue nunc venenatis id. Pellentesque habitant morbi tristique senectus ”</div>
-                        <div className="info-box">
-                        <h4 className="name">Robert Fox -</h4>
-                        <span className="designation">Co Founder</span>
-                        </div>
-                    </div>
-                </div>
-              </SwiperSlide>
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
           <div className="image-box">
-            <figure className="image client1 bounce-x overlay-anim">
-              <Link href="#"><img src="images/resource/client1.png" alt="Image"/></Link>
-            </figure>
-            <figure className="image client2 bounce-y overlay-anim">
-              <Link href="#"><img src="images/resource/client2.png" alt="Image"/></Link>
-            </figure>
-            <figure className="image client3 bounce-x overlay-anim">
-              <Link href="#"><img src="images/resource/client3.png" alt="Image"/></Link>
-            </figure>
-            <figure className="image client4 bounce-x overlay-anim">
-              <Link href="#"><img src="images/resource/client4.png" alt="Image"/></Link>
-            </figure>
-            <figure className="image client5 bounce-y overlay-anim">
-              <Link href="#"><img src="images/resource/client5.png" alt="Image"/></Link>
-            </figure>
+            {testimonial.clientImages.map((client, index) => (
+              <figure key={index} className={`image ${client.className} overlay-anim`}>
+                <Link href={client.link}>
+                  <img src={client.image} alt={client.alt}/>
+                </Link>
+              </figure>
+            ))}
           </div>
         </div>
       </div>
@@ -86,4 +64,5 @@ const Testimonial1 = ({ addClass }) => {
 	</>
 	);
 };
+
 export default Testimonial1

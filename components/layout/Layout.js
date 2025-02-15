@@ -1,4 +1,3 @@
-
 'use client'
 import { useEffect, useState } from "react"
 import BackToTop from '../elements/BackToTop'
@@ -12,7 +11,7 @@ import Header4 from './Header4'
 import Header5 from './Header5'
 import PageHead from './PageHead'
 
-export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children }) {
+export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children, groupedServices }) {
     const [scroll, setScroll] = useState(0)
     // Moblile Menu
     const [isMobileMenu, setMobileMenu] = useState(false)
@@ -37,8 +36,8 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
         <>
             <PageHead />
             <div className="page-wrapper" id="top">
-                {!headerStyle && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} />}
-                {headerStyle == 1 ? <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} /> : null}
+                {!headerStyle && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} groupedServices={groupedServices} />}
+                {headerStyle == 1 ? <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} groupedServices={groupedServices} /> : null}
                 {headerStyle == 2 ? <Header2 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} /> : null}
                 {headerStyle == 3 ? <Header3 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} /> : null}
                 {headerStyle == 4 ? <Header4 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} /> : null}

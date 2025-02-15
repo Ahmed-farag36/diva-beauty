@@ -1,63 +1,88 @@
-import Link from "next/link"
+import Link from "next/link";
+import footerData from "@/content/pages/footer.json";
 
 export default function Footer1() {
-    return (
-        <>
-        <footer className="main-footer">
-			<div className="widgets-section">
-			<div className="footer1-1 bounce-x"></div>
-			<div className="auto-container">
-				<div className="row">
+  return (
+    <>
+      <footer className="main-footer">
+        <div className="widgets-section">
+          <div className="footer1-1 bounce-x"></div>
+          <div className="auto-container">
+            <div className="row">
+              <div className="footer-column col-lg-4 col-md-6 order-1">
+                <div className="footer-widget timetable-widget">
+                  <h3 className="widget-title">
+                    {footerData.openingHours.title}
+                  </h3>
+                  <ul className="timetable">
+                    {footerData.openingHours.hours.map((item, index) => (
+                      <li key={index}>
+                        {item.day} : <span>{item.time}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
 
-				<div className="footer-column col-lg-4 col-md-6 order-1">
-					<div className="footer-widget timetable-widget">
-					<h3 className="widget-title">Open Hours</h3>
-					<ul className="timetable">
-						<li>Monday to Friday : <span>09:00-20:00</span></li>
-						<li>Saturday: <span>09:00-18:00</span></li>
-						<li>Sunday: <span>09:00-18:00</span></li>
-					</ul>
-					</div>
-				</div>
+              <div className="footer-column col-lg-4 col-md-6 order-0 order-lg-1">
+                <div className="footer-widget about-widget text-center">
+                  <div className="logo">
+                    <Link href="/">
+                      <img src={footerData.center.logo} alt="" />
+                    </Link>
+                  </div>
+                  <div className="text">{footerData.center.description}</div>
+                  <ul className="social-icon">
+                    {footerData.center.socialLinks.map((social, index) => (
+                      <li key={index}>
+                        <Link href={social.link}>
+                          <i className={`icon fab fa-${social.platform}`}></i>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
 
-				<div className="footer-column col-lg-4 col-md-6 order-0 order-lg-1">
-					<div className="footer-widget about-widget text-center">
-					<div className="logo"><Link href="index"><img src="images/logo-2.png" alt=""/></Link></div>
-					<div className="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore</div>
-					<ul className="social-icon">
-						<li><Link href="#"><i className="icon fab fa-twitter"></i></Link></li>
-						<li><Link href="#"><i className="icon fab fa-facebook-f"></i></Link></li>
-						<li><Link href="#"><i className="icon fab fa-pinterest-p"></i></Link></li>
-						<li><Link href="#"><i className="icon fab fa-vimeo-v"></i></Link></li>
-					</ul>
-					</div>
-				</div>
+              <div className="footer-column col-lg-4 col-md-6 order-2">
+                <div className="footer-widget contacts-widget">
+                  <h3 className="widget-title">{footerData.contact.title}</h3>
+                  <div className="text">{footerData.contact.address}</div>
+                  <ul className="contact-info">
+                    <li>
+                      <Link href={`tel:${footerData.contact.phone}`}>
+                        {footerData.contact.phone}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={`mailto:${footerData.contact.email}`}>
+                        {footerData.contact.email}
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-				<div className="footer-column col-lg-4 col-md-6 order-2">
-					<div className="footer-widget contacts-widget">
-					<h3 className="widget-title">Contact</h3>
-					<div className="text">2972 Westheimer Rd. Santa Ana, <br/> Illinois 85486</div>
-					<ul className="contact-info">
-						<li><Link href="tel:012-3456-789">012-3456-789</Link></li>
-						<li><Link href="mailto:yourmail@company.com">yourmail@company.com</Link></li>
-					</ul>
-					</div>
-				</div>
-				</div>
-			</div>
-			</div>
-
-			<div className="footer-bottom">
-			<div className="auto-container">
-				<div className="inner-container">
-				<figure className="image"><img src="images/icons/footer-bottom-img-1.png" alt="Image"/></figure>
-				<div className="copyright-text">&copy; Purerelax, <Link href="index">Reserved By Kodesolution</Link></div>
-				<Link className="link" href="/">Terms & Conditions</Link>
-				</div>
-			</div>
-			</div>
-        </footer>
-
-        </>
-    )
+        <div className="footer-bottom">
+          <div className="auto-container">
+            <div className="inner-container">
+              <figure className="image">
+                <img src={footerData.bottomBar.bottomImage} alt="Image" />
+              </figure>
+              <div className="copyright-text">
+                {footerData.bottomBar.copyrightText}{" "}
+                <Link href="/">{footerData.bottomBar.copyrightLink}</Link>
+              </div>
+              <Link className="link" href={footerData.bottomBar.termsLink}>
+                {footerData.bottomBar.termsText}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </>
+  );
 }

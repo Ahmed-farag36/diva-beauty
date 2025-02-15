@@ -1,0 +1,909 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images
+public_folder: images
+collections:
+  - name: "pages" # Used in routes, e.g., /admin/collections/pages
+    label: "Pages" # Used in the UI
+    format: "json"
+    # folder: "content/pages" # The path to the folder where the documents are stored
+    files:
+      - name: "home"
+        label: "Home"
+        file: "content/pages/home.json"
+        fields:
+          - label: "Banner Section"
+            name: "banner"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Slides"
+                name: "slides"
+                widget: "list"
+                fields:
+                  - {
+                      label: "Background Image",
+                      name: "backgroundImage",
+                      widget: "image",
+                    }
+                  - { label: "Leap Image", name: "leapImage", widget: "image" }
+                  - {
+                      label: "Sub Title",
+                      name: "subTitle",
+                      widget: "string",
+                      default: "Professional Styling Since 1990",
+                    }
+                  - label: "Title"
+                    name: "title"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Part 1",
+                          name: "part1",
+                          widget: "string",
+                          default: "The Essence",
+                        }
+                      - {
+                          label: "Part 2",
+                          name: "part2",
+                          widget: "string",
+                          default: "Of Beauty",
+                        }
+                  - label: "Button"
+                    name: "button"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Text",
+                          name: "text",
+                          widget: "string",
+                          default: "Book Now",
+                        }
+                      - {
+                          label: "Link",
+                          name: "link",
+                          widget: "string",
+                          default: "page-contact",
+                        }
+                  - { label: "Image 1", name: "image1", widget: "image" }
+                  - { label: "Image 2", name: "image2", widget: "image" }
+                  - {
+                      label: "Style Title",
+                      name: "styleTitle",
+                      widget: "string",
+                      default: "Purerelax",
+                    }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {
+                  label: "Background Image 1",
+                  name: "bgImage1",
+                  widget: "image",
+                }
+              - {
+                  label: "Background Image 2",
+                  name: "bgImage2",
+                  widget: "image",
+                }
+              - {
+                  label: "Background Image 3",
+                  name: "bgImage3",
+                  widget: "image",
+                }
+              - {
+                  label: "Background Image 4",
+                  name: "bgImage4",
+                  widget: "image",
+                }
+              - { label: "Main Image", name: "mainImage", widget: "image" }
+              - label: "Experience Box"
+                name: "experienceBox"
+                widget: "object"
+                fields:
+                  - {
+                      label: "Background Image",
+                      name: "bgImage",
+                      widget: "image",
+                    }
+                  - { label: "Years", name: "years", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
+              - label: "Content"
+                name: "content"
+                widget: "object"
+                fields:
+                  - { label: "Sub Title", name: "subTitle", widget: "string" }
+                  - {
+                      label: "Title Part 1",
+                      name: "titlePart1",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Title Part 2",
+                      name: "titlePart2",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                    }
+                  - label: "Features"
+                    name: "features"
+                    widget: "list"
+                    fields:
+                      - { label: "Text", name: "text", widget: "string" }
+                      - { label: "Icon", name: "icon", widget: "image" }
+              - label: "Author"
+                name: "author"
+                widget: "object"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Signature", name: "signature", widget: "image" }
+                  - { label: "Name", name: "name", widget: "string" }
+                  - {
+                      label: "Designation",
+                      name: "designation",
+                      widget: "string",
+                    }
+              - label: "Opening Hours"
+                name: "openingHours"
+                widget: "object"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Weekday Hours",
+                      name: "weekdayHours",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Saturday Hours",
+                      name: "saturdayHours",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Background Image",
+                      name: "bgImage",
+                      widget: "image",
+                    }
+          - label: "Clients Section"
+            name: "clients"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Clients"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Name", name: "name", widget: "string" }
+          - label: "Services Section"
+            name: "services"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Header"
+                name: "header"
+                widget: "object"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Sub Title", name: "subTitle", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                    }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {
+                      label: "Background Image 1",
+                      name: "bgImage1",
+                      widget: "image",
+                    }
+                  - {
+                      label: "Background Image 2",
+                      name: "bgImage2",
+                      widget: "image",
+                    }
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+          - label: "Marquee Section"
+            name: "marquee"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+          - label: "Video Section"
+            name: "video"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Background Image", name: "bgImage", widget: "image" }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+              - label: "Video Element"
+                name: "videoElement"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "YouTube Video ID",
+                      name: "videoId",
+                      widget: "string",
+                    }
+          - label: "Gallery Section"
+            name: "gallery"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Side Images"
+                name: "sideImages"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+              - label: "Main Image"
+                name: "mainImage"
+                widget: "object"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+          - label: "Pricing Section"
+            name: "pricing"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "See All Prices Button"
+                name: "seeAllButton"
+                widget: "object"
+                hint: "Leave the text empty to hide the button"
+                fields:
+                  - { label: "Button Text", name: "text", widget: "string", required: false }
+                  - { label: "Button Link", name: "link", widget: "string", default: "/page-pricing" }
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Background Image", name: "bgImage", widget: "image" }
+              - {
+                  label: "Top Shape Image",
+                  name: "topShapeImage",
+                  widget: "image",
+                }
+              - {
+                  label: "Bottom Shape Image",
+                  name: "bottomShapeImage",
+                  widget: "image",
+                }
+              - label: "Form"
+                name: "form"
+                widget: "object"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Sub Title", name: "subTitle", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                    }
+                  - {
+                      label: "Button Text",
+                      name: "buttonText",
+                      widget: "string",
+                    }
+                  - label: "Fields"
+                    name: "fields"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Name Placeholder",
+                          name: "namePlaceholder",
+                          widget: "string",
+                          default: "Name *",
+                        }
+                      - {
+                          label: "Email Placeholder",
+                          name: "emailPlaceholder",
+                          widget: "string",
+                          default: "Email Address *",
+                        }
+                      - {
+                          label: "Service Placeholder",
+                          name: "servicePlaceholder",
+                          widget: "string",
+                          default: "Select Service *",
+                        }
+                      - {
+                          label: "Date Placeholder",
+                          name: "datePlaceholder",
+                          widget: "string",
+                          default: "Select Date *",
+                        }
+                      - {
+                          label: "Date Format",
+                          name: "dateFormat",
+                          widget: "datetime",
+                          format: "YYYY-MM-DD",
+                          date_format: "YYYY-MM-DD",
+                          time_format: false,
+                        }
+                      - {
+                          label: "Message Placeholder",
+                          name: "messagePlaceholder",
+                          widget: "string",
+                          default: "Write a Message",
+                        }
+          - label: "Instagram Section"
+            name: "instagram"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+          - label: "Testimonial Section"
+            name: "testimonial"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Header"
+                name: "header"
+                widget: "object"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Sub Title", name: "subTitle", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+              - label: "Testimonials"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Text", name: "text", widget: "text" }
+                  - { label: "Name", name: "name", widget: "string" }
+                  - {
+                      label: "Designation",
+                      name: "designation",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Rating",
+                      name: "rating",
+                      widget: "number",
+                      min: 1,
+                      max: 5,
+                    }
+              - label: "Client Images"
+                name: "clientImages"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+                  - { label: "Class Name", name: "className", widget: "string" }
+      
+      - name: "contact"
+        label: "Contact"
+        file: "content/pages/contact.json"
+        fields:
+          - label: "Page Title"
+            name: "pageTitle"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", default: "Pricing Table" }
+              - { label: "Background Image", name: "bgImage", widget: "image", default: "/images/background/page-title-bg.png" }
+              - label: "Breadcrumb"
+                name: "breadcrumb"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+          - label: "Contact Form"
+            name: "contactForm"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "Subtitle", name: "subtitle", widget: "string" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Fields"
+                name: "fields"
+                widget: "object"
+                fields:
+                  - { label: "Name Placeholder", name: "name", widget: "string" }
+                  - { label: "Email Placeholder", name: "email", widget: "string" }
+                  - { label: "Subject Placeholder", name: "subject", widget: "string" }
+                  - { label: "Phone Placeholder", name: "phone", widget: "string" }
+                  - { label: "Message Placeholder", name: "message", widget: "string" }
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "Loading Text", name: "loadingText", widget: "string" }
+          - label: "Contact Info"
+            name: "contactInfo"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "Subtitle", name: "subtitle", widget: "string" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+              - label: "Details"
+                name: "details"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - label: "Content"
+                    name: "content"
+                    widget: "object"
+                    fields:
+                      - { label: "Prefix", name: "prefix", widget: "string", required: false }
+                      - { label: "Value", name: "value", widget: "string" }
+                      - { label: "Link", name: "link", widget: "string", required: false }
+          - label: "Map"
+            name: "map"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Source", name: "src", widget: "string" }
+              - { label: "Height", name: "height", widget: "string" }
+
+      - name: "Header"
+        label: "Header"
+        file: "content/pages/header.json"
+        fields:
+          - label: "Top Bar"
+            name: "topBar"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {
+                  label: "Email",
+                  name: "email",
+                  widget: "string",
+                  default: "alma.lawson@example.com",
+                }
+              - {
+                  label: "Hours Text",
+                  name: "hoursText",
+                  widget: "string",
+                  default: "Mon to Sat: 9:00am – 6:00pm Sun: Closed",
+                }
+              - label: "Social Links"
+                name: "socialLinks"
+                widget: "list"
+                fields:
+                  - {
+                      label: "Platform",
+                      name: "platform",
+                      widget: "select",
+                      options:
+                        [
+                          "twitter",
+                          "facebook-f",
+                          "pinterest-p",
+                          "vimeo-v",
+                          "instagram",
+                        ],
+                    }
+                  - { label: "Link", name: "link", widget: "string" }
+          - label: "Logo"
+            name: "logo"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Light Logo", name: "light", widget: "image" }
+              - { label: "Dark Logo", name: "dark", widget: "image" }
+          - label: "Book Now Button"
+            name: "bookNowButton"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {
+                  label: "Text",
+                  name: "text",
+                  widget: "string",
+                  default: "Book Now",
+                }
+              - {
+                  label: "Link",
+                  name: "link",
+                  widget: "string",
+                  default: "page-contact",
+                }
+          - label: "Menu"
+            name: "Menu"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Menu Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+                  - label: "Submenu"
+                    name: "submenu"
+                    widget: "list"
+                    required: false
+                    fields:
+                      - { label: "Name", name: "name", widget: "string" }
+                      - { label: "Link", name: "link", widget: "string" }
+          - label: "Mobile Menu Contacts"
+            name: "mobileMenuContacts"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Hours", name: "hours", widget: "string" }
+
+      - name: "Footer"
+        label: "Footer"
+        file: "content/pages/footer.json"
+        fields:
+          - label: "Opening Hours"
+            name: "openingHours"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "string",
+                  default: "Open Hours",
+                }
+              - label: "Hours"
+                name: "hours"
+                widget: "list"
+                fields:
+                  - { label: "Day", name: "day", widget: "string" }
+                  - { label: "Time", name: "time", widget: "string" }
+          - label: "Center Section"
+            name: "center"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Social Links"
+                name: "socialLinks"
+                widget: "list"
+                fields:
+                  - {
+                      label: "Platform",
+                      name: "platform",
+                      widget: "select",
+                      options:
+                        ["twitter", "facebook-f", "pinterest-p", "vimeo-v"],
+                    }
+                  - { label: "Link", name: "link", widget: "string" }
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "string",
+                  default: "Contact",
+                }
+              - { label: "Address", name: "address", widget: "text" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+          - label: "Bottom Bar"
+            name: "bottomBar"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Bottom Image", name: "bottomImage", widget: "image" }
+              - {
+                  label: "Copyright Text",
+                  name: "copyrightText",
+                  widget: "string",
+                  default: "© Purerelax",
+                }
+              - {
+                  label: "Copyright Link",
+                  name: "copyrightLink",
+                  widget: "string",
+                  default: "Reserved By Kodesolution",
+                }
+              - {
+                  label: "Terms Link Text",
+                  name: "termsText",
+                  widget: "string",
+                  default: "Terms & Conditions",
+                }
+              - {
+                  label: "Terms Link",
+                  name: "termsLink",
+                  widget: "string",
+                  default: "/",
+                }
+
+      - name: "team-details"
+        label: "Team Details Page"
+        file: "content/pages/page-team-details.json"
+        fields:
+          - label: "Page Title"
+            name: "pageTitle"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", default: "Pricing Table" }
+              - { label: "Background Image", name: "bgImage", widget: "image", default: "/images/background/page-title-bg.png" }
+              - label: "Breadcrumb"
+                name: "breadcrumb"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+          - label: "Team Member"
+            name: "teamMember"
+            widget: "list"
+            collapsed: true
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Position", name: "position", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Experience"
+                name: "experience"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                    }
+              - label: "Skills"
+                name: "skills"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                    }
+          - label: "Contact Form"
+            name: "contactForm"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - label: "Form Fields"
+                name: "fields"
+                widget: "object"
+                fields:
+                  - label: "Name Field"
+                    name: "name"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Placeholder",
+                          name: "placeholder",
+                          widget: "string",
+                        }
+                  - label: "Email Field"
+                    name: "email"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Placeholder",
+                          name: "placeholder",
+                          widget: "string",
+                        }
+                  - label: "Subject Field"
+                    name: "subject"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Placeholder",
+                          name: "placeholder",
+                          widget: "string",
+                        }
+                  - label: "Phone Field"
+                    name: "phone"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Placeholder",
+                          name: "placeholder",
+                          widget: "string",
+                        }
+                  - label: "Message Field"
+                    name: "message"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Placeholder",
+                          name: "placeholder",
+                          widget: "string",
+                        }
+              - label: "Submit Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - { label: "Button Text", name: "text", widget: "string" }
+                  - {
+                      label: "Loading Text",
+                      name: "loadingText",
+                      widget: "string",
+                    }
+
+      - name: "pricing"
+        label: "Pricing"
+        file: "content/pages/pricing.json"
+        fields:
+          - label: "Page Title"
+            name: "pageTitle"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", default: "Pricing Table" }
+              - { label: "Background Image", name: "bgImage", widget: "image", default: "/images/background/page-title-bg.png" }
+              - label: "Breadcrumb"
+                name: "breadcrumb"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+          - label: "Pricing Sections"
+            name: "pricingSections"
+            widget: "list"
+            fields:
+              - label: "Header"
+                name: "header"
+                widget: "object"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Sub Title", name: "subTitle", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+              - label: "Center Image"
+                name: "centerImage"
+                widget: "object"
+                fields:
+                  - { label: "Background Image", name: "bgImage", widget: "image" }
+                  - { label: "Main Image", name: "image", widget: "image" }
+              - label: "Pricing Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "string" }
+                  - { label: "Price", name: "price", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+      
+      - name: "service"
+        label: "Service"
+        file: "content/pages/service.json"
+        fields:
+          - label: "Page Title"
+            name: "pageTitle"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", default: "Pricing Table" }
+              - { label: "Background Image", name: "bgImage", widget: "image", default: "/images/background/page-title-bg.png" }
+              - label: "Breadcrumb"
+                name: "breadcrumb"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+
+      - name: "service-details"
+        label: "Service Details"
+        file: "content/pages/service-details.json"
+        fields:
+          - label: "Page Title"
+            name: "pageTitle"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Background Image", name: "bgImage", widget: "image", default: "/images/background/page-title-bg.png" }
+              - label: "Breadcrumb"
+                name: "breadcrumb"
+                widget: "object"
+                fields:
+                  - { label: "Home", name: "home", widget: "string", default: "Home" }
+                  - { label: "Home URL", name: "homeURL", widget: "string", default: "/" }
+                  - { label: "Services", name: "services", widget: "string", default: "Services" }
+                  - { label: "Services URL", name: "servicesURL", widget: "string", default: "/services" }
+                  - { label: "Label", name: "label", widget: "string", default: "{{slug}}" }
+                  - { label: "Service Details URL", name: "serviceDetailsURL", widget: "string", default: "/services/{{slug}}" }
+     
+  - name: "services"
+    label: "Services"
+    format: "json"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Icon", name: "icon", widget: "image" }
+      - { label: "Background Image", name: "bgImage", widget: "image" }
+      - { label: "Background Image Two", name: "bgImageTwo", widget: "image" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Duration", name: "duration", widget: "string" }
+      - label: "Service Overview"
+        name: "overview"
+        widget: "object"
+        fields:
+          - { label: "Main Image", name: "mainImage", widget: "image" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Additional Description", name: "additionalDescription", widget: "text" }
+      - label: "Service Center"
+        name: "serviceCenter"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Quote", name: "quote", widget: "text" }
+          - label: "Feature Images"
+            name: "featureImages"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
+      - label: "FAQ"
+        name: "faq"
+        widget: "list"
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Answer", name: "answer", widget: "text" }
+      - label: "Sidebar Menu"
+        name: "sidebarMenu"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Link", name: "link", widget: "string" }
+      - label: "Contact"
+        name: "contact"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Icon", name: "icon", widget: "image" }
+
+
+      

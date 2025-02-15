@@ -1,34 +1,52 @@
 import Link from "next/link";
+import menuData from "@/content/pages/header.json";
 
-export default function Menu() {
+export default function Menu({ groupedServices = {} }) {
+
   return (
-    <>
-      <ul className="navigation">
-        <li>
-          <Link href="/">Home</Link>
+    <ul className="navigation">
+      {menuData.menu.items.map((item, index) => (
+        <li key={index} className={
+          (item.submenu?.length > 0 || item.name === "Behandlungen") ? "dropdown" : ""
+        }>
+          <Link href={item.link}>
+            {item.name}
+            {(item.submenu?.length > 0 || item.name === "Behandlungen") && 
+              <span className="dropdown-btn fa fa-angle-down"></span>
+            }
+          </Link>
+          
+          {item.name === "Behandlungen" ? (
+            <ul>
+              {Object.entries(groupedServices).map(([category, services]) => (
+                <li key={category} className="dropdown">
+                  <Link href={`/services#${category}`}>
+                    {category}
+                    <span className="dropdown-btn fa fa-angle-down"></span>
+                  </Link>
+                  <ul>
+                    {services.map((service) => (
+                      <li key={service.title}>
+                        <Link href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                          {service.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          ) : item.submenu?.length > 0 ? (
+            <ul>
+              {item.submenu.map((subItem, subIndex) => (
+                <li key={subIndex}>
+                  <Link href={subItem.link}>{subItem.name}</Link>
+                </li>
+              ))}
+            </ul>
+          ) : null}
         </li>
-
-        <li className="dropdown">
-          <Link href="/page-services">Behandlungen</Link>
-          <ul>
-            <li>
-              <Link href="/page-services">Services Grid</Link>
-            </li>
-            <li>
-              <Link href="/page-service-details">Service Details</Link>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <Link href="/page-pricing">Preise</Link>
-        </li>
-        <li>
-          <Link href="/page-team-details">Über uns</Link>
-        </li>
-        <li>
-          <Link href="/page-contact">Kontakt</Link>
-        </li>
-      </ul>
-    </>
+      ))}
+    </ul>
   );
 }

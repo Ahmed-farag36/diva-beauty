@@ -9,6 +9,8 @@ import Services6 from "@/components/sections/Services6"
 import Services6T1 from "@/components/sections/Services6T1"
 import Team2 from "@/components/sections/Team2"
 import Testimonial1 from "@/components/sections/Testimonial1"
+import data from "@/content/pages/home.json"
+
 export default function Home6() {
 
   return (
@@ -21,7 +23,7 @@ export default function Home6() {
       <Pricing6 />
       <About6T1 />
       <Team2 />
-      <Testimonial1 addClass={"style-two"} />
+      <Testimonial1 data={data} addClass={"style-two"} />
       <Faq6 />
       <Blog2 addClass={"blog-section-home4"} />
     </Layout>

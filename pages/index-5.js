@@ -10,6 +10,8 @@ import Pricing5 from "@/components/sections/Pricing5"
 import Services3 from "@/components/sections/Services3"
 import Services5 from "@/components/sections/Services5"
 import Testimonial1 from "@/components/sections/Testimonial1"
+import data from "@/content/pages/home.json"
+
 export default function Home5() {
 
   return (
@@ -24,7 +26,7 @@ export default function Home5() {
       <Contact5 />
       <Funfact5 />
       <Pricing5 />
-      <Testimonial1 />
+      <Testimonial1 data={data} />
       <Blog2 addClass={"blog-section-home4"} />
     </Layout>
     </>

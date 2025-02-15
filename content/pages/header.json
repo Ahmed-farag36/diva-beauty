@@ -1,0 +1,66 @@
+{
+  "topBar": {
+    "email": "alma.lawson@example.com",
+    "hoursText": "Mon to Sat: 9:00am – 6:00pm Sun: Closed",
+    "socialLinks": [
+      {
+        "platform": "twitter",
+        "link": "#"
+      },
+      {
+        "platform": "facebook-f",
+        "link": "#"
+      },
+      {
+        "platform": "pinterest-p",
+        "link": "#"
+      },
+      {
+        "platform": "vimeo-v",
+        "link": "#"
+      }
+    ]
+  },
+  "logo": {
+    "light": "/images/logo.png",
+    "dark": "/images/logo-2.png"
+  },
+  "bookNowButton": {
+    "text": "Book Now",
+    "link": "page-contact"
+  },
+  "menu": {
+    "items": [
+      {
+        "name": "Home",
+        "link": "/",
+        "submenu": []
+      },
+      {
+        "name": "Behandlungen",
+        "link": "/services",
+        "submenu": []
+      },
+      {
+        "name": "Preise",
+        "link": "/page-pricing",
+        "submenu": []
+      },
+      {
+        "name": "Über uns",
+        "link": "/page-team-details",
+        "submenu": []
+      },
+      {
+        "name": "Kontakt",
+        "link": "/page-contact",
+        "submenu": []
+      }
+    ]
+  },
+  "mobileMenuContacts": {
+    "phone": "+49 176 300 07 307",
+    "email": "info@beauty-paradies.de",
+    "hours": "Mo - Fr: 09:00 - 18:00"
+  }
+} 

@@ -1,0 +1,16 @@
+{
+  "pageTitle": {
+    "title": "Service Details",
+    "bgImage": "/images/background/page-title-bg.png",
+    "breadcrumb": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Services",
+        "url": "/services"
+      }
+    ]
+  }
+}

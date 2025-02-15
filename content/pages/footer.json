@@ -1,0 +1,54 @@
+{
+  "openingHours": {
+    "title": "Open Hours",
+    "hours": [
+      {
+        "day": "Monday to Friday",
+        "time": "09:00-20:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "09:00-18:00"
+      }
+    ]
+  },
+  "center": {
+    "logo": "/images/logo-2.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore",
+    "socialLinks": [
+      {
+        "platform": "twitter",
+        "link": "#"
+      },
+      {
+        "platform": "facebook-f",
+        "link": "#"
+      },
+      {
+        "platform": "pinterest-p",
+        "link": "#"
+      },
+      {
+        "platform": "vimeo-v",
+        "link": "#"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "address": "2972 Westheimer Rd. Santa Ana, Illinois 85486",
+    "phone": "012-3456-789",
+    "email": "yourmail@company.com"
+  },
+  "bottomBar": {
+    "bottomImage": "/images/icons/footer-bottom-img-1.png",
+    "copyrightText": "© Purerelax",
+    "copyrightLink": "Reserved By Kodesolution",
+    "termsText": "Terms & Conditions",
+    "termsLink": "/"
+  }
+} 

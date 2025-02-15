@@ -1,0 +1,331 @@
+{
+  "banner": {
+    "slides": [
+      {
+        "backgroundImage": "/images/main-slider/bg-slider1-1.png",
+        "leapImage": "/images/main-slider/slide1-3.png",
+        "subTitle": "Professional Styling Since 1880",
+        "title": {
+          "part1": "The Essence",
+          "part2": "Of Beauty"
+        },
+        "button": {
+          "text": "Book Now",
+          "link": "page-contact"
+        },
+        "image1": "/images/main-slider/slide1-4.png",
+        "image2": "/images/main-slider/slide1-2.png",
+        "styleTitle": "Purerelax"
+      },
+      {
+        "backgroundImage": "/images/main-slider/bg-slider1-1.png",
+        "leapImage": "/images/main-slider/slide1-3.png",
+        "subTitle": "Professional Styling Since 1990",
+        "title": {
+          "part1": "The Essence",
+          "part2": "Of Beauty"
+        },
+        "button": {
+          "text": "Book Now",
+          "link": "page-contact"
+        },
+        "image1": "/images/main-slider/slide1-4.png",
+        "image2": "/images/main-slider/slide1-2.png",
+        "styleTitle": "Purerelax"
+      }
+    ]
+  },
+  "about": {
+    "bgImage1": "/images/resource/about1-3.png",
+    "bgImage2": "/images/resource/about1-4.png",
+    "bgImage3": "/images/resource/about1-7.png",
+    "bgImage4": "/images/resource/about1-8.png",
+    "mainImage": "/images/resource/about1-1.png",
+    "experienceBox": {
+      "bgImage": "/images/resource/about1-6.png",
+      "years": "20+",
+      "text": "Experience"
+    },
+    "content": {
+      "subTitle": "Get to know us",
+      "titlePart1": "Beauty and",
+      "titlePart2": "Spa Center",
+      "description": "Proin efficitur, mauris vel condimentum pulvinar, velit orci consectetur ligula, eget egestas magna mi ut arcu. Phasellus nec odio orci.",
+      "features": [
+        {
+          "text": "Velit orci consectetur ligula, eget egestas magn",
+          "icon": "/images/icons/theme-icon4.png"
+        },
+        {
+          "text": "Pelit orci consectetur ligula",
+          "icon": "/images/icons/theme-icon4.png"
+        },
+        {
+          "text": "Eget egestas magn",
+          "icon": "/images/icons/theme-icon4.png"
+        }
+      ]
+    },
+    "author": {
+      "image": "/images/resource/about1-2.png",
+      "signature": "/images/resource/about-sign1.png",
+      "name": "Michale",
+      "designation": "Co Founder"
+    },
+    "openingHours": {
+      "icon": "/images/icons/clock1.png",
+      "title": "Opening Hours",
+      "weekdayHours": "09:00 am - 06:00 pm",
+      "saturdayHours": "11:00 am to 3:00 pm",
+      "bgImage": "/images/resource/about1-5.png"
+    }
+  },
+  "clients": {
+    "items": [
+      {
+        "image": "/images/resource/client1-1.png",
+        "link": "#",
+        "name": "Client 1"
+      },
+      {
+        "image": "/images/resource/client1-2.png",
+        "link": "#",
+        "name": "Client 2"
+      },
+      {
+        "image": "/images/resource/client1-3.png",
+        "link": "#",
+        "name": "Client 3"
+      },
+      {
+        "image": "/images/resource/client1-4.png",
+        "link": "#",
+        "name": "Client 4"
+      },
+      {
+        "image": "/images/resource/client1-5.png",
+        "link": "#",
+        "name": "Client 5"
+      },
+      {
+        "image": "/images/resource/client1-1.png",
+        "link": "#",
+        "name": "Client 1"
+      },
+      {
+        "image": "/images/resource/client1-2.png",
+        "link": "#",
+        "name": "Client 2"
+      }
+    ]
+  },
+  "services": {
+    "header": {
+      "icon": "/images/icons/icon1.png",
+      "subTitle": "Services list",
+      "title": "Our Services Will Make You Glow",
+      "description": "Proin efficitur, mauris vel condimentum pulvinar, velit orci consectetur ligula, eget egestas magna mi ut arcu. Phasellus nec."
+    },
+    "items": [
+      {
+        "bgImage1": "/images/resource/service1-1.png",
+        "bgImage2": "/images/resource/service1-2.png",
+        "icon": "/images/icons/theme-icon5.png",
+        "title": "Sauna Relax",
+        "link": "page-service-details"
+      },
+      {
+        "bgImage1": "/images/resource/service1-1.png",
+        "bgImage2": "/images/resource/service1-2.png",
+        "icon": "/images/icons/theme-icon6.png",
+        "title": "Face Treatments",
+        "link": "page-service-details"
+      },
+      {
+        "bgImage1": "/images/resource/service1-1.png",
+        "bgImage2": "/images/resource/service1-2.png",
+        "icon": "/images/icons/theme-icon7.png",
+        "title": "Make-up",
+        "link": "page-service-details"
+      },
+      {
+        "bgImage1": "/images/resource/service1-1.png",
+        "bgImage2": "/images/resource/service1-2.png",
+        "icon": "/images/icons/theme-icon8.png",
+        "title": "Thai Massage",
+        "link": "page-service-details"
+      },
+      {
+        "bgImage1": "/images/resource/service1-1.png",
+        "bgImage2": "/images/resource/service1-2.png",
+        "icon": "/images/icons/theme-icon5.png",
+        "title": "Sauna Relax",
+        "link": "page-service-details"
+      }
+    ]
+  },
+  "marquee": {
+    "items": [
+      {
+        "text": "Mesotherapy"
+      },
+      {
+        "text": "Treatments"
+      },
+      {
+        "text": "Relax"
+      },
+      {
+        "text": "Manicure"
+      }
+    ]
+  },
+  "video": {
+    "bgImage": "/images/background/bg-video1.jpg",
+    "title": "Book & feel our Incredible Spa Experience",
+    "button": {
+      "text": "Make Appointment",
+      "link": "page-contact"
+    },
+    "videoElement": {
+      "title": "Watch Now",
+      "videoId": "L61p2uyiMSo"
+    }
+  },
+  "gallery": {
+    "smallImages": [
+      {
+        "image": "images/resource/gallery1-3.jpg",
+        "alt": "Gallery Image 2"
+      },
+      {
+        "image": "images/resource/gallery1-2.jpg",
+        "alt": "Gallery Image 3"
+      }
+    ],
+    "mediumImages": [
+      {
+        "image": "images/resource/gallery1-4.jpg",
+        "alt": "Gallery Image 1"
+      }
+    ],
+    "mainImage": {
+      "image": "images/resource/gallery1-1.jpg",
+      "alt": "Gallery Main Image"
+    }
+  },
+  "pricing": {
+    "seeAllButton": {
+      "text": "See all Prices",
+      "link": "/page-pricing#plans"
+    }
+  },
+  "contact": {
+    "bgImage": "/images/background/bg-contact1-1.jpg",
+    "topShapeImage": "/images/resource/curved-shape-top.png",
+    "bottomShapeImage": "/images/resource/curved-shape-bottom.png",
+    "form": {
+      "icon": "images/icons/icon1.png",
+      "subTitle": "Appointment",
+      "title": "Book Now",
+      "description": "Proin efficitur, mauris vel condimentum pulvinar, velit orci consectetur ligula.",
+      "buttonText": "Book Now",
+      "fields": {
+        "namePlaceholder": "Name *",
+        "emailPlaceholder": "Email Address *",
+        "servicePlaceholder": "Select Service *",
+        "datePlaceholder": "Select Date *",
+        "dateFormat": "YYYY-MM-DD",
+        "messagePlaceholder": "Write a Message"
+      }
+    }
+  },
+  "testimonial": {
+    "header": {
+      "icon": "images/icons/icon1.png",
+      "subTitle": "Testimonial",
+      "title": "What they say?"
+    },
+    "items": [
+      {
+        "text": "Suspendisse sit amet neque euismod, convallis quam eget, dignissim massa. Aliquam blandit risus purus, in congue nunc venenatis id. Pellentesque habitant morbi tristique senectus",
+        "name": "Robert Fox",
+        "designation": "Co Founder",
+        "rating": 5
+      },
+      {
+        "text": "Suspendisse sit amet neque euismod, convallis quam eget, dignissim massa. Aliquam blandit risus purus, in congue nunc venenatis id. Pellentesque habitant morbi tristique senectus",
+        "name": "Robert Fox",
+        "designation": "Co Founder",
+        "rating": 5
+      }
+    ],
+    "clientImages": [
+      {
+        "image": "images/resource/client1.png",
+        "link": "#",
+        "alt": "Client 1",
+        "className": "client1 bounce-x"
+      },
+      {
+        "image": "images/resource/client2.png",
+        "link": "#",
+        "alt": "Client 2",
+        "className": "client2 bounce-y"
+      },
+      {
+        "image": "images/resource/client3.png",
+        "link": "#",
+        "alt": "Client 3",
+        "className": "client3 bounce-x"
+      },
+      {
+        "image": "images/resource/client4.png",
+        "link": "#",
+        "alt": "Client 4",
+        "className": "client4 bounce-x"
+      },
+      {
+        "image": "images/resource/client5.png",
+        "link": "#",
+        "alt": "Client 5",
+        "className": "client5 bounce-y"
+      }
+    ]
+  },
+  "instagram": {
+    "title": "Follow On Instagram",
+    "images": [
+      {
+        "image": "images/resource/instagram1-1.jpg",
+        "link": "images/resource/instagram1-1.jpg",
+        "alt": "Instagram Image 1"
+      },
+      {
+        "image": "images/resource/instagram1-2.jpg",
+        "link": "images/resource/instagram1-2.jpg",
+        "alt": "Instagram Image 2"
+      },
+      {
+        "image": "images/resource/instagram1-3.jpg",
+        "link": "images/resource/instagram1-3.jpg",
+        "alt": "Instagram Image 3"
+      },
+      {
+        "image": "images/resource/instagram1-1.jpg",
+        "link": "images/resource/instagram1-1.jpg",
+        "alt": "Instagram Image 4"
+      },
+      {
+        "image": "images/resource/instagram1-4.jpg",
+        "link": "images/resource/instagram1-4.jpg",
+        "alt": "Instagram Image 5"
+      },
+      {
+        "image": "images/resource/instagram1-5.jpg",
+        "link": "images/resource/instagram1-5.jpg",
+        "alt": "Instagram Image 6"
+      }
+    ]
+  }
+}

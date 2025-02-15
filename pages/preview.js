@@ -1,0 +1,49 @@
+import { useState, useEffect } from "react";
+
+import { componentsMap } from "../src/componentmapping";
+const PreviewPage = () => {
+  const [previewData, setPreviewData] = useState(null);
+
+  useEffect(() => {
+    const fetchPreviewData = () => {
+      let current = window;
+      let n = 0;
+      let data = null;
+
+      while (current.parent && n < 10) {
+        current = current.parent;
+        n += 1;
+        if (current.previewDataCMS) {
+          data = current.previewDataCMS;
+        }
+      }
+      return data;
+    };
+
+    const interval = setInterval(() => {
+      const data = fetchPreviewData();
+      if (data) {
+        setPreviewData(JSON.parse(JSON.stringify(data)));
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const componentData = componentsMap[previewData?.type];
+
+  if (!componentData) {
+    return <p>Keine Vorschau verfügbar für diese Seite.</p>;
+  }
+
+  const { component: ComponentToRender, props } = componentData;
+
+  const enhancedProps = {
+    ...props,
+    data: previewData,
+  };
+
+  return <>{<ComponentToRender {...enhancedProps} />}</>;
+};
+
+export default PreviewPage;

@@ -23,7 +23,7 @@
   },
   "logo": {
     "light": "/images/logo.png",
-    "dark": "/images/logo-2.png"
+    "dark": "images/logo.png"
   },
   "bookNowButton": {
     "text": "Book Now",
@@ -63,4 +63,4 @@
     "email": "info@beauty-paradies.de",
     "hours": "Mo - Fr: 09:00 - 18:00"
   }
-} 
+}

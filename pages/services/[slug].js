@@ -3,12 +3,12 @@ import PageTitle from "@/components/sections/PageTitle"
 import ServiceDetails from "@/components/sections/innerpages/ServiceDetails"
 import { getServices, getGroupedServices } from "@/utils/getServices"
 
-export default function PageServiceDetails({ service, groupedServices }) {
+export default function PageServiceDetails({ data, groupedServices }) {
   return (
     <>
       <Layout headerStyle={1} footerStyle={1} groupedServices={groupedServices}>
-        <PageTitle pageName={service.title} breadcrumb={service.breadcrumb} bgImage={service.bgImage} />
-        <ServiceDetails serviceData={service} />
+        <PageTitle pageName={data.pageTitle.title} breadcrumb={data.pageTitle.breadcrumb} bgImage={data.pageTitle.bgImage} />
+        <ServiceDetails serviceData={data} />
       </Layout>
     </>
   )
@@ -45,7 +45,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      service,
+      data: service,
       groupedServices,
     },
   }

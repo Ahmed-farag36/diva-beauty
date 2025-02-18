@@ -1,43 +1,28 @@
-import HomeComponent from "./components/HomeComponent";
-import AboutComponent from "./components/AboutComponent";
-import PriceComponent from "./components/PriceComponent";
-import AcademyComponent from "../src/components/AcademyComponent";
-import ServicesComponent from "../src/components/ServicesComponent";
-import GaleryComponent from "./components/GaleryComponent";
-import AcademyPage from "./components/AcademyPage";
-import ServicePage from "./components/ServicePage";
+import HomeComponent from "@/pages/index";
+import PriceComponent from "@/pages/page-pricing";
+import ContactComponent from "@/pages/page-contact";
+import ServicesOverviewComponent from "@/pages/services/index";
+import ServiceDetailsComponent from "@/pages/services/[slug]";
 
 export const componentsMap = {
-  startseite: {
+  home: {
     component: HomeComponent,
-    props: {},
-  },
-  about: {
-    component: AboutComponent,
     props: {},
   },
   pricing: {
     component: PriceComponent,
     props: {},
   },
-  akademie: {
-    component: AcademyComponent,
+  contact: {
+    component: ContactComponent,
     props: {},
   },
-  behandlungen: {
-    component: ServicesComponent,
+  "services-overview": {
+    component: ServicesOverviewComponent,
     props: {},
   },
-  gallery: {
-    component: GaleryComponent,
-    props: {},
-  },
-  "academy-courses": {
-    component: AcademyPage,
-    props: {},
-  },
-  services: {
-    component: ServicePage,
+  "services": {
+    component: ServiceDetailsComponent,
     props: {},
   },
 };

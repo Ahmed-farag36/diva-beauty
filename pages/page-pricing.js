@@ -4,9 +4,9 @@ import PageTitle from "@/components/sections/PageTitle";
 import Pricing1 from "@/components/sections/Pricing1";
 import homeData from "@/content/pages/home.json"
 import { getServices, getGroupedServices } from "@/utils/getServices";
-import data from "@/content/pages/pricing.json"
+import pricingData from "@/content/pages/pricing.json"
 
-export default function PagePricing({ groupedServices }) {
+export default function PagePricing({ groupedServices, data }) {
   return (
     <>
       <Layout headerStyle={1} footerStyle={1} groupedServices={groupedServices}>
@@ -30,6 +30,6 @@ export async function getStaticProps() {
   const services = getServices();
   const groupedServices = getGroupedServices(services);
   return {
-    props: { groupedServices },
+    props: { groupedServices, data: pricingData },
   };
 }

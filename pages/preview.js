@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-
-import { componentsMap } from "../src/componentmapping";
-const PreviewPage = () => {
+import { getServices, getGroupedServices } from "@/utils/getServices";
+import { componentsMap } from "@/components/componentmapping";
+const PreviewPage = ({groupedServices}) => {
   const [previewData, setPreviewData] = useState(null);
 
   useEffect(() => {
@@ -41,9 +41,18 @@ const PreviewPage = () => {
   const enhancedProps = {
     ...props,
     data: previewData,
+    groupedServices
   };
 
   return <>{<ComponentToRender {...enhancedProps} />}</>;
 };
 
 export default PreviewPage;
+
+export async function getStaticProps() {
+  const services = getServices();
+  const groupedServices = getGroupedServices(services);
+  return {
+    props: { groupedServices },
+  };
+}

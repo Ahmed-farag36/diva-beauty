@@ -17,8 +17,7 @@ const CMSPage = () => {
     }
 
     (async () => {
-      const CMS = (await import("decap-cms-app")).default;
-      CMS.init();
+      const CMS = (await import("decap-cms")).default;
 
       const GeneratePreview = (type) =>
         createClass({
@@ -56,21 +55,10 @@ const CMSPage = () => {
           },
         });
 
-      CMS.registerPreviewTemplate("startseite", GeneratePreview("startseite"));
-      CMS.registerPreviewTemplate("about", GeneratePreview("about"));
+      CMS.registerPreviewTemplate("home", GeneratePreview("home"));
       CMS.registerPreviewTemplate("pricing", GeneratePreview("pricing"));
-      CMS.registerPreviewTemplate("akademie", GeneratePreview("akademie"));
-      CMS.registerPreviewTemplate(
-        "behandlungen",
-        GeneratePreview("behandlungen")
-      );
-
-      CMS.registerPreviewTemplate("gallery", GeneratePreview("gallery"));
-      CMS.registerPreviewTemplate(
-        "academy-courses",
-        GeneratePreview("academy-courses")
-      );
-
+      CMS.registerPreviewTemplate("contact", GeneratePreview("contact"));
+      CMS.registerPreviewTemplate("services-overview", GeneratePreview("services-overview"));
       CMS.registerPreviewTemplate("services", GeneratePreview("services"));
     })();
   }, []);
@@ -81,7 +69,6 @@ const CMSPage = () => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Content Manager</title>
-        <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
       </Head>
       <main id="cms" />
     </>

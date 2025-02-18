@@ -12,12 +12,12 @@ import Services1 from "@/components/sections/Services1"
 import Team1 from "@/components/sections/Team1"
 import Testimonial1 from "@/components/sections/Testimonial1"
 import Video1 from "@/components/sections/Video1"
-import data from "@/content/pages/home.json"
+import homeData from "@/content/pages/home.json"
 import { getServices, getGroupedServices } from "@/utils/getServices";
 import pricingData from "@/content/pages/pricing.json"
 import LearnMore from "@/components/common/LearnMore"
 
-export default function Home({ groupedServices }) {
+export default function Home({ data, groupedServices }) {
   
   return (
     <>
@@ -49,6 +49,6 @@ export async function getStaticProps() {
   const services = getServices();
   const groupedServices = getGroupedServices(services);
   return {
-    props: { groupedServices },
+    props: { groupedServices, data: homeData },
   };
 }

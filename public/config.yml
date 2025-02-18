@@ -782,8 +782,8 @@ collections:
                 name: "breadcrumb"
                 widget: "list"
                 fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "URL", name: "url", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string", default: "breadcrumb-default" }
+                  - { label: "URL", name: "url", widget: "string", default: "/breadcrumb-default" }
           - label: "Pricing Sections"
             name: "pricingSections"
             widget: "list"
@@ -811,9 +811,9 @@ collections:
                   - { label: "Price", name: "price", widget: "string" }
                   - { label: "Link", name: "link", widget: "string" }
       
-      - name: "service"
-        label: "Service"
-        file: "content/pages/service.json"
+      - name: "services-overview"
+        label: "Services Overview"
+        file: "content/pages/services.json"
         fields:
           - label: "Page Title"
             name: "pageTitle"
@@ -838,6 +838,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Background Image", name: "bgImage", widget: "image", default: "/images/background/page-title-bg.png" }
+              - { label: "Icon", name: "icon", widget: "image" }
               - label: "Breadcrumb"
                 name: "breadcrumb"
                 widget: "object"
@@ -855,6 +856,7 @@ collections:
     folder: "content/services"
     create: true
     slug: "{{slug}}"
+    preview_path: "/services/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Icon", name: "icon", widget: "image" }

@@ -2,6 +2,8 @@ import Link from "next/link";
 import footerData from "@/content/pages/footer.json";
 
 export default function Footer1({data}) {
+  if(!data) return null
+  
   return (
     <>
       <footer className="main-footer">

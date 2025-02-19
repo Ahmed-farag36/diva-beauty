@@ -60,6 +60,9 @@ const CMSPage = () => {
       CMS.registerPreviewTemplate("contact", GeneratePreview("contact"));
       CMS.registerPreviewTemplate("services-overview", GeneratePreview("services-overview"));
       CMS.registerPreviewTemplate("services", GeneratePreview("services"));
+      CMS.registerPreviewTemplate("team-details", GeneratePreview("team-details"));
+      CMS.registerPreviewTemplate("header", GeneratePreview("header"));
+      CMS.registerPreviewTemplate("footer", GeneratePreview("footer"));
     })();
   }, []);
 

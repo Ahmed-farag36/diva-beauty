@@ -3,6 +3,9 @@ import PriceComponent from "@/pages/page-pricing";
 import ContactComponent from "@/pages/page-contact";
 import ServicesOverviewComponent from "@/pages/services/index";
 import ServiceDetailsComponent from "@/pages/services/[slug]";
+import TeamDetailsComponent from "@/pages/page-team-details";
+import HeaderComponent from "@/components/layout/Header1";
+import FooterComponent from "@/components/layout/Footer1";
 
 export const componentsMap = {
   home: {
@@ -25,4 +28,15 @@ export const componentsMap = {
     component: ServiceDetailsComponent,
     props: {},
   },
+  "team-details": {
+    component: TeamDetailsComponent,
+    props: {},
+  },
+  "header": {
+    component: HeaderComponent,
+    props: {},
+  },
+  "footer": {
+    component: FooterComponent
+  }
 };

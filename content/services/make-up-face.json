@@ -1,9 +1,9 @@
 {
-  "title": "Make-up",
+  "title": "MAKE UP-FACE",
   "icon": "images/icons/theme-icon1.png",
   "bgImage": "/images/resource/service1-1.png",
   "bgImageTwo": "/images/resource/service1-2.png",
-  "link": "page-service-details",
+  "link": "/services/make-up-face",
   "category": "Gesichtsbehandlung",
   "price": "$100",
   "duration": "60 Minutes",
@@ -91,4 +91,4 @@
     "phone": "+892 ( 123 ) 112 - 9999",
     "icon": "lnr-icon-phone-handset"
   }
-} 
+}

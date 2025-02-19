@@ -11,7 +11,7 @@ import Header4 from './Header4'
 import Header5 from './Header5'
 import PageHead from './PageHead'
 
-export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children, groupedServices }) {
+export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children, groupedServices, headerData, footerData }) {
     const [scroll, setScroll] = useState(0)
     // Moblile Menu
     const [isMobileMenu, setMobileMenu] = useState(false)
@@ -32,16 +32,17 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
             }
         })
     }, [])
+            
     return (
         <>
             <PageHead />
             <div className="page-wrapper" id="top">
-                {!headerStyle && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} groupedServices={groupedServices} />}
-                {headerStyle == 1 ? <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} groupedServices={groupedServices} /> : null}
-                {headerStyle == 2 ? <Header2 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} /> : null}
+                {!headerStyle && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} groupedServices={groupedServices} data={headerData} />}
+                {headerStyle == 1 ? <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} groupedServices={groupedServices} data={headerData} /> : null}
+                {/* {headerStyle == 2 ? <Header2 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} /> : null}
                 {headerStyle == 3 ? <Header3 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} /> : null}
                 {headerStyle == 4 ? <Header4 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} /> : null}
-                {headerStyle == 5 ? <Header5 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} /> : null}
+                {headerStyle == 5 ? <Header5 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} isSearch={isSearch} handleSearch={handleSearch} /> : null} */}
 
                 <main className="main">
                     {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}
@@ -49,11 +50,11 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
                     {children}
                 </main>
 
-                {!footerStyle && < Footer1 />}
-                {footerStyle == 1 ? < Footer1 /> : null}
-                {footerStyle == 2 ? < Footer2 /> : null}
+                {!footerStyle && < Footer1 data={footerData} />}
+                {footerStyle == 1 ? < Footer1 data={footerData} /> : null}
+                {/* {footerStyle == 2 ? < Footer2 /> : null}
                 {footerStyle == 3 ? < Footer3 /> : null}
-                {footerStyle == 4 ? < Footer4 /> : null}
+                {footerStyle == 4 ? < Footer4 /> : null} */}
 
             </div>
                 <BackToTop />

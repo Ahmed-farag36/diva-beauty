@@ -2,12 +2,14 @@ import Layout from "@/components/layout/Layout"
 import PageTitle from "@/components/sections/PageTitle"
 import ServiceDetails from "@/components/sections/innerpages/ServiceDetails"
 import { getServices, getGroupedServices } from "@/utils/getServices"
+import headerData from "@/content/pages/header.json"
+import footerData from "@/content/pages/footer.json"
 
 export default function PageServiceDetails({ data, groupedServices }) {
   return (
     <>
-      <Layout headerStyle={1} footerStyle={1} groupedServices={groupedServices}>
-        <PageTitle pageName={data.pageTitle.title} breadcrumb={data.pageTitle.breadcrumb} bgImage={data.pageTitle.bgImage} />
+      <Layout headerStyle={1} footerStyle={1} groupedServices={groupedServices} headerData={headerData} footerData={footerData}>
+        <PageTitle pageName={data.title} breadcrumb={data.breadcrumb} bgImage={data.bgImage} />
         <ServiceDetails serviceData={data} />
       </Layout>
     </>

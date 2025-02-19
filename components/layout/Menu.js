@@ -1,8 +1,7 @@
 import Link from "next/link";
-import menuData from "@/content/pages/header.json";
 
-export default function Menu({ groupedServices = {} }) {
-
+export default function Menu({ groupedServices = {}, menuData }) {
+  
   return (
     <ul className="navigation">
       {menuData.menu.items.map((item, index) => (

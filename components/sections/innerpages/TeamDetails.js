@@ -1,13 +1,12 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import teamData from "@/content/pages/page-team-details.json";
 
 const CounterUp = dynamic(() => import("@/components/elements/CounterUp"), {
   ssr: false,
 });
 
-const TeamDetails = () => {
-  const { teamMembers, contactForm } = teamData;
+const TeamDetails = ({ teamData }) => {
+  const { teamMembers, contactForm } = teamData;  
 
   return (
     <>

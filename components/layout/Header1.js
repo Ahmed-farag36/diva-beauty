@@ -10,7 +10,8 @@ export default function Header1({
   isSearch,
   handleSearch,
   groupedServices = {},
-}) {
+  data
+}) {  
   return (
     <>
       <header
@@ -24,8 +25,8 @@ export default function Header1({
               <div className="top-left">
                 <ul className="list-style-one">
                   <li>
-                    <Link href={`mailto:${headerData.topBar.email}`}>
-                      {headerData.topBar.email}
+                    <Link href={`mailto:${data.topBar.email}`}>
+                      {data.topBar.email}
                     </Link>
                   </li>
                 </ul>
@@ -33,10 +34,10 @@ export default function Header1({
 
               <div className="top-right">
                 <ul className="list-style-two">
-                  <li>{headerData.topBar.hoursText}</li>
+                  <li>{data.topBar.hoursText}</li>
                 </ul>
                 <ul className="social-icon-one">
-                  {headerData.topBar.socialLinks.map((social, index) => (
+                  {data.topBar.socialLinks.map((social, index) => (
                     <li key={index}>
                       <Link href={social.link}>
                         <span
@@ -55,7 +56,7 @@ export default function Header1({
               <div className="logo-box">
                 <div className="logo">
                   <Link href="/">
-                    <img src={headerData.logo.light} alt="Logo" />
+                    <img src={data.logo.light} alt="Logo" />
                   </Link>
                 </div>
               </div>
@@ -63,8 +64,8 @@ export default function Header1({
               <div className="nav-outer">
                 <nav className="nav main-menu">
                   <Menu
-                    headerData={headerData}
                     groupedServices={groupedServices}
+                    menuData={data}
                   />
                 </nav>
               </div>
@@ -78,11 +79,11 @@ export default function Header1({
 
                 <div className="btn-box">
                   <Link
-                    href={headerData.bookNowButton.link}
+                    href={data.bookNowButton.link}
                     className="theme-btn btn-style-one"
                   >
                     <span className="btn-title">
-                      {headerData.bookNowButton.text}
+                      {data.bookNowButton.text}
                     </span>
                   </Link>
                 </div>
@@ -102,7 +103,7 @@ export default function Header1({
             <div className="upper-box">
               <div className="nav-logo">
                 <Link href="/">
-                  <img src={headerData.logo.dark} alt="" />
+                  <img src={data.logo.dark} alt="" />
                 </Link>
               </div>
               <div className="close-btn" onClick={handleMobileMenu}>
@@ -115,8 +116,8 @@ export default function Header1({
                 <div className="contact-info-box">
                   <i className="icon lnr-icon-phone-handset" />
                   <span className="title">Call Now</span>
-                  <Link href={`tel:${headerData.mobileMenuContacts.phone}`}>
-                    {headerData.mobileMenuContacts.phone}
+                  <Link href={`tel:${data.mobileMenuContacts.phone}`}>
+                    {data.mobileMenuContacts.phone}
                   </Link>
                 </div>
               </li>
@@ -124,8 +125,8 @@ export default function Header1({
                 <div className="contact-info-box">
                   <span className="icon lnr-icon-envelope1" />
                   <span className="title">Send Email</span>
-                  <Link href={`mailto:${headerData.mobileMenuContacts.email}`}>
-                    {headerData.mobileMenuContacts.email}
+                  <Link href={`mailto:${data.mobileMenuContacts.email}`}>
+                    {data.mobileMenuContacts.email}
                   </Link>
                 </div>
               </li>
@@ -133,7 +134,7 @@ export default function Header1({
                 <div className="contact-info-box">
                   <span className="icon lnr-icon-clock" />
                   <span className="title">Working Hours</span>
-                  {headerData.mobileMenuContacts.hours}
+                  {data.mobileMenuContacts.hours}
                 </div>
               </li>
             </ul>
@@ -196,7 +197,7 @@ export default function Header1({
               {/*Logo*/}
               <div className="logo">
                 <Link href="/">
-                  <img src={headerData.logo.dark} alt="" />
+                  <img src={data.logo.dark} alt="" />
                 </Link>
               </div>
               {/*Right Col*/}
@@ -204,7 +205,7 @@ export default function Header1({
                 {/* Main Menu */}
                 <nav className="main-menu">
                   <div className="navbar-collapse show collapse clearfix">
-                    <Menu headerData={headerData} groupedServices={groupedServices} />
+                    <Menu groupedServices={groupedServices} menuData={data} />
                   </div>
                 </nav>
                 {/* Main Menu End*/}
@@ -220,4 +221,12 @@ export default function Header1({
       </header>
     </>
   );
+}
+
+export async function getStaticPorps() {
+  return {
+    props: {
+      data: headerData
+    }
+  }
 }

@@ -1,9 +1,9 @@
 {
-  "title": "Face Treatment",
+  "title": "FACE TREATMENT",
   "icon": "images/icons/theme-icon3.png",
   "bgImage": "/images/background/page-title-bg.jpg",
   "bgImageTwo": "/images/resource/service1-2.png",
-  "link": "page-service-details",
+  "link": "/services/face-treatment",
   "category": "Massage",
   "price": "$100",
   "duration": "60 Minutes",
@@ -91,4 +91,4 @@
     "phone": "+892 ( 123 ) 112 - 9999",
     "icon": "lnr-icon-phone-handset"
   }
-} 
+}

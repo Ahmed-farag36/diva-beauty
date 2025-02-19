@@ -16,12 +16,14 @@ import homeData from "@/content/pages/home.json"
 import { getServices, getGroupedServices } from "@/utils/getServices";
 import pricingData from "@/content/pages/pricing.json"
 import LearnMore from "@/components/common/LearnMore"
+import headerData from "@/content/pages/header.json"
+import footerData from "@/content/pages/footer.json"
 
 export default function Home({ data, groupedServices }) {
   
   return (
     <>
-      <Layout headerStyle={1} footerStyle={1} groupedServices={groupedServices}>
+      <Layout headerStyle={1} footerStyle={1} groupedServices={groupedServices} headerData={headerData} footerData={footerData}>
         <Banner1 data={data} />
         <About1 data={data} />
         <Clients1 data={data} />

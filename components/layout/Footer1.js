@@ -1,7 +1,7 @@
 import Link from "next/link";
 import footerData from "@/content/pages/footer.json";
 
-export default function Footer1() {
+export default function Footer1({data}) {
   return (
     <>
       <footer className="main-footer">
@@ -12,10 +12,10 @@ export default function Footer1() {
               <div className="footer-column col-lg-4 col-md-6 order-1">
                 <div className="footer-widget timetable-widget">
                   <h3 className="widget-title">
-                    {footerData.openingHours.title}
+                    {data.openingHours.title}
                   </h3>
                   <ul className="timetable">
-                    {footerData.openingHours.hours.map((item, index) => (
+                    {data.openingHours.hours.map((item, index) => (
                       <li key={index}>
                         {item.day} : <span>{item.time}</span>
                       </li>
@@ -28,12 +28,12 @@ export default function Footer1() {
                 <div className="footer-widget about-widget text-center">
                   <div className="logo">
                     <Link href="/">
-                      <img src={footerData.center.logo} alt="" />
+                      <img src={data.center.logo} alt="" />
                     </Link>
                   </div>
-                  <div className="text">{footerData.center.description}</div>
+                  <div className="text">{data.center.description}</div>
                   <ul className="social-icon">
-                    {footerData.center.socialLinks.map((social, index) => (
+                    {data.center.socialLinks.map((social, index) => (
                       <li key={index}>
                         <Link href={social.link}>
                           <i className={`icon fab fa-${social.platform}`}></i>
@@ -46,17 +46,17 @@ export default function Footer1() {
 
               <div className="footer-column col-lg-4 col-md-6 order-2">
                 <div className="footer-widget contacts-widget">
-                  <h3 className="widget-title">{footerData.contact.title}</h3>
-                  <div className="text">{footerData.contact.address}</div>
+                  <h3 className="widget-title">{data.contact.title}</h3>
+                  <div className="text">{data.contact.address}</div>
                   <ul className="contact-info">
                     <li>
-                      <Link href={`tel:${footerData.contact.phone}`}>
-                        {footerData.contact.phone}
+                      <Link href={`tel:${data.contact.phone}`}>
+                        {data.contact.phone}
                       </Link>
                     </li>
                     <li>
-                      <Link href={`mailto:${footerData.contact.email}`}>
-                        {footerData.contact.email}
+                      <Link href={`mailto:${data.contact.email}`}>
+                        {data.contact.email}
                       </Link>
                     </li>
                   </ul>
@@ -70,14 +70,14 @@ export default function Footer1() {
           <div className="auto-container">
             <div className="inner-container">
               <figure className="image">
-                <img src={footerData.bottomBar.bottomImage} alt="Image" />
+                <img src={data.bottomBar.bottomImage} alt="Image" />
               </figure>
               <div className="copyright-text">
-                {footerData.bottomBar.copyrightText}{" "}
-                <Link href="/">{footerData.bottomBar.copyrightLink}</Link>
+                {data.bottomBar.copyrightText}{" "}
+                <Link href="/">{data.bottomBar.copyrightLink}</Link>
               </div>
-              <Link className="link" href={footerData.bottomBar.termsLink}>
-                {footerData.bottomBar.termsText}
+              <Link className="link" href={data.bottomBar.termsLink}>
+                {data.bottomBar.termsText}
               </Link>
             </div>
           </div>
@@ -85,4 +85,13 @@ export default function Footer1() {
       </footer>
     </>
   );
+}
+
+
+export async function getStaticProps() {
+  return {
+    props: {
+      data: footerData
+    }
+  }
 }

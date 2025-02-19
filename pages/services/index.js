@@ -4,19 +4,21 @@ import PageTitle from "@/components/sections/PageTitle";
 import Testimonial1 from "@/components/sections/Testimonial1";
 import Link from "next/link";
 import Instagram1 from "@/components/sections/Instagram1";
-import data from "@/content/pages/home.json";
-import services from "@/content/pages/services.json";
+import homeData from "@/content/pages/home.json";
+import servicesData from "@/content/pages/services.json";
 import { getServices, getGroupedServices } from "@/utils/getServices";
+import headerData from "@/content/pages/header.json";
+import footerData from "@/content/pages/footer.json";
 
-export default function PageServices({ groupedServices }) {
+export default function PageServices({ groupedServices, data }) {
   return (
     <> 
-      <Layout headerStyle={1} footerStyle={1} groupedServices={groupedServices}>
-        <PageTitle pageName={services.pageTitle.title} breadcrumb={services.pageTitle.breadcrumb} bgImage={services.pageTitle.bgImage} />
+      <Layout headerStyle={1} footerStyle={1} groupedServices={groupedServices} headerData={headerData} footerData={footerData}>
+        <PageTitle pageName={data.pageTitle.title} breadcrumb={data.pageTitle.breadcrumb} bgImage={data.pageTitle.bgImage} />
         {Object.keys(groupedServices).map((category) => (
             <Services key={category[0]} services={groupedServices[category]} />
         ))}
-        <Instagram1 data={data} />
+        <Instagram1 data={homeData} />
       </Layout>
     </>
   );
@@ -30,6 +32,7 @@ export async function getStaticProps() {
   return {
     props: {
       groupedServices,
+      data: servicesData
     },
   };
 }

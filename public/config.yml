@@ -481,181 +481,6 @@ collections:
               - { label: "Source", name: "src", widget: "string" }
               - { label: "Height", name: "height", widget: "string" }
 
-      - name: "Header"
-        label: "Header"
-        file: "content/pages/header.json"
-        fields:
-          - label: "Top Bar"
-            name: "topBar"
-            widget: "object"
-            collapsed: true
-            fields:
-              - {
-                  label: "Email",
-                  name: "email",
-                  widget: "string",
-                  default: "alma.lawson@example.com",
-                }
-              - {
-                  label: "Hours Text",
-                  name: "hoursText",
-                  widget: "string",
-                  default: "Mon to Sat: 9:00am – 6:00pm Sun: Closed",
-                }
-              - label: "Social Links"
-                name: "socialLinks"
-                widget: "list"
-                fields:
-                  - {
-                      label: "Platform",
-                      name: "platform",
-                      widget: "select",
-                      options:
-                        [
-                          "twitter",
-                          "facebook-f",
-                          "pinterest-p",
-                          "vimeo-v",
-                          "instagram",
-                        ],
-                    }
-                  - { label: "Link", name: "link", widget: "string" }
-          - label: "Logo"
-            name: "logo"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Light Logo", name: "light", widget: "image" }
-              - { label: "Dark Logo", name: "dark", widget: "image" }
-          - label: "Book Now Button"
-            name: "bookNowButton"
-            widget: "object"
-            collapsed: true
-            fields:
-              - {
-                  label: "Text",
-                  name: "text",
-                  widget: "string",
-                  default: "Book Now",
-                }
-              - {
-                  label: "Link",
-                  name: "link",
-                  widget: "string",
-                  default: "page-contact",
-                }
-          - label: "Menu"
-            name: "Menu"
-            widget: "object"
-            collapsed: true
-            fields:
-              - label: "Menu Items"
-                name: "items"
-                widget: "list"
-                fields:
-                  - { label: "Name", name: "name", widget: "string" }
-                  - { label: "Link", name: "link", widget: "string" }
-                  - label: "Submenu"
-                    name: "submenu"
-                    widget: "list"
-                    required: false
-                    fields:
-                      - { label: "Name", name: "name", widget: "string" }
-                      - { label: "Link", name: "link", widget: "string" }
-          - label: "Mobile Menu Contacts"
-            name: "mobileMenuContacts"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Phone", name: "phone", widget: "string" }
-              - { label: "Email", name: "email", widget: "string" }
-              - { label: "Hours", name: "hours", widget: "string" }
-
-      - name: "Footer"
-        label: "Footer"
-        file: "content/pages/footer.json"
-        fields:
-          - label: "Opening Hours"
-            name: "openingHours"
-            widget: "object"
-            collapsed: true
-            fields:
-              - {
-                  label: "Title",
-                  name: "title",
-                  widget: "string",
-                  default: "Open Hours",
-                }
-              - label: "Hours"
-                name: "hours"
-                widget: "list"
-                fields:
-                  - { label: "Day", name: "day", widget: "string" }
-                  - { label: "Time", name: "time", widget: "string" }
-          - label: "Center Section"
-            name: "center"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Logo", name: "logo", widget: "image" }
-              - { label: "Description", name: "description", widget: "text" }
-              - label: "Social Links"
-                name: "socialLinks"
-                widget: "list"
-                fields:
-                  - {
-                      label: "Platform",
-                      name: "platform",
-                      widget: "select",
-                      options:
-                        ["twitter", "facebook-f", "pinterest-p", "vimeo-v"],
-                    }
-                  - { label: "Link", name: "link", widget: "string" }
-          - label: "Contact Section"
-            name: "contact"
-            widget: "object"
-            collapsed: true
-            fields:
-              - {
-                  label: "Title",
-                  name: "title",
-                  widget: "string",
-                  default: "Contact",
-                }
-              - { label: "Address", name: "address", widget: "text" }
-              - { label: "Phone", name: "phone", widget: "string" }
-              - { label: "Email", name: "email", widget: "string" }
-          - label: "Bottom Bar"
-            name: "bottomBar"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Bottom Image", name: "bottomImage", widget: "image" }
-              - {
-                  label: "Copyright Text",
-                  name: "copyrightText",
-                  widget: "string",
-                  default: "© Purerelax",
-                }
-              - {
-                  label: "Copyright Link",
-                  name: "copyrightLink",
-                  widget: "string",
-                  default: "Reserved By Kodesolution",
-                }
-              - {
-                  label: "Terms Link Text",
-                  name: "termsText",
-                  widget: "string",
-                  default: "Terms & Conditions",
-                }
-              - {
-                  label: "Terms Link",
-                  name: "termsLink",
-                  widget: "string",
-                  default: "/",
-                }
-
       - name: "team-details"
         label: "Team Details Page"
         file: "content/pages/page-team-details.json"
@@ -672,8 +497,8 @@ collections:
                 fields:
                   - { label: "Label", name: "label", widget: "string" }
                   - { label: "URL", name: "url", widget: "string" }
-          - label: "Team Member"
-            name: "teamMember"
+          - label: "Team Members"
+            name: "teamMembers"
             widget: "list"
             collapsed: true
             fields:
@@ -826,30 +651,209 @@ collections:
                 widget: "list"
                 fields:
                   - { label: "Label", name: "label", widget: "string" }
-                  - { label: "URL", name: "url", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string", default: "/services/{{slug}}" }
 
-      - name: "service-details"
-        label: "Service Details"
-        file: "content/pages/service-details.json"
+      # - name: "service-details"
+      #   label: "Service Details"
+      #   file: "content/pages/service-details.json"
+      #   fields:
+      #     - label: "Page Title"
+      #       name: "pageTitle"
+      #       widget: "object"
+      #       fields:
+      #         - { label: "Title", name: "title", widget: "string" }
+      #         - { label: "Background Image", name: "bgImage", widget: "image", default: "/images/background/page-title-bg.png" }
+      #         - { label: "Icon", name: "icon", widget: "image" }
+      #         - label: "Breadcrumb"
+      #           name: "breadcrumb"
+      #           widget: "object"
+      #           fields:
+      #             - { label: "Home", name: "home", widget: "string", default: "Home" }
+      #             - { label: "Home URL", name: "homeURL", widget: "string", default: "/" }
+      #             - { label: "Services", name: "services", widget: "string", default: "Services" }
+      #             - { label: "Services URL", name: "servicesURL", widget: "string", default: "/services" }
+      #             - { label: "Label", name: "label", widget: "string", default: "{{slug}}" }
+      #             - { label: "Service Details URL", name: "serviceDetailsURL", widget: "string", default: "/services/{{slug}}" }
+
+  - name: "components"
+    label: "Components"
+    format: json
+    files:
+      - name: "header"
+        label: "Header"
+        file: "content/pages/header.json"
         fields:
-          - label: "Page Title"
-            name: "pageTitle"
+          - label: "Top Bar"
+            name: "topBar"
             widget: "object"
+            collapsed: true
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Background Image", name: "bgImage", widget: "image", default: "/images/background/page-title-bg.png" }
-              - { label: "Icon", name: "icon", widget: "image" }
-              - label: "Breadcrumb"
-                name: "breadcrumb"
-                widget: "object"
+              - {
+                  label: "Email",
+                  name: "email",
+                  widget: "string",
+                  default: "alma.lawson@example.com",
+                }
+              - {
+                  label: "Hours Text",
+                  name: "hoursText",
+                  widget: "string",
+                  default: "Mon to Sat: 9:00am – 6:00pm Sun: Closed",
+                }
+              - label: "Social Links"
+                name: "socialLinks"
+                widget: "list"
                 fields:
-                  - { label: "Home", name: "home", widget: "string", default: "Home" }
-                  - { label: "Home URL", name: "homeURL", widget: "string", default: "/" }
-                  - { label: "Services", name: "services", widget: "string", default: "Services" }
-                  - { label: "Services URL", name: "servicesURL", widget: "string", default: "/services" }
-                  - { label: "Label", name: "label", widget: "string", default: "{{slug}}" }
-                  - { label: "Service Details URL", name: "serviceDetailsURL", widget: "string", default: "/services/{{slug}}" }
-     
+                  - {
+                      label: "Platform",
+                      name: "platform",
+                      widget: "select",
+                      options:
+                        [
+                          "twitter",
+                          "facebook-f",
+                          "pinterest-p",
+                          "vimeo-v",
+                          "instagram",
+                        ],
+                    }
+                  - { label: "Link", name: "link", widget: "string" }
+          - label: "Logo"
+            name: "logo"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Light Logo", name: "light", widget: "image" }
+              - { label: "Dark Logo", name: "dark", widget: "image" }
+          - label: "Book Now Button"
+            name: "bookNowButton"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {
+                  label: "Text",
+                  name: "text",
+                  widget: "string",
+                  default: "Book Now",
+                }
+              - {
+                  label: "Link",
+                  name: "link",
+                  widget: "string",
+                  default: "page-contact",
+                }
+          - label: "Menu"
+            name: "menu"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Menu Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+                  - label: "Submenu"
+                    name: "submenu"
+                    widget: "list"
+                    required: false
+                    fields:
+                      - { label: "Name", name: "name", widget: "string" }
+                      - { label: "Link", name: "link", widget: "string" }
+          - label: "Mobile Menu Contacts"
+            name: "mobileMenuContacts"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Hours", name: "hours", widget: "string" }
+
+      - name: "footer"
+        label: "Footer"
+        file: "content/pages/footer.json"
+        fields:
+          - label: "Opening Hours"
+            name: "openingHours"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "string",
+                  default: "Open Hours",
+                }
+              - label: "Hours"
+                name: "hours"
+                widget: "list"
+                fields:
+                  - { label: "Day", name: "day", widget: "string" }
+                  - { label: "Time", name: "time", widget: "string" }
+          - label: "Center Section"
+            name: "center"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Social Links"
+                name: "socialLinks"
+                widget: "list"
+                fields:
+                  - {
+                      label: "Platform",
+                      name: "platform",
+                      widget: "select",
+                      options:
+                        ["twitter", "facebook-f", "pinterest-p", "vimeo-v"],
+                    }
+                  - { label: "Link", name: "link", widget: "string" }
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "string",
+                  default: "Contact",
+                }
+              - { label: "Address", name: "address", widget: "text" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+          - label: "Bottom Bar"
+            name: "bottomBar"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Bottom Image", name: "bottomImage", widget: "image" }
+              - {
+                  label: "Copyright Text",
+                  name: "copyrightText",
+                  widget: "string",
+                  default: "© Purerelax",
+                }
+              - {
+                  label: "Copyright Link",
+                  name: "copyrightLink",
+                  widget: "string",
+                  default: "Reserved By Kodesolution",
+                }
+              - {
+                  label: "Terms Link Text",
+                  name: "termsText",
+                  widget: "string",
+                  default: "Terms & Conditions",
+                }
+              - {
+                  label: "Terms Link",
+                  name: "termsLink",
+                  widget: "string",
+                  default: "/",
+                }
+
   - name: "services"
     label: "Services"
     format: "json"
@@ -862,7 +866,7 @@ collections:
       - { label: "Icon", name: "icon", widget: "image" }
       - { label: "Background Image", name: "bgImage", widget: "image" }
       - { label: "Background Image Two", name: "bgImageTwo", widget: "image" }
-      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Link", name: "link", widget: "string", default: "/services/{{slug}}" }
       - { label: "Category", name: "category", widget: "string" }
       - { label: "Price", name: "price", widget: "string" }
       - { label: "Duration", name: "duration", widget: "string" }

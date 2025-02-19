@@ -5,11 +5,13 @@ import Pricing1 from "@/components/sections/Pricing1";
 import homeData from "@/content/pages/home.json"
 import { getServices, getGroupedServices } from "@/utils/getServices";
 import pricingData from "@/content/pages/pricing.json"
+import headerData from "@/content/pages/header.json"
+import footerData from "@/content/pages/footer.json"
 
 export default function PagePricing({ groupedServices, data }) {
   return (
     <>
-      <Layout headerStyle={1} footerStyle={1} groupedServices={groupedServices}>
+      <Layout headerStyle={1} footerStyle={1} groupedServices={groupedServices} headerData={headerData} footerData={footerData}>
         <PageTitle 
           pageName={data.pageTitle.title} 
           breadcrumb={data.pageTitle.breadcrumb}
